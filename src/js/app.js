@@ -206,11 +206,11 @@ async function EnableSubmitOnCheckbox(){
 }
 
 function InitBurgerMenu() {
-    const burgerNode = document.querySelector('.header__burger-btn');
+    const burgerNode = document.querySelector('.header__burger-button');
     if (burgerNode) {
         UIkit.modal(document.querySelector('.header__burger-menu'));
         burgerNode.addEventListener('click', (event) => {
-            burgerNode.classList.toggle('header__burger-btn_active');
+            burgerNode.classList.toggle('header__burger-button_active');
         });
     }
 }
@@ -292,7 +292,6 @@ async function InitLoadMorePosts() {
         });
     }
 }
-
 document.addEventListener('DOMContentLoaded', (event) => {
     // ASYNC
     InitCenteredSliders();      // Преключение класса центрального слайда при свайпах
