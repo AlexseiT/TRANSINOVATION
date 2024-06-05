@@ -1,0 +1,37 @@
+.green-block .section__head-text{
+    color: $white;
+}
+.green-block .section__title{
+    color: $white;
+}
+.green-block .delivery-block__slide_default .delivery-block__arrow-icon path{
+    stroke: $white;
+}
+.green-block .delivery-block__slide_default .delivery-block__arrow-button{
+    background-color: $green;
+}
+.green-block .delivery-block__slide_default .delivery-block__arrow-button:hover{
+    background-color: $light;
+}
+.green-block .delivery-block__slide_default .delivery-block__arrow-button:hover .delivery-block__arrow-icon path{
+    stroke: $black;
+}
+
+.green-block .delivery-block__slide-down{
+    margin-top: 200px;
+}
+
+.green-block .section__head{
+    padding-top: 50px;
+}
+
+@include media($tablet) {
+    .green-block .delivery-block__slide-down{
+        margin-top: 170px;
+    }
+}
+@include media($mobile) {
+    .green-block .delivery-block__slide-down{
+        margin-top: 100px;
+    }
+}

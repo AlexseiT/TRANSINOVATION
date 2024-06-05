@@ -1,4 +1,5 @@
 const isMobile = document.documentElement.clientWidth <= 640;
+const isCustomTablet = document.documentElement.clientWidth <= 830;
 const isTablet = document.documentElement.clientWidth <= 1200;
 const isLaptop = document.documentElement.clientWidth <= 1440;
 const isDesktop = document.documentElement.clientWidth > 1440;
@@ -292,6 +293,267 @@ async function InitLoadMorePosts() {
         });
     }
 }
+function MapPathInit(){
+    let pathsChine = document.querySelectorAll(".pathGreen");
+    let index = 0;
+    pathsChine.forEach((path) => {
+        index += 1;
+        if (index % 2 == 0){
+            anime({
+                targets: path, 
+                strokeDashoffset: [120, 0],
+                easing: 'easeInOutSine',
+                duration: 3000,
+                direction: 'normal',
+                loop: true,    
+            });
+        }
+        else
+        {
+            anime({
+                targets: path, 
+                strokeDashoffset: [120, 0],
+                easing: 'easeInOutSine',
+                duration: 3000,
+                direction: 'reverse',
+                loop: true,    
+            });
+        }
+
+    });
+    let path1Russia = document.querySelectorAll(".pathGray.path1");
+    let path2Russia = document.querySelectorAll(".pathGray.path2");
+    let path3Russia = document.querySelectorAll(".pathGray.path3");
+    let path4Russia = document.querySelectorAll(".pathGray.path4");
+    anime({
+        targets: path1Russia, 
+        strokeDashoffset: [64, 0],
+        easing: 'easeInOutSine',
+        duration: 2500,
+        direction: 'normal',
+        loop: true,    
+    });
+    anime({
+        targets: path2Russia, 
+        strokeDashoffset: [64, 0],
+        easing: 'easeInOutSine',
+        duration: 2500,
+        direction: 'normal',
+        loop: true,    
+    });
+    anime({
+        targets: path3Russia, 
+        strokeDashoffset: [64, 0],
+        easing: 'easeInOutSine',
+        duration: 2500,
+        direction: 'normal',
+        loop: true,    
+    });
+    anime({
+        targets: path4Russia, 
+        strokeDashoffset: [64, 0],
+        easing: 'easeInOutSine',
+        duration: 2500,
+        direction: 'reverse',
+        loop: true,    
+    });
+    let circles = document.querySelectorAll(".map__img circle")
+    circles.forEach((circle) => {
+        anime({
+            targets: circle, 
+            easing: 'easeInOutSine',
+            duration: 3000,
+            direction: 'alternate',
+            r: 9,
+            loop: true,    
+        });
+    });
+}
+function TippyRussiaCityInit(){
+    let obj = document.querySelector(".circle_msk");
+    let mskTippy = tippy(obj, {
+        content: '<a class = "text_min map__sity">Москва</a>',
+        theme: 'map',
+        arrow: false,
+        trigger: 'click',
+        onHidden(instance) {
+            instance.show();
+        },
+        allowHTML: true,
+        placement: 'left',
+      });
+    mskTippy.show();
+
+    obj = document.querySelector(".circle_spb");
+    let spbTippy = tippy(obj, {
+        content: '<a class = "text_min map__sity">Санкт- Петербург</a>',
+        theme: 'map',
+        arrow: false,
+        trigger: 'click',
+        onHidden(instance) {
+            instance.show();
+        },
+        allowHTML: true,
+        placement: 'left',
+      });
+    spbTippy.show();
+
+    obj = document.querySelector(".circle_kazan");
+    let kazanTippy = tippy(obj, {
+        content: '<a class = "text_min map__sity">Казань</a>',
+        theme: 'map',
+        arrow: false,
+        trigger: 'click',
+        onHidden(instance) {
+            instance.show();
+        },
+        allowHTML: true,
+        placement: 'top',
+      });
+    kazanTippy.show();
+
+    obj = document.querySelector(".circle_ekb");
+    let ekbTippy = tippy(obj, {
+        content: '<a class = "text_min map__sity">Екатеренбург</a>',
+        theme: 'map',
+        arrow: false,
+        trigger: 'click',
+        onHidden(instance) {
+            instance.show();
+        },
+        allowHTML: true,
+        placement: 'top',
+      });
+      ekbTippy.show();
+
+    obj = document.querySelector(".circle_nsk");
+    let nskTippy = tippy(obj, {
+        content: '<a class = "text_min map__sity">Новосибирск</a>',
+        theme: 'map',
+        arrow: false,
+        trigger: 'click',
+        onHidden(instance) {
+            instance.show();
+        },
+        allowHTML: true,
+        placement: 'left',
+    });
+    nskTippy.show();
+
+    obj = document.querySelector(".circle_vsk");
+    let vskTippy = tippy(obj, {
+        content: '<a class = "text_min map__sity">Владивосток</a>',
+        theme: 'map',
+        arrow: false,
+        trigger: 'click',
+        onHidden(instance) {
+            instance.show();
+        },
+        allowHTML: true,
+        placement: 'top',
+    });
+    vskTippy.show();
+      
+}
+function TippyChinaCityInit(){
+    let obj = document.querySelector(".circle_cin");
+    let circle_cin = tippy(obj, {
+        content: '<a class = "text_min map__sity">Циндао</a>',
+        theme: 'map',
+        arrow: false,
+        trigger: 'click',
+        onHidden(instance) {
+            instance.show();
+        },
+        allowHTML: true,
+        placement: 'top',
+      });
+    circle_cin.show();
+
+    obj = document.querySelector(".circle_jaen");
+    let circle_jaen = tippy(obj, {
+        content: '<a class = "text_min map__sity">Чжэнчжоу</a>',
+        theme: 'map',
+        arrow: false,
+        trigger: 'click',
+        onHidden(instance) {
+            instance.show();
+        },
+        allowHTML: true,
+        placement: 'bottom',
+      });
+    circle_jaen.show();
+
+    obj = document.querySelector(".circle_chen");
+    let circle_chen = tippy(obj, {
+        content: '<a class = "text_min map__sity">Чэнду</a>',
+        theme: 'map',
+        arrow: false,
+        trigger: 'click',
+        onHidden(instance) {
+            instance.show();
+        },
+        allowHTML: true,
+        placement: 'bottom',
+      });
+    circle_chen.show();
+
+    obj = document.querySelector(".circle_shan");
+    let circle_shan = tippy(obj, {
+        content: '<a class = "text_min map__sity">Шанхай</a>',
+        theme: 'map',
+        arrow: false,
+        trigger: 'click',
+        onHidden(instance) {
+            instance.show();
+        },
+        allowHTML: true,
+        placement: 'top',
+      });
+    circle_shan.show();
+
+    obj = document.querySelector(".circle_shen");
+    let circle_shen = tippy(obj, {
+        content: '<a class = "text_min map__sity">Шэньян</a>',
+        theme: 'map',
+        arrow: false,
+        trigger: 'click',
+        onHidden(instance) {
+            instance.show();
+        },
+        allowHTML: true,
+        placement: 'top',
+      });
+    circle_shen.show();
+
+    obj = document.querySelector(".circle_nin");
+    let circle_nin = tippy(obj, {
+        content: '<a class = "text_min map__sity">Нинбо</a>',
+        theme: 'map',
+        arrow: false,
+        trigger: 'click',
+        onHidden(instance) {
+            instance.show();
+        },
+        allowHTML: true,
+        placement: 'bottom',
+      });
+    circle_nin.show();
+
+    obj = document.querySelector(".circle_tyan");
+    let circle_tyan = tippy(obj, {
+        content: '<a class = "text_min map__sity">Тяньцзинь</a>',
+        theme: 'map',
+        arrow: false,
+        trigger: 'click',
+        onHidden(instance) {
+            instance.show();
+        },
+        allowHTML: true,
+        placement: 'left',
+      });
+    circle_tyan.show();
+}
 document.addEventListener('DOMContentLoaded', (event) => {
     // ASYNC
     InitCenteredSliders();      // Преключение класса центрального слайда при свайпах
@@ -305,9 +567,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // InsertPostContents();    // Содержание статьи по заголовкам
     // LoadMapOnScroll();       // Прогрузка карты при скролле
-
+    MapPathInit();
     if(isTablet) {
         InitBurgerMenu();
+    }
+    if(!isCustomTablet) {
+        TippyRussiaCityInit();
+        TippyChinaCityInit();
     }
 
     // Наложение партикла

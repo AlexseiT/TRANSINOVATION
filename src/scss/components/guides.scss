@@ -1,0 +1,119 @@
+.guides {
+    &__block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 27px;
+        margin-top: 70px;
+        padding-bottom: 90px;
+    }
+    &__block-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 27px;
+    }
+    &__card {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 322px;
+        min-width: 293px;
+    }
+    &__card-title {
+        color: $black;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    &__card-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $green;
+        border-radius: 50px;
+        width: 50px;
+        height: 50px;
+        margin-left: auto;
+    }
+    &__card-link:hover {
+        border: 1px solid $green;
+        background-color: $white;
+        .guides__card-link-icon path{
+            stroke: $green;
+        }
+    }
+
+    &__card-link-icon {
+    }
+}
+@include media($laptop) {
+    .guides {
+        &__block {
+            gap: 15px;
+            margin-top: 55px;
+            padding-bottom: 76px;
+        }
+        &__block-row {
+            gap: 15px;
+        }
+        &__card {
+            min-width: 229px;
+        }
+
+    }
+}
+@include media($tablet) {
+
+}
+@include media($customTablet) {
+    .guides__block-row{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@include media($mobile) {
+    .guides {
+        &__block {
+            gap: 10px;
+        }
+        &__block-row {
+            gap: 10px;
+            width: 100%;
+        }
+        &__card {
+            min-width: 100%;
+            width: 100%;
+            max-width: 100%;
+        }
+        &__card-title{
+            font-size: 1rem;
+        }
+    }
+}
+@include media($mobileCustom) {
+    .guides {
+        &__block {
+            gap: 15px;
+        }
+        &__block-row {
+            gap: 15px;
+            width: 100%;
+        }
+        &__card {
+            min-width: 100%;
+            width: 100%;
+            max-width: 100%;
+        }
+        &__card-title{
+            font-size: 1.2rem;
+        }
+        &__block-row{
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+}

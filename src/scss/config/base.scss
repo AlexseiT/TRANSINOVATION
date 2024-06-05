@@ -108,6 +108,10 @@ textarea{
         flex-direction: column;
         gap: 2rem;
     }
+    &_right{
+        margin: 0px 0px 0px auto;
+        max-width: 1600px;
+    }
 }
 
 .section-title {
@@ -126,13 +130,12 @@ textarea{
     &_head{
         font-size: 3.5rem;
     }
+    &_large{
+        font-size: 3rem;
+    }
 
     &_huge{
         font-size: 2.5rem;
-    }
-
-    &_large{
-        font-size: 3rem;
     }
 
     &_standart{
@@ -306,12 +309,21 @@ textarea{
     border: 1px solid $gray;
     color: $black;
 }
+.section{
+    margin-top: 100px;
+}
 @include media($laptop) {
     .text_min {
         font-size: 1.1rem;
     }
+    .section{
+        margin-top: 85px;
+    }
 }
 @include media($tablet) {
+    .section{
+        margin-top: 65px;
+    }
     .text{
         color: $textColor;
         font-size: 1.5rem;
@@ -322,7 +334,7 @@ textarea{
         }
     
         &_head{
-            font-size: 3.5rem;
+            font-size: 3rem;
         }
     
         &_huge{
@@ -330,7 +342,7 @@ textarea{
         }
     
         &_large{
-            font-size: 2.5rem;
+            font-size: 2rem;
         }
     
         &_standart{
@@ -343,6 +355,53 @@ textarea{
     
     }
 }
+.green-block {
+    background-color: $green;
+    &_up {
+        border-radius: 50px 50px 0 0;
+    }
+    &_down {
+        border-radius: 0 0 50px 50px;
+    }
+}
+.section-no-margin{
+    margin-top: 0;
+}
 @include media($mobile) {
-
+    .section{
+        margin-top: 50px;
+    }
+    .text{
+        color: $textColor;
+        font-size: 1.2rem;
+        font-weight: 400;
+    
+        &_overhead{
+            font-size: 3.5rem;
+        }
+    
+        &_head{
+            font-size: 2rem;
+        }
+    
+        &_huge{
+            font-size: 2rem;
+        }
+    
+        &_large{
+            font-size: 1.5rem;
+        }
+    
+        &_standart{
+            font-size: 1.2rem;
+        }
+    
+        &_small{
+            font-size: 1.2rem;
+        }
+    
+    }
+}
+.uk-slidenav svg{
+    display: none;
 }
