@@ -405,3 +405,27 @@ textarea{
 .uk-slidenav svg{
     display: none;
 }
+.reveal{
+}
+.reveal1{
+  position: relative;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal2{
+  position: relative;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+.reveal3{
+  position: relative;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 3s all ease;
+}
+.reveal.active-reveal{
+  transform: translateY(0);
+  opacity: 1;
+}

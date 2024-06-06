@@ -554,6 +554,62 @@ function TippyChinaCityInit(){
       });
     circle_tyan.show();
 }
+function InitClientsCard(){
+    /*
+    let elements = document.querySelectorAll(".clients__card");
+    let center = document.querySelector(".clients__title");
+
+
+    let amount = elements.length;
+    let startAngle = -90;
+    let angleToAdd = 360 / amount;
+    let offsetPx = -(elements[0].offsetWidth / 2) + (center.offsetWidth / 2);
+    let radius =  160;
+
+    elements.forEach((element) => {
+        let angle = startAngle * Math.PI / 180;
+        let x = (radius * Math.cos(angle)) + offsetPx;
+        let y = (radius * Math.sin(angle)) + offsetPx;
+        element.style.transform = "translate(" + x + "%," + y + "%)";
+        startAngle += angleToAdd;
+        console.log(123);
+    });
+    */
+}
+function RevealInit() {
+    let reveals = document.querySelectorAll(".reveal");
+  
+    for (let i = 0; i < reveals.length; i++) {
+        let windowHeight = window.innerHeight;
+        let elementTop = reveals[i].getBoundingClientRect().top;
+  
+      if (elementTop < windowHeight + 10) {
+        reveals[i].classList.add("active-reveal");
+      } else {
+        reveals[i].classList.remove("active-reveal");
+      }
+    }
+}
+function ButtonTop(){
+    let backToTop = document.querySelector(".footer__button-top");
+ 
+    // Показать/скрыть кнопку при прокрутке страницы
+    window.addEventListener("scroll", function () {
+      if (window.pageYOffset > 300) {
+        //backToTop.style.display = "flex";
+        backToTop.classList.add("button-top-active");
+      } else {
+        //backToTop.style.display = "none";
+        backToTop.classList.remove("button-top-active");
+      }
+    });
+   
+    // Плавная прокрутка при клике на кнопку
+    backToTop.addEventListener("click", function (event) {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+}
 document.addEventListener('DOMContentLoaded', (event) => {
     // ASYNC
     InitCenteredSliders();      // Преключение класса центрального слайда при свайпах
@@ -564,10 +620,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     InitCityPopup();
 	InitCookieAgree();
-
+    ButtonTop();
     // InsertPostContents();    // Содержание статьи по заголовкам
     // LoadMapOnScroll();       // Прогрузка карты при скролле
     MapPathInit();
+    InitClientsCard();
+    RevealInit();
+    window.addEventListener("scroll", RevealInit);
     if(isTablet) {
         InitBurgerMenu();
     }
