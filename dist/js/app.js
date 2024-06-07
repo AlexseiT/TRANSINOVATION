@@ -730,16 +730,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
     if(!isMobile) {
         MapPathInit();
     }
-
+    
     RevealInit();
     LinckMapInit();
     window.addEventListener("scroll", RevealInit);
     if(isTablet) {
         InitBurgerMenu();
     }
-    if(!isCustomTablet) {
-        //TippyRussiaCityInit();
-        //TippyChinaCityInit();
+    if(isCustomTablet2) {
+        initActiveGreenSlide();
     }
     if(!isCustomTablet2) {
         DeleteActiveSlides();
