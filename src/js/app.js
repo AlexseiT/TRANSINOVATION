@@ -1,5 +1,6 @@
 const isMobile = document.documentElement.clientWidth <= 640;
 const isCustomTablet = document.documentElement.clientWidth <= 830;
+const isCustomTablet2 = document.documentElement.clientWidth > 980;
 const isTablet = document.documentElement.clientWidth <= 1200;
 const isLaptop = document.documentElement.clientWidth <= 1440;
 const isDesktop = document.documentElement.clientWidth > 1440;
@@ -369,6 +370,34 @@ function MapPathInit(){
         });
     });
 }
+function LinckMapInit(){
+    let elementsMap = document.querySelectorAll(".map__sity");
+    let mapWidthNow = parseFloat(document.querySelector('.map__img').getBoundingClientRect().width);
+    let mapHeightNow = parseFloat(document.querySelector('.map__img').getBoundingClientRect().height);
+    let mapWidth = 1364;
+    let mapHeight = 963;
+    let coeffX = mapWidthNow / mapWidth;
+    let coeffY = mapHeightNow / mapHeight;
+
+    elementsMap.forEach((objLink) => {
+        let obj = document.querySelector("."+objLink.id);
+        let coordinateX = (obj.getAttribute('cx') * coeffX);
+        let coordinateY = (obj.getAttribute('cy') * coeffY);
+        if (objLink.classList.contains("map__sityRussia")){
+            coordinateX -= (parseFloat(objLink.getBoundingClientRect().width) / 2) * coeffX;
+            coordinateY -=  55 * coeffX;
+        }
+        if (objLink.classList.contains("map__sityChina")){
+            coordinateX -= (parseFloat(objLink.getBoundingClientRect().width) - 0)* coeffX;
+            coordinateY +=  6 * coeffX;
+        }
+        objLink.style.left =  coordinateX + "px";
+        objLink.style.top = coordinateY + "px";
+    });
+
+
+
+}
 function TippyRussiaCityInit(){
     let obj = document.querySelector(".circle_msk");
     let mskTippy = tippy(obj, {
@@ -528,7 +557,7 @@ function TippyChinaCityInit(){
 
     obj = document.querySelector(".circle_nin");
     let circle_nin = tippy(obj, {
-        content: '<a class = "text_min map__sity">Нинбо</a>',
+        content: '<a href = "#" class = "text_min map__sity">Нинбо</a>',
         theme: 'map',
         arrow: false,
         trigger: 'click',
@@ -553,28 +582,6 @@ function TippyChinaCityInit(){
         placement: 'left',
       });
     circle_tyan.show();
-}
-function InitClientsCard(){
-    /*
-    let elements = document.querySelectorAll(".clients__card");
-    let center = document.querySelector(".clients__title");
-
-
-    let amount = elements.length;
-    let startAngle = -90;
-    let angleToAdd = 360 / amount;
-    let offsetPx = -(elements[0].offsetWidth / 2) + (center.offsetWidth / 2);
-    let radius =  160;
-
-    elements.forEach((element) => {
-        let angle = startAngle * Math.PI / 180;
-        let x = (radius * Math.cos(angle)) + offsetPx;
-        let y = (radius * Math.sin(angle)) + offsetPx;
-        element.style.transform = "translate(" + x + "%," + y + "%)";
-        startAngle += angleToAdd;
-        console.log(123);
-    });
-    */
 }
 function RevealInit() {
     let reveals = document.querySelectorAll(".reveal");
@@ -610,6 +617,102 @@ function ButtonTop(){
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
 }
+
+function WhiteSliderEvent(){  
+    let activeSlides = document.querySelectorAll(".white-slide.uk-active");
+    let predSlide = document.querySelectorAll(".green-active");
+    predSlide.forEach((slide) => {
+        slide.classList.remove("green-active");
+    });
+
+    let lastSlide = document.querySelector('.white-slide:last-of-type');
+    let lastActive = document.querySelector('.white-slide.uk-active:last-of-type');
+    let firstSlide = document.querySelector('.white-slide');
+    let firstActive = document.querySelector('.white-slide.uk-active');
+    for (var i = 0, len = activeSlides.length; i < len; i++) {
+        let prevSlide = activeSlides[i].previousElementSibling;
+        let nextSlide = activeSlides[i].nextElementSibling;
+
+        if (prevSlide == null && nextSlide != null && nextSlide.classList.contains("uk-active") && lastSlide === lastActive){
+            activeSlides[i].classList.add("green-active");
+            nextSlide.classList.remove("green-active");
+            break;
+        }
+        else if (nextSlide == null && prevSlide != null &&prevSlide.classList.contains("uk-active") && firstSlide === firstActive){
+            activeSlides[i].classList.add("green-active");
+            prevSlide.classList.remove("green-active");
+            break;
+        }
+        else if (nextSlide != null && prevSlide != null && prevSlide.classList.contains("uk-active") && nextSlide.classList.contains("uk-active")){
+            activeSlides[i].classList.add("green-active");
+            nextSlide.classList.remove("green-active");
+            prevSlide.classList.remove("green-active");
+            break;
+        }
+    }
+}
+function GreenSliderEvent(){  
+    let activeSlides = document.querySelectorAll(".green-slide.uk-active");
+    let predSlide = document.querySelectorAll(".white-active");
+    predSlide.forEach((slide) => {
+        slide.classList.remove("white-active");
+    });
+
+    let lastSlide = document.querySelector('.green-slide:last-of-type');
+    let lastActive = document.querySelector('.green-slide.uk-active:last-of-type');
+    let firstSlide = document.querySelector('.green-slide');
+    let firstActive = document.querySelector('.green-slide.uk-active');
+    for (var i = 0, len = activeSlides.length; i < len; i++) {
+        let prevSlide = activeSlides[i].previousElementSibling;
+        let nextSlide = activeSlides[i].nextElementSibling;
+
+        if (prevSlide == null && nextSlide != null && nextSlide.classList.contains("uk-active") && lastSlide === lastActive){
+            activeSlides[i].classList.add("white-active");
+            nextSlide.classList.remove("white-active");
+            break;
+        }
+        else if (nextSlide == null && prevSlide != null &&prevSlide.classList.contains("uk-active") && firstSlide === firstActive){
+            activeSlides[i].classList.add("white-active");
+            prevSlide.classList.remove("white-active");
+            break;
+        }
+        else if (nextSlide != null && prevSlide != null && prevSlide.classList.contains("uk-active") && nextSlide.classList.contains("uk-active")){
+            activeSlides[i].classList.add("white-active");
+            nextSlide.classList.remove("white-active");
+            prevSlide.classList.remove("white-active");
+            break;
+        }
+    }
+}
+function initActiveGreenSlide(){
+    let checkSliderWhite = document.querySelector(".white-slider");
+    let checkSliderGreen = document.querySelector(".green-slider");
+
+    UIkit.util.on(checkSliderWhite, 'itemshow', function () {
+        if(!isCustomTablet) {
+            setTimeout(() => {
+                WhiteSliderEvent();
+            }, "800");
+        }
+    });
+    UIkit.util.on(checkSliderGreen, 'itemshow', function () {
+        if(!isCustomTablet) {
+            setTimeout(() => {
+                GreenSliderEvent();
+            }, "800");
+        }
+    });
+}
+function DeleteActiveSlides(){
+    let predSlideGreen = document.querySelectorAll(".green-active");
+    predSlideGreen.forEach((slide) => {
+        slide.classList.remove("green-active");
+    });
+    let predSlideWhite = document.querySelectorAll(".white-active");
+    predSlideWhite.forEach((slide) => {
+        slide.classList.remove("white-active");
+    });
+}
 document.addEventListener('DOMContentLoaded', (event) => {
     // ASYNC
     InitCenteredSliders();      // Преключение класса центрального слайда при свайпах
@@ -623,17 +726,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
     ButtonTop();
     // InsertPostContents();    // Содержание статьи по заголовкам
     // LoadMapOnScroll();       // Прогрузка карты при скролле
-    MapPathInit();
-    InitClientsCard();
+
+    if(!isMobile) {
+        MapPathInit();
+    }
+
     RevealInit();
+    LinckMapInit();
     window.addEventListener("scroll", RevealInit);
     if(isTablet) {
         InitBurgerMenu();
     }
     if(!isCustomTablet) {
-        TippyRussiaCityInit();
-        TippyChinaCityInit();
+        //TippyRussiaCityInit();
+        //TippyChinaCityInit();
     }
+    if(!isCustomTablet2) {
+        DeleteActiveSlides();
+    }
+
 
     // Наложение партикла
     // particlesJS.load('particles-slider', 'static/ParticlesJSON/GreenHexagons.json');

@@ -1,5 +1,6 @@
 const isMobile = document.documentElement.clientWidth <= 640;
 const isCustomTablet = document.documentElement.clientWidth <= 830;
+const isCustomTablet2 = document.documentElement.clientWidth > 980;
 const isTablet = document.documentElement.clientWidth <= 1200;
 const isLaptop = document.documentElement.clientWidth <= 1440;
 const isDesktop = document.documentElement.clientWidth > 1440;
@@ -11,14 +12,13 @@ function isWebp() {
 
         webP.onload = webP.onerror = () => callback(webP.height === 2);
         webP.src =
-            'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+        'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
     };
 
     // Добавление класса _webp или _no-webp для HTML
     testWebp((support) => {
         const className = support ? 'webp' : 'no-webp';
-        document.querySelector('html')
-            .classList.add(className);
+        document.querySelector('html').classList.add(className);
         console.log(support ? 'webp поддерживается' : 'webp не поддерживается');
     });
 }
@@ -26,93 +26,84 @@ function isWebp() {
 isWebp();
 
 const InsertPostContents = () => {
-    const headers = [];
-    const indexes = [0];
-    const articleContent = document.querySelector('.post__content');
-    // функция для получения предыдущего header
-    const getPrevHeader = (diff = 0) => {
-        if ((indexes.length - diff) === 0) {
-            return null;
-        }
-        let header = headers[indexes[0]];
-        for (let i = 1, length = indexes.length - diff; i < length; i++) {
-            header = header.contains[indexes[i]];
-        }
-        return header;
-    }
-    // функция для добавления item в headers
-    const addItemToHeaders = (el, diff) => {
-        let header = headers;
-        if (diff === 0) {
-            header = indexes.length > 1 ? getPrevHeader(1)
-                .contains : header;
-            indexes.length > 1 ? indexes[indexes.length - 1]++ : indexes[0]++;
-        }
-        else if (diff > 0) {
-            header = getPrevHeader()
-                .contains;
-            indexes.push(0);
-        }
-        else if (diff < 0) {
-            const parentHeader = getPrevHeader(Math.abs(diff) + 1);
-            for (let i = 0; i < Math.abs(diff); i++) {
-                indexes.pop();
-            }
-            header = parentHeader ? parentHeader.contains : header;
-            parentHeader ? indexes[indexes.length - 1]++ : indexes[0]++;
-        }
-        header.push({
-            el,
-            contains: []
-        });
-    }
-    // сформируем оглавление страницы для вставки его на страницу
-    let html = '';
-    const createTableOfContents = (items) => {
-        html += '<ol>';
-        for (let i = 0, length = items.length; i < length; i++) {
-            const url = `${location.href.split('#')[0]}#${items[i].el.id}`;
-            html += `<li><a href="${url}">${items[i].el.textContent}</a>`;
-            if (items[i].contains.length) {
-                createTableOfContents(items[i].contains);
-            }
-            html += '</li>';
-        }
-        html += '</ol>';
-    }
+	const headers = [];
+	const indexes = [0];
+	const articleContent = document.querySelector('.post__content');
+	// функция для получения предыдущего header
+	const getPrevHeader = (diff = 0) => {
+	  if ((indexes.length - diff) === 0) {
+		return null;
+	  }
+	  let header = headers[indexes[0]];
+	  for (let i = 1, length = indexes.length - diff; i < length; i++) {
+		header = header.contains[indexes[i]];
+	  }
+	  return header;
+	}
+	// функция для добавления item в headers
+	const addItemToHeaders = (el, diff) => {
+	  let header = headers;
+	  if (diff === 0) {
+		header = indexes.length > 1 ? getPrevHeader(1).contains : header;
+		indexes.length > 1 ? indexes[indexes.length - 1]++ : indexes[0]++;
+	  } else if (diff > 0) {
+		header = getPrevHeader().contains;
+		indexes.push(0);
+	  } else if (diff < 0) {
+		const parentHeader = getPrevHeader(Math.abs(diff) + 1);
+		for (let i = 0; i < Math.abs(diff); i++) {
+		  indexes.pop();
+		}
+		header = parentHeader ? parentHeader.contains : header;
+		parentHeader ? indexes[indexes.length - 1]++ : indexes[0]++;
+	  }
+	  header.push({ el, contains: [] });
+	}
+	// сформируем оглавление страницы для вставки его на страницу
+	let html = '';
+	const createTableOfContents = (items) => {
+	  html += '<ol>';
+	  for (let i = 0, length = items.length; i < length; i++) {
+		const url = `${location.href.split('#')[0]}#${items[i].el.id}`;
+		html += `<li><a href="${url}">${items[i].el.textContent}</a>`;
+		if (items[i].contains.length) {
+		  createTableOfContents(items[i].contains);
+		}
+		html += '</li>';
+	  }
+	  html += '</ol>';
+	}
 
-    if (articleContent) {
-        const contentsList = document.querySelector('.post__contents-list');
-        if (contentsList) {
-            // добавим заголовки в headers
-            articleContent.querySelectorAll('h2, h3, h4')
-                .forEach((el, index) => {
-                    if (!el.id) {
-                        el.id = `id-${index}`;
-                    }
-                    if (!index) {
-                        addItemToHeaders(el);
-                        return;
-                    }
-                    const diff = el.tagName.substring(1) - getPrevHeader()
-                        .el.tagName.substring(1);
-                    addItemToHeaders(el, diff);
-                });
+	if(articleContent){
+	  const contentsList = document.querySelector('.post__contents-list');
+	  if(contentsList){
+		// добавим заголовки в headers
+		articleContent.querySelectorAll('h2, h3, h4').forEach((el, index) => {
+			if (!el.id) {
+			el.id = `id-${index}`;
+			}
+			if (!index) {
+			addItemToHeaders(el);
+			return;
+			}
+			const diff = el.tagName.substring(1) - getPrevHeader().el.tagName.substring(1);
+			addItemToHeaders(el, diff);
+		});
 
-            createTableOfContents(headers);
-            contentsList.insertAdjacentHTML('afterbegin', html);
-        }
-    }
+		createTableOfContents(headers);
+		contentsList.insertAdjacentHTML('afterbegin', html);
+	  }
+	}
 }
 
-async function CallbackFormInit() {
+async function CallbackFormInit(){
     let forms = document.querySelectorAll('form');
 
-    if (forms.length > 0) {
-        forms.forEach((form) => {
+    if(forms.length > 0){
+        forms.forEach((form) =>{
             let phoneInputs = form.querySelectorAll('input[name="phone"]');
 
-            if (phoneInputs.length > 0) {
+            if(phoneInputs.length > 0) {
                 phoneInputs.forEach((phoneInput) => {
                     const phoneMask = new IMask(phoneInput, {
                         mask: "+{7} (000) 000-00-00",
@@ -120,10 +111,10 @@ async function CallbackFormInit() {
 
                     phoneInput.addEventListener('input', (event) => {
                         event.preventDefault();
-
+                
                         if (!phoneMask.masked.isComplete) {
                             phoneInput.classList.add("uk-form-danger");
-                        }
+                        } 
                         else {
                             phoneInput.classList.remove("uk-form-danger");
                         }
@@ -131,36 +122,35 @@ async function CallbackFormInit() {
 
                     form.addEventListener('submit', (event) => {
                         event.preventDefault();
-
-                        if (!phoneMask.masked.isComplete) {
+                
+                        if (!phoneMask.masked.isComplete){
                             return;
                         }
-
-                        let formData = {};
-                        let inputs = form.querySelectorAll('input:not([type="submit"]), textarea');
-                        if (inputs.length > 0) {
-                            inputs.forEach((input) => {
-                                formData[input.getAttribute('name')] = input.value;
-                            })
-                        }
+						
+						let formData = {};
+						let inputs = form.querySelectorAll('input:not([type="submit"]), textarea');
+						if(inputs.length > 0) {
+							inputs.forEach((input) => {
+								formData[input.getAttribute('name')] = input.value;
+							})
+						}
 
                         let successPopupNode = document.querySelector('#callback-popup-success');
                         // Удалить в проде
-                        UIkit.modal(successPopupNode)
-                            .show();
+						UIkit.modal(successPopupNode).show();
                         //  //
 
-                        // jQuery.ajax({
-                        // 	url: '/wp-admin/admin-ajax.php',
-                        // 	method: 'post',
-                        // 	data: {
-                        // 		action: 'sendForm',
-                        // 		data: JSON.stringify(formData)
-                        // 	},
-                        // 	success: function(data){
-                        // 		UIkit.modal(successPopupNode).show();
-                        // 	}
-                        // });
+						// jQuery.ajax({
+						// 	url: '/wp-admin/admin-ajax.php',
+						// 	method: 'post',
+						// 	data: {
+						// 		action: 'sendForm',
+						// 		data: JSON.stringify(formData)
+						// 	},
+						// 	success: function(data){
+						// 		UIkit.modal(successPopupNode).show();
+						// 	}
+						// });
                     })
                 })
             }
@@ -168,24 +158,24 @@ async function CallbackFormInit() {
     };
 }
 
-function LoadMapOnScroll() {
+function LoadMapOnScroll(){
     let isMapAppend = false;
-    let mapNode = document.querySelector('.map');
-    if (mapNode) {
-        document.addEventListener('scroll', (event) => {
-            if (!isMapAppend) {
-                if (window.scrollY > 1000) {
-                    let script = document.createElement('script');
-
-                    script.src = 'https://nalogsib.ru/wp-content/themes/NalogSib/js/map.js';
-                    script.type = 'text/javascript';
-
-                    mapNode.append(script);
-                    isMapAppend = true;
-                }
-            }
-        });
-    }
+	let mapNode = document.querySelector('.map');
+	if(mapNode) {
+		document.addEventListener('scroll', (event) => {
+			if(!isMapAppend) {
+				if(window.scrollY > 1000) {
+					let script = document.createElement('script');
+					
+					script.src = 'https://nalogsib.ru/wp-content/themes/NalogSib/js/map.js';
+					script.type = 'text/javascript';
+					
+					mapNode.append(script);
+					isMapAppend = true;
+				}
+			}
+		});
+	}
 }
 
 async function InitCenteredSliders() {
@@ -202,18 +192,19 @@ async function InitCenteredSliders() {
     };
 }
 
-async function EnableSubmitOnCheckbox() {
-    let checks = document.querySelectorAll('.form-checkbox');
-    checks.forEach((checkbox) => {
-        let form = checkbox.closest('form');
-        let button = form.querySelector('button[type="submit"]');
-        if (form && button) {
-            button.classList.toggle('btn_inactive');
-            checkbox.addEventListener('click', (event) => {
-                button.classList.toggle('btn_inactive');
-            });
-        }
-    });
+async function EnableSubmitOnCheckbox(){
+	let checks = document.querySelectorAll('.form-checkbox');
+	checks.forEach((checkbox) =>{
+		let form = checkbox.closest('form');
+		let button = form.querySelector('button[type="submit"]');
+		if (form && button)
+		{
+			button.classList.toggle('btn_inactive');
+			checkbox.addEventListener('click', (event) => {
+				button.classList.toggle('btn_inactive');
+			});
+		}
+	});
 }
 
 function InitBurgerMenu() {
@@ -233,17 +224,17 @@ function InitCityPopup() {
 
     const cityPopupNode = document.querySelector("#city-popup");
 
-    if (cityPopupNode) {
+    if(cityPopupNode){
         const acceptBtn = document.querySelector(".city-popup__accept-btn");
         const cityPopup = UIkit.modal(cityPopupNode);
-
+    
         cityPopup.show();
-
-        if (acceptBtn) {
+    
+        if(acceptBtn){
             acceptBtn.addEventListener('click', (event) => {
                 let domainSplit = window.location.host.split('.');
                 let subDomain = domainSplit.length > 2 ? window.location.host.split('.')[0] : 'новосибирск';
-
+    
                 document.cookie = `selectedCity=${subDomain}; path=/; expires=${new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toUTCString()}`;
             });
         }
@@ -251,86 +242,82 @@ function InitCityPopup() {
 }
 
 function InitCookieAgree() {
-    if (document.cookie.includes("cookieAgree")) {
+	if (document.cookie.includes("cookieAgree")) {
         return;
     }
+	
+	const cookieNoteNode = document.querySelector("#cookie-note");
+	if(cookieNoteNode){
+		const acceptBtn = cookieNoteNode.querySelector(".cookie-note__accept-btn");
 
-    const cookieNoteNode = document.querySelector("#cookie-note");
-    if (cookieNoteNode) {
-        const acceptBtn = cookieNoteNode.querySelector(".cookie-note__accept-btn");
-
-        if (acceptBtn) {
-            cookieNoteNode.style.display = "block";
-            acceptBtn.addEventListener('click', (event) => {
-                document.cookie = `cookieAgree=true; path=/; expires=${new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toUTCString()}`;
-                cookieNoteNode.style.display = "none";
-            });
-        }
-    }
+		if(acceptBtn){
+			cookieNoteNode.style.display = "block";
+			acceptBtn.addEventListener('click', (event) => {
+				document.cookie = `cookieAgree=true; path=/; expires=${new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toUTCString()}`;
+				cookieNoteNode.style.display = "none";
+			});
+		}
+	}
 }
 
 async function InitLoadMorePosts() {
     const moreBtn = document.querySelector('.blog__articles-more-btn');
     if (moreBtn) {
-        jQuery(function($) {
-            $(".blog__articles-more-btn")
-                .on("click", function() {
-                    const button = $(this);
-                    button.html("Загрузка...");
+        jQuery(function ($) {
+            $(".blog__articles-more-btn").on("click", function () {
+                const button = $(this);
+                button.html("Загрузка...");
 
-                    const data = {
-                        "action": "load_more",
-                        "page": currentPage
-                    }
+                const data = {
+                    "action": "load_more",
+                    "page": currentPage
+                }
 
-                    $.ajax({
-                        url: "/wp-admin/admin-ajax.php",
-                        data: data,
-                        type: "POST",
-                        success: function(data) {
-                            if (data) {
-                                button.html("Загрузить ещё");
-                                button.prev()
-                                    .prev()
-                                    .append(data);
-                                currentPage++;
-                                if (currentPage == maxPages) {
-                                    button.remove();
-                                }
-                            }
-                            else {
+                $.ajax({
+                    url: "/wp-admin/admin-ajax.php",
+                    data: data,
+                    type: "POST",
+                    success: function (data) {
+                        if (data) {
+                            button.html("Загрузить ещё");
+                            button.prev().prev().append(data);
+                            currentPage++;
+                            if (currentPage == maxPages) {
                                 button.remove();
                             }
+                        } else {
+                            button.remove();
                         }
-                    });
+                    }
                 });
+            });
         });
     }
 }
-
-function MapPathInit() {
+function MapPathInit(){
     let pathsChine = document.querySelectorAll(".pathGreen");
     let index = 0;
     pathsChine.forEach((path) => {
         index += 1;
-        if (index % 2 == 0) {
+        if (index % 2 == 0){
             anime({
-                targets: path,
+                targets: path, 
                 strokeDashoffset: [120, 0],
                 easing: 'easeInOutSine',
                 duration: 3000,
                 direction: 'normal',
-                loop: true,
+                loop: true,    
             });
         }
-        else {
+        else
+        {
             anime({
-                targets: path,
+                targets: path, 
                 strokeDashoffset: [120, 0],
                 easing: 'easeInOutSine',
                 duration: 3000,
                 direction: 'reverse',
-                loop: true,
+                loop: true,    
             });
         }
 
@@ -340,51 +327,78 @@ function MapPathInit() {
     let path3Russia = document.querySelectorAll(".pathGray.path3");
     let path4Russia = document.querySelectorAll(".pathGray.path4");
     anime({
-        targets: path1Russia,
+        targets: path1Russia, 
         strokeDashoffset: [64, 0],
         easing: 'easeInOutSine',
         duration: 2500,
         direction: 'normal',
-        loop: true,
+        loop: true,    
     });
     anime({
-        targets: path2Russia,
+        targets: path2Russia, 
         strokeDashoffset: [64, 0],
         easing: 'easeInOutSine',
         duration: 2500,
         direction: 'normal',
-        loop: true,
+        loop: true,    
     });
     anime({
-        targets: path3Russia,
+        targets: path3Russia, 
         strokeDashoffset: [64, 0],
         easing: 'easeInOutSine',
         duration: 2500,
         direction: 'normal',
-        loop: true,
+        loop: true,    
     });
     anime({
-        targets: path4Russia,
+        targets: path4Russia, 
         strokeDashoffset: [64, 0],
         easing: 'easeInOutSine',
         duration: 2500,
         direction: 'reverse',
-        loop: true,
+        loop: true,    
     });
     let circles = document.querySelectorAll(".map__img circle")
     circles.forEach((circle) => {
         anime({
-            targets: circle,
+            targets: circle, 
             easing: 'easeInOutSine',
             duration: 3000,
             direction: 'alternate',
             r: 9,
-            loop: true,
+            loop: true,    
         });
     });
 }
+function LinckMapInit(){
+    let elementsMap = document.querySelectorAll(".map__sity");
+    let mapWidthNow = parseFloat(document.querySelector('.map__img').getBoundingClientRect().width);
+    let mapHeightNow = parseFloat(document.querySelector('.map__img').getBoundingClientRect().height);
+    let mapWidth = 1364;
+    let mapHeight = 963;
+    let coeffX = mapWidthNow / mapWidth;
+    let coeffY = mapHeightNow / mapHeight;
 
-function TippyRussiaCityInit() {
+    elementsMap.forEach((objLink) => {
+        let obj = document.querySelector("."+objLink.id);
+        let coordinateX = (obj.getAttribute('cx') * coeffX);
+        let coordinateY = (obj.getAttribute('cy') * coeffY);
+        if (objLink.classList.contains("map__sityRussia")){
+            coordinateX -= (parseFloat(objLink.getBoundingClientRect().width) / 2) * coeffX;
+            coordinateY -=  55 * coeffX;
+        }
+        if (objLink.classList.contains("map__sityChina")){
+            coordinateX -= (parseFloat(objLink.getBoundingClientRect().width) - 0)* coeffX;
+            coordinateY +=  6 * coeffX;
+        }
+        objLink.style.left =  coordinateX + "px";
+        objLink.style.top = coordinateY + "px";
+    });
+
+
+
+}
+function TippyRussiaCityInit(){
     let obj = document.querySelector(".circle_msk");
     let mskTippy = tippy(obj, {
         content: '<a class = "text_min map__sity">Москва</a>',
@@ -396,7 +410,7 @@ function TippyRussiaCityInit() {
         },
         allowHTML: true,
         placement: 'left',
-    });
+      });
     mskTippy.show();
 
     obj = document.querySelector(".circle_spb");
@@ -410,7 +424,7 @@ function TippyRussiaCityInit() {
         },
         allowHTML: true,
         placement: 'left',
-    });
+      });
     spbTippy.show();
 
     obj = document.querySelector(".circle_kazan");
@@ -424,7 +438,7 @@ function TippyRussiaCityInit() {
         },
         allowHTML: true,
         placement: 'top',
-    });
+      });
     kazanTippy.show();
 
     obj = document.querySelector(".circle_ekb");
@@ -438,8 +452,8 @@ function TippyRussiaCityInit() {
         },
         allowHTML: true,
         placement: 'top',
-    });
-    ekbTippy.show();
+      });
+      ekbTippy.show();
 
     obj = document.querySelector(".circle_nsk");
     let nskTippy = tippy(obj, {
@@ -468,10 +482,9 @@ function TippyRussiaCityInit() {
         placement: 'top',
     });
     vskTippy.show();
-
+      
 }
-
-function TippyChinaCityInit() {
+function TippyChinaCityInit(){
     let obj = document.querySelector(".circle_cin");
     let circle_cin = tippy(obj, {
         content: '<a class = "text_min map__sity">Циндао</a>',
@@ -483,7 +496,7 @@ function TippyChinaCityInit() {
         },
         allowHTML: true,
         placement: 'top',
-    });
+      });
     circle_cin.show();
 
     obj = document.querySelector(".circle_jaen");
@@ -497,7 +510,7 @@ function TippyChinaCityInit() {
         },
         allowHTML: true,
         placement: 'bottom',
-    });
+      });
     circle_jaen.show();
 
     obj = document.querySelector(".circle_chen");
@@ -511,7 +524,7 @@ function TippyChinaCityInit() {
         },
         allowHTML: true,
         placement: 'bottom',
-    });
+      });
     circle_chen.show();
 
     obj = document.querySelector(".circle_shan");
@@ -525,7 +538,7 @@ function TippyChinaCityInit() {
         },
         allowHTML: true,
         placement: 'top',
-    });
+      });
     circle_shan.show();
 
     obj = document.querySelector(".circle_shen");
@@ -539,12 +552,12 @@ function TippyChinaCityInit() {
         },
         allowHTML: true,
         placement: 'top',
-    });
+      });
     circle_shen.show();
 
     obj = document.querySelector(".circle_nin");
     let circle_nin = tippy(obj, {
-        content: '<a class = "text_min map__sity">Нинбо</a>',
+        content: '<a href = "#" class = "text_min map__sity">Нинбо</a>',
         theme: 'map',
         arrow: false,
         trigger: 'click',
@@ -553,7 +566,7 @@ function TippyChinaCityInit() {
         },
         allowHTML: true,
         placement: 'bottom',
-    });
+      });
     circle_nin.show();
 
     obj = document.querySelector(".circle_tyan");
@@ -567,98 +580,171 @@ function TippyChinaCityInit() {
         },
         allowHTML: true,
         placement: 'left',
-    });
+      });
     circle_tyan.show();
 }
-
-function InitClientsCard() {
-    /*
-    let elements = document.querySelectorAll(".clients__card");
-    let center = document.querySelector(".clients__title");
-
-
-    let amount = elements.length;
-    let startAngle = -90;
-    let angleToAdd = 360 / amount;
-    let offsetPx = -(elements[0].offsetWidth / 2) + (center.offsetWidth / 2);
-    let radius =  160;
-
-    elements.forEach((element) => {
-        let angle = startAngle * Math.PI / 180;
-        let x = (radius * Math.cos(angle)) + offsetPx;
-        let y = (radius * Math.sin(angle)) + offsetPx;
-        element.style.transform = "translate(" + x + "%," + y + "%)";
-        startAngle += angleToAdd;
-        console.log(123);
-    });
-    */
-}
-
 function RevealInit() {
     let reveals = document.querySelectorAll(".reveal");
-
+  
     for (let i = 0; i < reveals.length; i++) {
         let windowHeight = window.innerHeight;
-        let elementTop = reveals[i].getBoundingClientRect()
-            .top;
+        let elementTop = reveals[i].getBoundingClientRect().top;
+  
+      if (elementTop < windowHeight + 10) {
+        reveals[i].classList.add("active-reveal");
+      } else {
+        reveals[i].classList.remove("active-reveal");
+      }
+    }
+}
+function ButtonTop(){
+    let backToTop = document.querySelector(".footer__button-top");
+ 
+    // Показать/скрыть кнопку при прокрутке страницы
+    window.addEventListener("scroll", function () {
+      if (window.pageYOffset > 300) {
+        //backToTop.style.display = "flex";
+        backToTop.classList.add("button-top-active");
+      } else {
+        //backToTop.style.display = "none";
+        backToTop.classList.remove("button-top-active");
+      }
+    });
+   
+    // Плавная прокрутка при клике на кнопку
+    backToTop.addEventListener("click", function (event) {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+}
 
-        if (elementTop < windowHeight + 10) {
-            reveals[i].classList.add("active-reveal");
+function WhiteSliderEvent(){  
+    let activeSlides = document.querySelectorAll(".white-slide.uk-active");
+    let predSlide = document.querySelectorAll(".green-active");
+    predSlide.forEach((slide) => {
+        slide.classList.remove("green-active");
+    });
+
+    let lastSlide = document.querySelector('.white-slide:last-of-type');
+    let lastActive = document.querySelector('.white-slide.uk-active:last-of-type');
+    let firstSlide = document.querySelector('.white-slide');
+    let firstActive = document.querySelector('.white-slide.uk-active');
+    for (var i = 0, len = activeSlides.length; i < len; i++) {
+        let prevSlide = activeSlides[i].previousElementSibling;
+        let nextSlide = activeSlides[i].nextElementSibling;
+
+        if (prevSlide == null && nextSlide != null && nextSlide.classList.contains("uk-active") && lastSlide === lastActive){
+            activeSlides[i].classList.add("green-active");
+            nextSlide.classList.remove("green-active");
+            break;
         }
-        else {
-            reveals[i].classList.remove("active-reveal");
+        else if (nextSlide == null && prevSlide != null &&prevSlide.classList.contains("uk-active") && firstSlide === firstActive){
+            activeSlides[i].classList.add("green-active");
+            prevSlide.classList.remove("green-active");
+            break;
+        }
+        else if (nextSlide != null && prevSlide != null && prevSlide.classList.contains("uk-active") && nextSlide.classList.contains("uk-active")){
+            activeSlides[i].classList.add("green-active");
+            nextSlide.classList.remove("green-active");
+            prevSlide.classList.remove("green-active");
+            break;
         }
     }
 }
-
-function ButtonTop() {
-    let backToTop = document.querySelector(".footer__button-top");
-
-    // Показать/скрыть кнопку при прокрутке страницы
-    window.addEventListener("scroll", function() {
-        if (window.pageYOffset > 300) {
-            //backToTop.style.display = "flex";
-            backToTop.classList.add("button-top-active");
-        }
-        else {
-            //backToTop.style.display = "none";
-            backToTop.classList.remove("button-top-active");
-        }
+function GreenSliderEvent(){  
+    let activeSlides = document.querySelectorAll(".green-slide.uk-active");
+    let predSlide = document.querySelectorAll(".white-active");
+    predSlide.forEach((slide) => {
+        slide.classList.remove("white-active");
     });
 
-    // Плавная прокрутка при клике на кнопку
-    backToTop.addEventListener("click", function(event) {
-        event.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
+    let lastSlide = document.querySelector('.green-slide:last-of-type');
+    let lastActive = document.querySelector('.green-slide.uk-active:last-of-type');
+    let firstSlide = document.querySelector('.green-slide');
+    let firstActive = document.querySelector('.green-slide.uk-active');
+    for (var i = 0, len = activeSlides.length; i < len; i++) {
+        let prevSlide = activeSlides[i].previousElementSibling;
+        let nextSlide = activeSlides[i].nextElementSibling;
+
+        if (prevSlide == null && nextSlide != null && nextSlide.classList.contains("uk-active") && lastSlide === lastActive){
+            activeSlides[i].classList.add("white-active");
+            nextSlide.classList.remove("white-active");
+            break;
+        }
+        else if (nextSlide == null && prevSlide != null &&prevSlide.classList.contains("uk-active") && firstSlide === firstActive){
+            activeSlides[i].classList.add("white-active");
+            prevSlide.classList.remove("white-active");
+            break;
+        }
+        else if (nextSlide != null && prevSlide != null && prevSlide.classList.contains("uk-active") && nextSlide.classList.contains("uk-active")){
+            activeSlides[i].classList.add("white-active");
+            nextSlide.classList.remove("white-active");
+            prevSlide.classList.remove("white-active");
+            break;
+        }
+    }
+}
+function initActiveGreenSlide(){
+    let checkSliderWhite = document.querySelector(".white-slider");
+    let checkSliderGreen = document.querySelector(".green-slider");
+
+    UIkit.util.on(checkSliderWhite, 'itemshow', function () {
+        if(!isCustomTablet) {
+            setTimeout(() => {
+                WhiteSliderEvent();
+            }, "800");
+        }
+    });
+    UIkit.util.on(checkSliderGreen, 'itemshow', function () {
+        if(!isCustomTablet) {
+            setTimeout(() => {
+                GreenSliderEvent();
+            }, "800");
+        }
+    });
+}
+function DeleteActiveSlides(){
+    let predSlideGreen = document.querySelectorAll(".green-active");
+    predSlideGreen.forEach((slide) => {
+        slide.classList.remove("green-active");
+    });
+    let predSlideWhite = document.querySelectorAll(".white-active");
+    predSlideWhite.forEach((slide) => {
+        slide.classList.remove("white-active");
     });
 }
 document.addEventListener('DOMContentLoaded', (event) => {
     // ASYNC
-    InitCenteredSliders(); // Преключение класса центрального слайда при свайпах
-    CallbackFormInit(); // Инцициализация всех форм (Маска тел. + ajax на submit)
-    EnableSubmitOnCheckbox(); // Активация submit только после согласия с политикой
+    InitCenteredSliders();      // Преключение класса центрального слайда при свайпах
+    CallbackFormInit();         // Инцициализация всех форм (Маска тел. + ajax на submit)
+    EnableSubmitOnCheckbox();   // Активация submit только после согласия с политикой
     // InitLoadMorePosts();        // Инит кнопки "Загрузить еще" для постов, см. WP ExBlog.php, functions.php
     // END ASYNC
 
     InitCityPopup();
-    InitCookieAgree();
+	InitCookieAgree();
     ButtonTop();
     // InsertPostContents();    // Содержание статьи по заголовкам
     // LoadMapOnScroll();       // Прогрузка карты при скролле
-    MapPathInit();
-    InitClientsCard();
+
+    if(!isMobile) {
+        MapPathInit();
+    }
+
     RevealInit();
+    LinckMapInit();
     window.addEventListener("scroll", RevealInit);
-    if (isTablet) {
+    if(isTablet) {
         InitBurgerMenu();
     }
-    if (!isCustomTablet) {
-        TippyRussiaCityInit();
-        TippyChinaCityInit();
+    if(!isCustomTablet) {
+        //TippyRussiaCityInit();
+        //TippyChinaCityInit();
     }
+    if(!isCustomTablet2) {
+        DeleteActiveSlides();
+    }
+
 
     // Наложение партикла
     // particlesJS.load('particles-slider', 'static/ParticlesJSON/GreenHexagons.json');

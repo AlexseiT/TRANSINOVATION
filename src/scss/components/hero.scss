@@ -1,6 +1,6 @@
 .hero {
 
-    background: url(../images/hero.jpg) no-repeat 45% 50%;
+    background: url(../images/hero1.jpg) no-repeat 45% 50%;
     background-size: cover !important;
     height: 90vh;
     position: relative;
@@ -13,6 +13,15 @@
         right: 0;
         margin: auto;
         height: fit-content;
+        z-index: 2;
+    }
+    &__object-container{
+        position: absolute;
+        right: -70px;
+        z-index: 1;
+        animation: swing 5s ease;
+        animation-iteration-count: infinite;
+        pointer-events: none;
     }
 
     &__title {
@@ -32,10 +41,9 @@
     }
 }
 
-
 @include media($laptop) {
     .hero {
-        background: url(../images/hero.jpg) no-repeat 45% 50%;
+        background: url(../images/hero1.jpg) no-repeat 45% 50%;
         &__container {
             top: 130px;
         }
@@ -92,5 +100,44 @@
         &__buttons {
 
         }
+        &__object-container{
+            display: none;
+        }
+    }
+}
+
+@keyframes swing
+{
+   /* 0%
+    {
+        transform: translateX(0) rotate(0);  
+    }
+    25%
+    {
+        transform: translateX(-50px) rotate(10deg);  
+    }
+    50%
+    {
+        transform: translateX(0) rotate(0);  
+    }
+    75%
+    {
+        transform: translateX(50px) rotate(-10deg);  
+    }
+    100%
+    {
+        transform: translateX(0) rotate(0);  
+    }*/
+    0%
+    {
+        transform: translateX(-30px) rotate(2deg);  
+    }
+    50%
+    {
+        transform: translateX(30px) rotate(-2deg);  
+    }
+    100%
+    {
+        transform: translateX(-30px) rotate(2deg);  
     }
 }
