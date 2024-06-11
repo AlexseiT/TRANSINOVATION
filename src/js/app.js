@@ -299,7 +299,7 @@ function MapPathInit(){
     let index = 0;
     pathsChine.forEach((path) => {
         index += 1;
-        if (index % 2 == 0){
+        if (index % 3 == 0){
             anime({
                 targets: path, 
                 strokeDashoffset: [120, 0],
@@ -322,10 +322,20 @@ function MapPathInit(){
         }
 
     });
+    let path0Russia = document.querySelectorAll(".pathGray.path0");
     let path1Russia = document.querySelectorAll(".pathGray.path1");
     let path2Russia = document.querySelectorAll(".pathGray.path2");
     let path3Russia = document.querySelectorAll(".pathGray.path3");
     let path4Russia = document.querySelectorAll(".pathGray.path4");
+    let path5Russia = document.querySelectorAll(".pathGray.path5");
+    anime({
+        targets: path0Russia, 
+        strokeDashoffset: [64, 0],
+        easing: 'easeInOutSine',
+        duration: 2500,
+        direction: 'normal',
+        loop: true,    
+    });
     anime({
         targets: path1Russia, 
         strokeDashoffset: [64, 0],
@@ -358,6 +368,14 @@ function MapPathInit(){
         direction: 'reverse',
         loop: true,    
     });
+    anime({
+        targets: path5Russia, 
+        strokeDashoffset: [64, 0],
+        easing: 'easeInOutSine',
+        duration: 2500,
+        direction: 'reverse',
+        loop: true,    
+    });
     let circles = document.querySelectorAll(".map__img circle")
     circles.forEach((circle) => {
         anime({
@@ -383,9 +401,13 @@ function LinckMapInit(){
         let obj = document.querySelector("."+objLink.id);
         let coordinateX = (obj.getAttribute('cx') * coeffX);
         let coordinateY = (obj.getAttribute('cy') * coeffY);
-        if (objLink.classList.contains("map__sityRussia")){
+        if (objLink.classList.contains("map__sityRussia") && objLink.id != "circle_nsk" && objLink.id != "circle_nau" && objLink.id != 'circle_nahod'){
             coordinateX -= (parseFloat(objLink.getBoundingClientRect().width) / 2) * coeffX;
             coordinateY -=  55 * coeffX;
+        }
+        if(objLink.id == "circle_nsk" || objLink.id == "circle_nau" || objLink.id == 'circle_nahod'){
+            coordinateX -= (parseFloat(objLink.getBoundingClientRect().width) / 2)* coeffX;
+            coordinateY +=  6 * coeffX;
         }
         if (objLink.classList.contains("map__sityChina")){
             coordinateX -= (parseFloat(objLink.getBoundingClientRect().width) - 0)* coeffX;
