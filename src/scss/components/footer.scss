@@ -107,6 +107,10 @@
     pointer-events: inherit;
     cursor: pointer;
 }
+.footer__block_min-gap{
+    justify-content: start;
+    gap: 40px;
+}
 @include media($mobile) {
     .footer {
         &__up {

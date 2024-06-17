@@ -28,7 +28,15 @@
         transition: .3s;
         border: 1px solid $white;
         text-align: center;
+        align-items: center;
+        display: flex;
         box-shadow: 2px 4px 10px #00000047;
+    }
+    &__sity.text_small{
+        font-weight: 600;
+    }
+    &__sity.text_min{
+        font-weight: 500;
     }
     &__sity:hover {
         border: 1px solid $green;
@@ -47,7 +55,9 @@
 
 @include media($mobile) {
     .map {
-
+        &__sity{
+            width: fit-content;
+        }
         &__title-block{
             padding-top: 20px;
         }
@@ -66,9 +76,18 @@
         }
         
         &__wrapper-link{
+            /*
             display: grid;
             grid-template-columns: 1fr 1fr;
+            gap: 15px;*/
+
+            display: flex;
             gap: 15px;
+            width: 100%;
+            overflow-x: scroll;
+            padding-bottom: 14px;
+            padding-left: 7px;
+            padding-right: 7px;
         }
     }
     .map__title-block{

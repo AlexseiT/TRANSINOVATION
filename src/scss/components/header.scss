@@ -1,7 +1,7 @@
 .header {
     position: fixed;
     width: 100%;
-    background-color: white;
+    background-color: $overLight;
     z-index: 99999;
     &__container {
         padding-top: 15px;

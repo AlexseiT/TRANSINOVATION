@@ -9,6 +9,12 @@ html, body {
 
 html {
     font-size: 12px;
+    zoom: 85%;
+}
+@include media($tablet) {
+    html {
+        zoom: inherit;
+    }
 }
 
 body {
@@ -109,8 +115,8 @@ textarea{
         gap: 2rem;
     }
     &_right{
-        margin: 0px 0px 0px auto;
-        max-width: 1600px;
+        /*margin: 0px 0px 0px auto;*/
+        max-width: 1800px;
     }
 }
 
@@ -120,7 +126,7 @@ textarea{
 
 .text{
     color: $textColor;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 400;
 
     &_overhead{
@@ -219,7 +225,54 @@ textarea{
         outline: none;
     }
 }
+.uk-modal{
+    z-index: 100000;
+}
+.button.uk-modal-close{
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    padding-bottom: 12px;
+}
+.modal-request .uk-modal-body{
+    border-radius: 30px;
+}
+@include media($mobile) {
+    .button.uk-modal-close{
+        padding: 10px;
+        width: 30px;
+        height: 30px;
+        border-radius: 8px;
+        right: 20px;
+        top: 20px;
+        padding-bottom: 8px;
+    }
+}
 
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    &__input {
+        padding: 25px;
+        border: 1px solid #858585;
+        background-color: #FFFFFF;
+        border-radius: 15px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        width: 100%;
+    }
+
+}
+
+.button-form{
+    width: 100%;
+}
 .slider {
     &_centered {
         img {

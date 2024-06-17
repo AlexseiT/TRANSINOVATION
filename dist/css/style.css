@@ -197,6 +197,7 @@ body {
 
 html {
     font-size: 12px;
+    zoom: 85%;
 }
 
 body {
@@ -308,8 +309,8 @@ textarea:focus-visible {
 }
 
 .container_right {
-    margin: 0px 0px 0px auto;
-    max-width: 1600px;
+    /*margin: 0px 0px 0px auto;*/
+    max-width: 1800px;
 }
 
 .section-title {
@@ -318,7 +319,7 @@ textarea:focus-visible {
 
 .text {
     color: #000000;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 400;
 }
 
@@ -416,6 +417,57 @@ textarea:focus-visible {
 
 .btn:focus {
     outline: none;
+}
+
+.uk-modal {
+    z-index: 100000;
+}
+
+.button.uk-modal-close {
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    padding-bottom: 12px;
+}
+
+.modal-request .uk-modal-body {
+    border-radius: 30px;
+}
+
+.modal-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-form__input {
+    padding: 25px;
+    border: 1px solid #858585;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+}
+
+.button-form {
+    width: 100%;
 }
 
 .slider_centered img {
@@ -694,7 +746,7 @@ textarea:focus-visible {
 .header {
     position: fixed;
     width: 100%;
-    background-color: white;
+    background-color: #F2F2F2;
     z-index: 99999;
 }
 
@@ -884,7 +936,7 @@ textarea:focus-visible {
 .hero {
     background: url(../images/hero1.jpg) no-repeat 45% 50%;
     background-size: cover !important;
-    height: 90vh;
+    height: 100vh;
     position: relative;
     margin-top: 0px;
 }
@@ -932,27 +984,6 @@ textarea:focus-visible {
 }
 
 @-webkit-keyframes swing {
-
-    /* 0%
-   {
-       transform: translateX(0) rotate(0);  
-   }
-   25%
-   {
-       transform: translateX(-50px) rotate(10deg);  
-   }
-   50%
-   {
-       transform: translateX(0) rotate(0);  
-   }
-   75%
-   {
-       transform: translateX(50px) rotate(-10deg);  
-   }
-   100%
-   {
-       transform: translateX(0) rotate(0);  
-   }*/
     0% {
         -webkit-transform: translateX(-30px) rotate(2deg);
         transform: translateX(-30px) rotate(2deg);
@@ -970,27 +1001,6 @@ textarea:focus-visible {
 }
 
 @keyframes swing {
-
-    /* 0%
-   {
-       transform: translateX(0) rotate(0);  
-   }
-   25%
-   {
-       transform: translateX(-50px) rotate(10deg);  
-   }
-   50%
-   {
-       transform: translateX(0) rotate(0);  
-   }
-   75%
-   {
-       transform: translateX(50px) rotate(-10deg);  
-   }
-   100%
-   {
-       transform: translateX(0) rotate(0);  
-   }*/
     0% {
         -webkit-transform: translateX(-30px) rotate(2deg);
         transform: translateX(-30px) rotate(2deg);
@@ -1333,6 +1343,22 @@ textarea:focus-visible {
     transition: 0.3s;
     border: 1px solid #FFFFFF;
     text-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2784313725);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2784313725);
+}
+
+.map__sity.text_small {
+    font-weight: 600;
+}
+
+.map__sity.text_min {
+    font-weight: 500;
 }
 
 .map__sity:hover {
@@ -1500,6 +1526,7 @@ textarea:focus-visible {
     background-color: #F2F2F2;
     border-radius: 23px;
     position: absolute;
+    cursor: default;
 }
 
 .clients__card_dark {
@@ -1690,6 +1717,159 @@ textarea:focus-visible {
     cursor: pointer;
 }
 
+.footer__block_min-gap {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+    gap: 40px;
+}
+
+.transportation-block {
+    margin-top: 150px;
+}
+
+.transportation-block__hero {
+    position: relative;
+    height: 630px;
+}
+
+.transportation-block__wrapper {
+    overflow: hidden;
+    border-radius: 50px;
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+}
+
+.transportation-block__hero-content {
+    position: absolute;
+    z-index: 2;
+    bottom: 70px;
+    left: 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.transportation-block__hero-button {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.transportation-block__img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.transportation-block__title {
+    color: #FFFFFF;
+}
+
+.transportation-block__content {
+    margin-top: 50px;
+}
+
+.transportation-infograph__content {
+    margin-top: 70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 25px;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+.transportation-infograph__content_mobile {
+    display: none;
+}
+
+.transportation-infograph__column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.transportation-infograph__card {
+    background-color: #F2F2F2;
+    border-radius: 50px;
+    padding: 32px;
+    height: 100%;
+}
+
+.transportation-infograph__number {
+    background-color: #3F9755;
+    width: 65px;
+    height: 65px;
+    border-radius: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.transportation-infograph__number-text {
+    color: #FFFFFF;
+    font-family: Actay Wide Bd;
+    padding-top: 8px;
+}
+
+.block-404 {
+    height: 600px;
+    margin-top: 180px;
+}
+
+.block-404__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.block-404__title {
+    color: #3F9755;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.block-404__text {
+    color: #000000;
+}
+
+.block-404__text_accent {
+    color: #3F9755;
+}
+
 @media (max-width: 1440.98px) {
     .text_min {
         font-size: 1.1rem;
@@ -1735,6 +1915,10 @@ textarea:focus-visible {
 }
 
 @media (max-width: 1200.98px) {
+    html {
+        zoom: inherit;
+    }
+
     .section {
         margin-top: 65px;
     }
@@ -1811,6 +1995,10 @@ textarea:focus-visible {
     .header__logo-wrapper {
         width: 50px;
         height: 50px;
+    }
+
+    .hero {
+        height: 100vh;
     }
 
     .hero__container {
@@ -1896,6 +2084,24 @@ textarea:focus-visible {
         top: 120px;
         left: 50px;
     }
+
+    .transportation-block {
+        margin-top: 90px;
+    }
+
+    .transportation-block__hero {
+        height: 500px;
+    }
+
+    .block-404 {
+        height: 400px;
+        margin-top: 120px;
+    }
+
+    .block-404__title {
+        color: #3F9755;
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 1000.98px) {
@@ -1908,6 +2114,16 @@ textarea:focus-visible {
 }
 
 @media (max-width: 640.98px) {
+    .button.uk-modal-close {
+        padding: 10px;
+        width: 30px;
+        height: 30px;
+        border-radius: 8px;
+        right: 20px;
+        top: 20px;
+        padding-bottom: 8px;
+    }
+
     .section {
         margin-top: 50px;
     }
@@ -1947,7 +2163,9 @@ textarea:focus-visible {
     }
 
     .hero__object-container {
-        display: none;
+        /*display: none;*/
+        top: 324px;
+        right: -20px;
     }
 
     .infograph__block-img {
@@ -1970,6 +2188,12 @@ textarea:focus-visible {
         -webkit-box-pack: left;
         -ms-flex-pack: left;
         justify-content: left;
+    }
+
+    .map__sity {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
     }
 
     .map__title-block {
@@ -1998,11 +2222,19 @@ textarea:focus-visible {
     }
 
     .map__wrapper-link {
-        display: -ms-grid;
-        display: grid;
-        -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+        /*
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;*/
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
         gap: 15px;
+        width: 100%;
+        overflow-x: scroll;
+        padding-bottom: 14px;
+        padding-left: 7px;
+        padding-right: 7px;
     }
 
     .map__title-block {
@@ -2090,6 +2322,73 @@ textarea:focus-visible {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
+    }
+
+    .transportation-block {
+        margin-top: 0px;
+    }
+
+    .transportation-block__wrapper {
+        border-radius: 25px;
+    }
+
+    .transportation-block__hero-content {
+        gap: 20px;
+    }
+
+    .transportation-block__hero {
+        height: 400px;
+    }
+
+    .transportation-block__content {
+        margin-top: 30px;
+    }
+
+    .transportation-block__hero-button {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        padding: 20px;
+    }
+
+    .transportation-infograph__number {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+    }
+
+    .transportation-infograph__number-text {
+        padding-top: 5px;
+    }
+
+    .transportation-infograph__content {
+        margin-top: 30px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .transportation-infograph__content_mobile {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .transportation-infograph__content_default {
+        display: none;
+    }
+
+    .transportation-infograph__card {
+        border-radius: 25px;
+    }
+
+    .transportation-infograph__card-title {
+        margin-top: 20px;
+    }
+
+    .block-404 {
+        margin-top: 30px;
     }
 }
 

@@ -390,35 +390,39 @@ function MapPathInit(){
 }
 function LinckMapInit(){
     let elementsMap = document.querySelectorAll(".map__sity");
-    let mapWidthNow = parseFloat(document.querySelector('.map__img').getBoundingClientRect().width);
-    let mapHeightNow = parseFloat(document.querySelector('.map__img').getBoundingClientRect().height);
-    let mapWidth = 1364;
-    let mapHeight = 963;
-    let coeffX = mapWidthNow / mapWidth;
-    let coeffY = mapHeightNow / mapHeight;
+    let map = document.querySelector('.map__img');
+    if (map){
+        let mapWidthNow = parseFloat(map.getBoundingClientRect().width);
+        let mapHeightNow = parseFloat(map.getBoundingClientRect().height);
+        let mapWidth = 1364;
+        let mapHeight = 963;
+        let coeffX = mapWidthNow / mapWidth;
+        let coeffY = mapHeightNow / mapHeight;
 
-    elementsMap.forEach((objLink) => {
-        let obj = document.querySelector("."+objLink.id);
-        let coordinateX = (obj.getAttribute('cx') * coeffX);
-        let coordinateY = (obj.getAttribute('cy') * coeffY);
-        if (objLink.classList.contains("map__sityRussia") && objLink.id != "circle_nsk" && objLink.id != "circle_nau" && objLink.id != 'circle_nahod'){
-            coordinateX -= (parseFloat(objLink.getBoundingClientRect().width) / 2) * coeffX;
-            coordinateY -=  55 * coeffX;
-        }
-        if(objLink.id == "circle_nsk" || objLink.id == "circle_nau" || objLink.id == 'circle_nahod'){
-            coordinateX -= (parseFloat(objLink.getBoundingClientRect().width) / 2)* coeffX;
-            coordinateY +=  6 * coeffX;
-        }
-        if (objLink.classList.contains("map__sityChina")){
-            coordinateX -= (parseFloat(objLink.getBoundingClientRect().width) - 0)* coeffX;
-            coordinateY +=  6 * coeffX;
-        }
-        objLink.style.left =  coordinateX + "px";
-        objLink.style.top = coordinateY + "px";
-    });
-
-
-
+        elementsMap.forEach((objLink) => {
+            let obj = document.querySelector("."+objLink.id);
+            let coordinateX = (obj.getAttribute('cx') * coeffX);
+            let coordinateY = (obj.getAttribute('cy') * coeffY);
+            if (objLink.classList.contains("map__sityRussia") && objLink.id != "circle_nsk" && objLink.id != "circle_nau" && objLink.id != 'circle_nahod'){
+                coordinateX -= (parseFloat(objLink.getBoundingClientRect().width) / 2 + 20 ) * coeffX;
+                coordinateY -=  55 * coeffX;
+            }
+            if(objLink.id == "circle_nau" || objLink.id == 'circle_nahod'){
+                coordinateX -= (parseFloat(objLink.getBoundingClientRect().width) / 2 + 20)* coeffX;
+                coordinateY +=  6 * coeffX;
+            }
+            if(objLink.id == "circle_nsk"){
+                coordinateX -= (parseFloat(objLink.getBoundingClientRect().width) / 2 + 40)* coeffX;
+                coordinateY +=  6 * coeffX;
+            }
+            if (objLink.classList.contains("map__sityChina")){
+                coordinateX -= (parseFloat(objLink.getBoundingClientRect().width) - 0)* coeffX;
+                coordinateY +=  6 * coeffX;
+            }
+            objLink.style.left =  coordinateX + "px";
+            objLink.style.top = coordinateY + "px";
+        });
+    }
 }
 function TippyRussiaCityInit(){
     let obj = document.querySelector(".circle_msk");

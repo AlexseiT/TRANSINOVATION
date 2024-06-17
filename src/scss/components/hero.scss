@@ -2,7 +2,7 @@
 
     background: url(../images/hero1.jpg) no-repeat 45% 50%;
     background-size: cover !important;
-    height: 90vh;
+    height: 100vh;
     position: relative;
     margin-top: 0px;
     &__container {
@@ -64,6 +64,7 @@
 }
 @include media($tablet) {
     .hero {
+        height: 100vh;
         &__container {
             top: 100px;
         }
@@ -101,33 +102,15 @@
 
         }
         &__object-container{
-            display: none;
+            /*display: none;*/
+            top: 324px;
+            right: -20px;
         }
     }
 }
 
 @keyframes swing
 {
-   /* 0%
-    {
-        transform: translateX(0) rotate(0);  
-    }
-    25%
-    {
-        transform: translateX(-50px) rotate(10deg);  
-    }
-    50%
-    {
-        transform: translateX(0) rotate(0);  
-    }
-    75%
-    {
-        transform: translateX(50px) rotate(-10deg);  
-    }
-    100%
-    {
-        transform: translateX(0) rotate(0);  
-    }*/
     0%
     {
         transform: translateX(-30px) rotate(2deg);  

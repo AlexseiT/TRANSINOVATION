@@ -1,0 +1,43 @@
+.block-404 {
+    height: 600px;
+    margin-top: 180px;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+
+        color: $green;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    &__text {
+        color: $black;
+        &_accent {
+            color: $green;
+        }
+    }
+}
+@include media($tablet) {
+    .block-404 {
+        height: 400px;
+        margin-top: 120px;
+        &__title {
+    
+            color: $green;
+            margin-bottom: 20px;
+    
+        }
+    
+    }
+}
+@include media($mobile) {
+    .block-404 {
+        margin-top: 30px;
+    
+    }
+}

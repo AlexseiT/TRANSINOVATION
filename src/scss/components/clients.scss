@@ -20,6 +20,7 @@
         background-color: $overLight;
         border-radius: 23px;
         position: absolute;
+        cursor: default;
         &_dark{
             background-color: $darkGray;
         }
