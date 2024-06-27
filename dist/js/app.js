@@ -871,7 +871,60 @@ function InitContactMapNSK(){
         map.geoObjects.add(placemark);
     }
 }
-function TerminalList(){
+function EdditTerminal(map, block, arrayTerminal){
+    arrayTerminal.forEach(element => {
+        let string =  element.split("|");
+        let adress = string[0];
+        let name = string[1];
+        let lon = string[2];
+        let lat = string[3];
+        let card = document.createElement("div");
+        card.classList = "terminal__card";
+        card.setAttribute("lon",lon);
+        card.setAttribute("lat",lat);
+        let nameAdress = document.createElement("span");
+        nameAdress.classList = "terminal__adress text_standart";
+        nameAdress.innerText = adress;
+        let nameCard = document.createElement("span");
+        nameCard.classList = "terminal__name text_small";
+        nameCard.innerText = name;
+        card.appendChild(nameAdress);
+        card.appendChild(nameCard);
+        block.appendChild(card);
+        let placemark = new ymaps.Placemark([lon,lat], {
+            iconCaption: name
+        }, {
+            preset: 'islands#greenDotIcon'
+        });
+        map.geoObjects.add(placemark);
+        card.addEventListener('click', function (event) {
+            map.setZoom(18);
+            map.panTo([parseFloat(lon),parseFloat(lat)]);
+        })
+    });
+}
+let listTerminals = ['г. Новосибирск, Восточное шоссе, 2|АО "Евросиб-СПб-ТС"|55.125731|83.006803', 
+    'г. Новосибирск, ул. Толмачевская, 1|ПАО "Трансконтейнер"|54.965471|82.827858', 
+    'г. Новосибирск, ул. Тайгинская, 6 к. 1|ООО "ФИТ"|55.106551|82.990929', 
+    'с. Прокудское, ст. ЧИК, 3307 км|ТЛЦ Сибирский|54.999000|82.536696',
+    'г. Новосибирск, ул Молодости 53 Г|Чемской пл 1|54.861668|82.958922',
+    'г. Новосибирск, ул Варшавская 1 А корп. 1|Чемской пл 2|54.855921|82.957701',
+    'г. Новосибирск, ст. Сеятель, ул.Плотинная, 12|ООО «Сервис-Эклон»|54.858554|83.026116',
+    'г. Новосибирск, ул 2-я Станционная, 21, корпус 2|ТГ Континент|55.011732|82.823717',
+    'г. Новосибирск, Толмачевское 53Г|ТК Терминал|54.973646|82.781352',
+    'г. Новосибирск, Тайгинская 7/12|ТК Терминал|55.110486|82.993031',
+    'г. Новосибирск, ул Аэропорт, 2/3|ТЕРМИНАЛ-СЕВЕР|55.088815|82.921005',
+    'г. Новосибирск, Толмачёвское шоссе, д 45, сток ПАО "ТрансКонтейнер"|ООО «ТК 54 РЕГИОН»|54.970029|82.788656',
+    'г. Новосибирск, Толмачёвское шоссе, 27 к31|Азимут|54.961915|82.822055',
+    'г. Новосибирск, Новосибирский р-н, Толмачевская складская зона 5а|Терминал ТрейдТранс|54.963801|82.788108',
+    'Новосибирский район, Адрес НСО, Пашинский переезд, Восточное шоссе, 2. Сток Евросиб|Терминал ЕТН|55.125731|83.006803',
+    'г. Новосибирск, Станционная, 38/4|Терминал НГТ|54.998803|82.835548',
+    'г. Новосибирск, ул. Толмачёвская складская зона 1|Терминал ОБЬ|54.963967|82.788189',
+    'г. Обь, Октябрьская 8/2|Терминал Константа|54.988949|82.694171',
+    'г. Новосибирск, Петухова 47А|Терминал Ross|54.954342|82.861150',
+    'г. Новосибирск, ул. Пасечная, 23|Терминал Восточный|55.147695|82.988477',
+];
+function TerminalList(terminals){
     let block = document.querySelector(".terminal__content-list");
 
     //map.addChild(new YMapDefaultSchemeLayer());
@@ -882,64 +935,50 @@ function TerminalList(){
             center: [54.995963, 82.904236],
             zoom: 11,
         });
-        let arrayTerminal = ['г. Новосибирск, Восточное шоссе, 2|АО "Евросиб-СПб-ТС"|55.125731|83.006803', 
-            'г. Новосибирск, ул. Толмачевская, 1|ПАО "Трансконтейнер"|54.965471|82.827858', 
-            'г. Новосибирск, ул. Тайгинская, 6 к. 1|ООО "ФИТ"|55.106551|82.990929', 
-            'с. Прокудское, ст. ЧИК, 3307 км|ТЛЦ Сибирский|54.999000|82.536696',
-            'г. Новосибирск, ул Молодости 53 Г|Чемской пл 1|54.861668|82.958922',
-            'г. Новосибирск, ул Варшавская 1 А корп. 1|Чемской пл 2|54.855921|82.957701',
-            'г. Новосибирск, ст. Сеятель, ул.Плотинная, 12|ООО «Сервис-Эклон»|54.858554|83.026116',
-            'г. Новосибирск, ул 2-я Станционная, 21, корпус 2|ТГ Континент|55.011732|82.823717',
-            'г. Новосибирск, Толмачевское 53Г|ТК Терминал|54.973646|82.781352',
-            'г. Новосибирск, Тайгинская 7/12|ТК Терминал|55.110486|82.993031',
-            'г. Новосибирск, ул Аэропорт, 2/3|ТЕРМИНАЛ-СЕВЕР|55.088815|82.921005',
-            'г. Новосибирск, Толмачёвское шоссе, д 45, сток ПАО "ТрансКонтейнер"|ООО «ТК 54 РЕГИОН»|54.970029|82.788656',
-            'г. Новосибирск, Толмачёвское шоссе, 27 к31|Азимут|54.961915|82.822055',
-            'г. Новосибирск, Новосибирский р-н, Толмачевская складская зона 5а|Терминал ТрейдТранс|54.963801|82.788108',
-            'Новосибирский район, Адрес НСО, Пашинский переезд, Восточное шоссе, 2. Сток Евросиб|Терминал ЕТН|55.125731|83.006803',
-            'г. Новосибирск, Станционная, 38/4|Терминал НГТ|54.998803|82.835548',
-            'г. Новосибирск, ул. Толмачёвская складская зона 1|Терминал ОБЬ|54.963967|82.788189',
-            'г. Обь, Октябрьская 8/2|Терминал Константа|54.988949|82.694171',
-            'г. Новосибирск, Петухова 47А|Терминал Ross|54.954342|82.861150',
-            'г. Новосибирск, ул. Пасечная, 23|Терминал Восточный|55.147695|82.988477',
-        ];
-        //let averageLon = 0;
-        //let averageLat = 0;
-        //let index = 0;
-        arrayTerminal.forEach(element => {
-            let string =  element.split("|");
-            let adress = string[0];
-            let name = string[1];
-            let lon = string[2];
-            let lat = string[3];
-            let card = document.createElement("div");
-            card.classList = "terminal__card";
-            card.setAttribute("lon",lon);
-            card.setAttribute("lat",lat);
-            let nameAdress = document.createElement("span");
-            nameAdress.classList = "terminal__adress";
-            nameAdress.innerText = adress;
-            let nameCard = document.createElement("span");
-            nameCard.classList = "terminal__name";
-            nameCard.innerText = name;
-            card.appendChild(nameAdress);
-            card.appendChild(nameCard);
-            block.appendChild(card);
-            //index+=1;
-            //averageLon+=parseInt(lon);
-            //averageLat+=parseInt(lat);
-            let placemark = new ymaps.Placemark([lon,lat], {
-                iconCaption: name
-            }, {
-                preset: 'islands#greenDotIcon'
+        InitTerminalInput(map);
+        EdditTerminal(map, block, terminals);
+    }
+}
+function InitTerminalInput(map){
+    let input = document.querySelector(".terminal__search");
+    if (input){
+        let block = document.querySelector(".terminal__content-list");
+        input.addEventListener('input', function (event)
+        {
+            let value = input.value;
+            let terminals = [];
+            listTerminals.forEach(terminal => {
+                let check = terminal.toLowerCase().includes(value.toLowerCase());
+                if (check){
+                    terminals.push(terminal);
+                }
             });
-            map.geoObjects.add(placemark);
-            card.addEventListener('click', function (event) {
-                map.setCenter([lon,lat]);
-            })
+            block.innerHTML = "";
+            terminals.forEach(element => {
+                let string =  element.split("|");
+                let adress = string[0];
+                let name = string[1];
+                let lon = string[2];
+                let lat = string[3];
+                let card = document.createElement("div");
+                card.classList = "terminal__card";
+                card.setAttribute("lon",lon);
+                card.setAttribute("lat",lat);
+                let nameAdress = document.createElement("span");
+                nameAdress.classList = "terminal__adress text_standart";
+                nameAdress.innerText = adress;
+                let nameCard = document.createElement("span");
+                nameCard.classList = "terminal__name text_small";
+                nameCard.innerText = name;
+                card.appendChild(nameAdress);
+                card.appendChild(nameCard);
+                block.appendChild(card);
+                card.addEventListener('click', function (event) {
+                    map.setZoom(18);
+                    map.panTo([parseFloat(lon),parseFloat(lat)]);
+                })
+            });
         });
-        //averageLon = averageLon/index;
-        //averageLat = averageLat/index;
     }
 }
 function InitAnimCircleContainer(){
@@ -1057,7 +1096,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         InitNumberContainer();
     }
     setTimeout(() => {
-        TerminalList();
+        TerminalList(listTerminals);
         InitContactMapNSK();
         InitContactMapMSK();
     }, 1000);

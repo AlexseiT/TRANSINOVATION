@@ -2029,15 +2029,106 @@ textarea:focus-visible {
     margin-top: 30px;
   }
 }
+.terminal__container {
+  position: relative;
+}
 .terminal__map {
   width: 100% !important;
-  height: 120vh !important;
+  height: 115vh !important;
   margin-top: 50px;
 }
 .terminal__map .ymaps-2-1-79-map {
   width: 100% !important;
-  height: 120vh !important;
+  height: 115vh !important;
 }
+.terminal__content {
+  z-index: 10000;
+  position: absolute;
+  background-color: #FFFFFF;
+  width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: 20px 20px 0 0;
+  bottom: 0;
+  left: 15%;
+}
+.terminal__content_up {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px 20px 0 20px;
+}
+.terminal__button {
+  padding: 20px 35px;
+}
+.terminal__search {
+  border: 1px solid #8B8B8B;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  padding: 10px 35px;
+  font-weight: 500;
+}
+.terminal__search::placeholder {
+  color: #8B8B8B;
+  font-weight: 500;
+}
+.terminal__content-list {
+  height: 80vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+.terminal__adress {
+  width: 60%;
+}
+.terminal__card {
+  position: relative;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #000000;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.terminal__card:before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 1px;
+  transform: rotate(45deg);
+  transition: 0.3s;
+  background-color: #000000;
+  right: 40px;
+  top: 42%;
+  border-radius: 50px;
+}
+.terminal__card:after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 1px;
+  transform: rotate(-45deg);
+  transition: 0.3s;
+  background-color: #000000;
+  right: 40px;
+  top: 47%;
+  border-radius: 50px;
+}
+.terminal__card:hover {
+  background-color: #3F9755;
+  color: #FFFFFF;
+}
+.terminal__card:hover:after {
+  background-color: #FFFFFF;
+}
+.terminal__card:hover:before {
+  background-color: #FFFFFF;
+}
+
 .contacts__block {
   display: flex;
   gap: 50px;

@@ -1,28 +1,111 @@
 .terminal {
 
     &__container {
+        position: relative;
     }
 
     &__map {
         width: 100% !important;
-        height: 120vh !important;
+        height: 115vh !important;
         margin-top: 50px;
         .ymaps-2-1-79-map{
             width: 100% !important;
-            height: 120vh !important;
+            height: 115vh !important;
         }
     }
 
     &__content {
+        z-index: 10000;
+        position: absolute;
+        background-color: $white;
+        width: 460px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        border-radius: 20px 20px 0 0;
+        bottom: 0;
+        left: 15%;
+        &_up{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 20px 20px 0 20px;
+        }
     }
 
     &__button {
+        padding: 20px 35px;
     }
 
     &__search {
+        border: 1px solid #8B8B8B;
+        background-color: $white;
+        border-radius: 8px;
+        padding: 10px 35px;
+        font-weight: 500;
     }
-
+    &__search::placeholder{
+        color: #8B8B8B;
+        font-weight: 500;
+    }
     &__content-list {
+        height: 80vh;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    &__adress{
+        width: 60%;
+
+    }
+    &__name{
+
+    }
+    &__card{
+        position: relative;
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding-top: 30px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid $black;
+        transition: .3s;
+        cursor: pointer;
+    }
+    &__card:before{
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 1px;
+        transform: rotate(45deg);
+        transition: .3s;
+        background-color: $black;
+        right: 40px;
+        top: 42%;
+        border-radius: 50px;
+    }
+    &__card:after{
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 1px;
+        transform: rotate(-45deg);
+        transition: .3s;
+        background-color: $black;
+        right: 40px;
+        top: 47%;
+        border-radius: 50px;
+    }
+    &__card:hover{
+        background-color: $green;
+        color: $white;
+    }
+    &__card:hover:after{
+        background-color: $white;
+    }
+    &__card:hover:before{
+        background-color: $white;
     }
 }
 
