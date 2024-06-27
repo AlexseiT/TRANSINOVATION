@@ -1,135 +1,134 @@
 <!doctype html>
-<html lang="ru">
-
-<head>
+    <html lang="ru">
+    <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
     <!-- UIkit CSS -->
-    <link rel="stylesheet" href="static/uikit-3.16.24.min.css?_v=20240617120154">
-    <link rel="stylesheet" href="css/style.css?_v=20240617120154">
-
+    <link rel="stylesheet" href="static/uikit-3.16.24.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--<script src="https://api-maps.yandex.ru/v3/?apikey=a814767b-9ac1-4885-b50e-23ea98324ad8&lang=ru_RU"></script>-->
+    <script src="https://api-maps.yandex.ru/2.1-dev/?apikey=a814767b-9ac1-4885-b50e-23ea98324ad8&lang=ru_RU" type="text/javascript">
     <title>SITE</title>
 </head>
-
-<body>
-    <header class="header" uk-sticky="media: (max-width: 768px)">
-        <div class="container header__container">
-            <div class="header__logo">
-                <a href="/TR/" class="link header__logo-wrapper"><img src="images/icons/logo.svg" class="header__logo-icon" alt="Trans inovation"></a>
-                <span class="header__time-text text_mini">г. Новосибирск<br>Пн-Пт 08:00 - 18:00</span>
-            </div>
-            <div class="header__menu">
-                <ul class="text_min header__menu-list">
-                    <li class="link header__menu-link"><a href="/TR/">Главная</a></li>
-                    <li class="link header__menu-link"><a href="/TR/404.html">О компании</a></li>
-                    <li class="link header__menu-link"><a href="/TR/404.html">Услуги</a></li>
-                    <li class="link header__menu-link"><a href="/TR/404.html">Тарифы</a></li>
-                    <li class="link header__menu-link"><a href="/TR/404.html">Справочники</a></li>
-                    <li class="link header__menu-link"><a href="/TR/404.html">Контакты</a></li>
-                </ul>
-            </div>
-            <div class="text_min header__buttons">
-                <a href="tel:+78001012832" class="button header__button">8 (800) 101-28-32</a>
-                <a class="button header__button header__button_accent" uk-toggle="target: #formRequest">Оставить заявку</a>
-                <a href="https://aflk.coralway.ru/cabinet/ru_RU/" class="button header__button header__button_icon" target="_blank"><img src="images/icons/exit.svg" class="header__button-icon" alt=""></a>
-                <a href="#header__burger-menu" class="header__burger-button" uk-toggle>
-                    <div class="header__burger-line"></div>
-                    <div class="header__burger-line"></div>
-                    <div class="header__burger-line"></div>
-                </a>
-            </div>
+    <body>
+        <header class="header" uk-sticky="media: (max-width: 768px)">
+    <div class="header__container container">
+        <div class="header__logo">
+            <a href="/TR/" class="header__logo-wrapper link"><img src="images/icons/logo.svg" class="header__logo-icon" alt="Trans inovation"></a>
+            <span class="text_mini header__time-text">г. Новосибирск<br>Пн-Пт 08:00 - 18:00</span>
         </div>
-    </header>
-    <div id="header__burger-menu" class="header__menu burger__menu" uk-modal-full uk-modal>
-        <ul class="text_min header__menu-list burger__menu-list">
-            <li class="link header__menu-link"><a href="/TR/404.html">Главная</a></li>
-            <li class="link header__menu-link"><a href="/TR/404.html">О компании</a></li>
-            <li class="link header__menu-link"><a href="/TR/404.html">Услуги</a></li>
-            <li class="link header__menu-link"><a href="/TR/404.html">Тарифы</a></li>
-            <li class="link header__menu-link"><a href="/TR/404.html">Справочники</a></li>
-            <li class="link header__menu-link"><a href="/TR/404.html">Контакты</a></li>
-        </ul>
-        <div class="text_min header__burger-menu-column">
-            <a href="tel:+78001012832" class="button header__button mobile">8 (800) 101-28-32</a>
-            <a class="button header__button header__button_accent mobile" uk-toggle="target: #formRequest">Оставить заявку</a>
-            <span class="mobile header__time-text text_mini">г. Новосибирск<br>Пн-Пт 08:00 - 17:00</span>
+        <div class="header__menu">
+            <ul class="text_min header__menu-list">
+                <li class="header__menu-link link"><a href="/TR/">Главная</a></li>
+                <li class="header__menu-link link"><a href="/TR/404.html">О компании</a></li>
+                <li class="header__menu-link link"><a href="/TR/404.html">Услуги</a></li>
+                <li class="header__menu-link link"><a href="/TR/404.html">Тарифы</a></li>
+                <li class="header__menu-link link"><a href="/TR/404.html">Справочники</a></li>
+                <li class="header__menu-link link"><a href="/TR/404.html">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="text_min header__buttons">
+            <a href="tel:+78001012832" class="button header__button">8 (800) 101-28-32</a>
+            <a class="button header__button header__button_accent" uk-toggle="target: #formRequest">Оставить заявку</a>
+            <a href="https://aflk.coralway.ru/cabinet/ru_RU/" class="button header__button header__button_icon" target="_blank"><img src="images/icons/exit.svg" class="header__button-icon" alt=""></a>
+            <a href="#header__burger-menu" class="header__burger-button" uk-toggle>
+                <div class="header__burger-line"></div>
+                <div class="header__burger-line"></div>
+                <div class="header__burger-line"></div>
+            </a>
+        </div>
+    </div>
+</header>
+<div id="header__burger-menu" class="header__menu burger__menu" uk-modal-full uk-modal>
+    <ul class="text_min header__menu-list burger__menu-list">
+        <li class="header__menu-link link"><a href="/TR/404.html">Главная</a></li>
+        <li class="header__menu-link link"><a href="/TR/404.html">О компании</a></li>
+        <li class="header__menu-link link"><a href="/TR/404.html">Услуги</a></li>
+        <li class="header__menu-link link"><a href="/TR/404.html">Тарифы</a></li>
+        <li class="header__menu-link link"><a href="/TR/404.html">Справочники</a></li>
+        <li class="header__menu-link link"><a href="/TR/404.html">Контакты</a></li>
+    </ul>
+    <div class="text_min header__burger-menu-column">
+        <a href="tel:+78001012832" class="button header__button mobile">8 (800) 101-28-32</a>
+        <a class="button header__button header__button_accent mobile" uk-toggle="target: #formRequest">Оставить заявку</a>
+        <span class="text_mini header__time-text mobile">г. Новосибирск<br>Пн-Пт 08:00 - 17:00</span>
+    </div>
+</div>
+
+        <main class="main">
+            <section class="hero">
+    <div class="container hero__container">
+        <h1 class="text_large hero__title">Надежные логистические <br>решения для вашего бизнеса</h1>
+        <span class="text_standart hero__text">Одна из крупнейших транспортно-логистических <br>компаний в России</span>
+        <div class="hero__buttons">
+            <a href="#" class="text_small button button__accent" uk-toggle="target: #formRequest">Расчитать стоимость</a>
+            <a href="/TR/404.html" class="text_small button button__standart">Контейнерные перевозки<img src="images/min-arrow.svg" class="button__arrow" alt=""></a>
+        </div>
+    </div>
+    <img class="hero__object-container" src="images/container.png">
+</section>
+            <section id="delivery" class="delivery-block">
+    
+    <div class="container delivery-block__container">
+        <div class="section__head delivery-block__title-block">
+            <div class="section__number-block"><img class="section__number-icon" src="images/icons/number1.svg"></div>
+            <span class="text_standart section__head-text">Вы нам - четкое ТЗ, <br>а мы вам оптимальное <br>логистическое решение</span>
+            <h2 class="text_head section__title">Найдем наиболее <br>выгодный способ доставки</h2>
         </div>
     </div>
 
-    <main class="main">
-        <section class="hero">
-            <div class="container hero__container">
-                <h1 class="text_large hero__title">Надежные логистические <br>решения для вашего бизнеса</h1>
-                <span class="text_standart hero__text">Одна из крупнейших транспортно-логистических <br>компаний в России</span>
-                <div class="hero__buttons">
-                    <a href="#" class="text_small button button__accent" uk-toggle="target: #formRequest">Расчитать стоимость</a>
-                    <a href="/TR/404.html" class="text_small button button__standart">Контейнерные перевозки<img src="images/min-arrow.svg" class="button__arrow" alt=""></a>
-                </div>
-            </div>
-            <img class="hero__object-container" src="images/container.png">
-        </section>
-        <section id="delivery" class="delivery-block">
+    <div class="container container_right delivery-block__slider-block">
+        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
 
-            <div class="container delivery-block__container">
-                <div class="section__head delivery-block__title-block">
-                    <div class="section__number-block"><img class="section__number-icon" src="images/icons/number1.svg"></div>
-                    <span class="text_standart section__head-text">Вы нам - четкое ТЗ, <br>а мы вам оптимальное <br>логистическое решение</span>
-                    <h2 class="text_head section__title">Найдем наиболее <br>выгодный способ доставки</h2>
-                </div>
+            <div class="delivery-block__slider-buttons">
+                <a class="delivery-block__button delivery-block__button_prev white-slider-prev" uk-slidenav-previous uk-slider-item="previous"><img class="" src="images/icons/prev-icon.svg"></a>
+                <a class="delivery-block__button delivery-block__button_next white-slider-next" uk-slidenav-next uk-slider-item="next"><img class="" src="images/icons/next-icon.svg"></a>
             </div>
 
-            <div class="container container_right delivery-block__slider-block">
-                <div class="uk-light uk-position-relative uk-visible-toggle" tabindex="-1" uk-slider>
+            <div class="delivery-slider white-slider uk-slider-items uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m">
 
-                    <div class="delivery-block__slider-buttons">
-                        <a class="delivery-block__button delivery-block__button_prev white-slider-prev" uk-slidenav-previous uk-slider-item="previous"><img class="" src="images/icons/prev-icon.svg"></a>
-                        <a class="delivery-block__button delivery-block__button_next white-slider-next" uk-slidenav-next uk-slider-item="next"><img class="" src="images/icons/next-icon.svg"></a>
+                <div class="delivery-block__slide white-slide">
+                    <div class="delivery-block__slide_default">
+                        <div class="delivery-block__slide-up">
+                            <img class="delivery-block__icon uk-preserve" src="images/icons/d1.png">
+                            <a href="/TR/404.html" class="delivery-block__arrow-button"><img class="delivery-block__arrow-icon" src="images/icons/arrow-type-1.svg" uk-svg></a>
+                        </div>   
+                        <div class="delivery-block__slide-down">
+                            <h3 class="text_standart delivery-block__slide-title">Импортные и экспортные контейнерные перевозки</h3>
+                            <span class="text_small delivery-block__slide-text">Данная услуга предоставляет компаниям возможность эффективно и безопасно доставлять товары по всему миру.</span>
+                        </div>  
                     </div>
+                </div>
 
-                    <div class="delivery-slider uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m uk-slider-items white-slider">
+                <div class="delivery-block__slide white-slide green-active">
+                    <div class="delivery-block__slide_default">
+                        <div class="delivery-block__slide-up">
+                            <img class="delivery-block__icon uk-preserve" src="images/icons/d2.png">
+                            <a href="/TR/404.html" class="delivery-block__arrow-button"><img class="delivery-block__arrow-icon" src="images/icons/arrow-type-1.svg" uk-svg></a>
+                        </div>   
+                        <div class="delivery-block__slide-down">
+                            <h3 class="text_standart delivery-block__slide-title">Контейнерные перевозки по России ж/д и авто</h3>
+                            <span class="text_small delivery-block__slide-text">Комбинированный подход ж/д и автомобильного транспорта увеличивает возможности для доставки грузов различных объемов и характеристик.</span>
+                        </div>  
+                    </div>
+                </div>
 
-                        <div class="delivery-block__slide white-slide">
-                            <div class="delivery-block__slide_default">
-                                <div class="delivery-block__slide-up">
-                                    <img class="delivery-block__icon uk-preserve" src="images/icons/d1.png">
-                                    <a href="/TR/404.html" class="delivery-block__arrow-button"><img class="delivery-block__arrow-icon" src="images/icons/arrow-type-1.svg" uk-svg></a>
-                                </div>
-                                <div class="delivery-block__slide-down">
-                                    <h3 class="text_standart delivery-block__slide-title">Импортные и экспортные контейнерные перевозки</h3>
-                                    <span class="text_small delivery-block__slide-text">Данная услуга предоставляет компаниям возможность эффективно и безопасно доставлять товары по всему миру.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="delivery-block__slide white-slide green-active">
-                            <div class="delivery-block__slide_default">
-                                <div class="delivery-block__slide-up">
-                                    <img class="delivery-block__icon uk-preserve" src="images/icons/d2.png">
-                                    <a href="/TR/404.html" class="delivery-block__arrow-button"><img class="delivery-block__arrow-icon" src="images/icons/arrow-type-1.svg" uk-svg></a>
-                                </div>
-                                <div class="delivery-block__slide-down">
-                                    <h3 class="text_standart delivery-block__slide-title">Контейнерные перевозки по России ж/д и авто</h3>
-                                    <span class="text_small delivery-block__slide-text">Комбинированный подход ж/д и автомобильного транспорта увеличивает возможности для доставки грузов различных объемов и характеристик.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="delivery-block__slide white-slide">
-                            <div class="delivery-block__slide_default">
-                                <div class="delivery-block__slide-up">
-                                    <img class="delivery-block__icon uk-preserve" src="images/icons/d3.png">
-                                    <a href="/TR/404.html" class="delivery-block__arrow-button"><img class="delivery-block__arrow-icon" src="images/icons/arrow-type-1.svg" uk-svg></a>
-                                </div>
-                                <div class="delivery-block__slide-down">
-                                    <h3 class="text_standart delivery-block__slide-title">Доставку грузов из разных стран</h3>
-                                    <span class="text_small delivery-block__slide-text">Комплексный сервис, обеспечивающий надежную и эффективную транспортировку грузов со всех уголков мира.</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!--
+                <div class="delivery-block__slide white-slide">
+                    <div class="delivery-block__slide_default">
+                        <div class="delivery-block__slide-up">
+                            <img class="delivery-block__icon uk-preserve" src="images/icons/d3.png">
+                            <a href="/TR/404.html" class="delivery-block__arrow-button"><img class="delivery-block__arrow-icon" src="images/icons/arrow-type-1.svg" uk-svg></a>
+                        </div>   
+                        <div class="delivery-block__slide-down">
+                            <h3 class="text_standart delivery-block__slide-title">Доставку грузов из разных стран</h3>
+                            <span class="text_small delivery-block__slide-text">Комплексный сервис, обеспечивающий надежную и эффективную транспортировку грузов со всех уголков мира.</span>
+                        </div>  
+                    </div>
+                </div>
+<!--
                 <div class = "delivery-block__slide white-slide">
                     <div class = "delivery-block__slide_default">
                         <div class = "delivery-block__slide-up">
@@ -156,56 +155,56 @@
                     </div>
                 </div>
 -->
-                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+            <section id="advantages" class="infograph section">
+    
+    <div class="container infograph__container">
+        <div class="section__head infograph__title-block">
+            <div class="section__number-block"><img class="section__number-icon" src="images/icons/number2.svg"></div>
+            <h2 class="text_head section__title infograph__title">Почему нам<br>доверяют</h2>
+        </div>
+    </div>
+    <div class="infograph__block">
+        <div class="infograph__block-img">
+            <img class="infograph__back-img" src="images/trainBack.png">
+        </div>
+        <div class="container">
+            <div class="infograph__block-content">
+                <div class="infograph__card">
+                    <div class="infograph__card-icon-wrapper"><img class="infograph__card-icon" src="images/icons/card-icon.svg"></div>
+                    <h3 class="text_large infograph__card-title">Автопарк</h3>
+                    <span class="text_small infograph__card-text">Собственный парк <br>автотранспорта.</span>
+                </div>
+                <div class="infograph__card">
+                    <div class="infograph__card-icon-wrapper"><img class="infograph__card-icon" src="images/icons/card-icon1.svg"></div>
+                    <h3 class="text_large infograph__card-title">Филиалы</h3>
+                    <span class="text_small infograph__card-text">Москва, Краснодар, Красноярск.</span>
+                </div>
+                <div class="infograph__card">
+                    <div class="infograph__card-icon-wrapper"><img class="infograph__card-icon" src="images/icons/card-icon2.svg"></div>
+                    <h3 class="text_large infograph__card-title">Стоки</h3>
+                    <span class="text_small infograph__card-text">Свои стоки для хранения контейнеров.</span>
+                </div>
+                <div class="infograph__card">
+                    <div class="infograph__card-icon-wrapper"><img class="infograph__card-icon" src="images/icons/card-icon3.svg"></div>
+                    <h3 class="text_large infograph__card-title">Терминалы</h3>
+                    <span class="text_small infograph__card-text">Наличие грузовых <br>терминалов.</span>
                 </div>
             </div>
-        </section>
-        <section id="advantages" class="section infograph">
-
-            <div class="container infograph__container">
-                <div class="section__head infograph__title-block">
-                    <div class="section__number-block"><img class="section__number-icon" src="images/icons/number2.svg"></div>
-                    <h2 class="text_head section__title infograph__title">Почему нам<br>доверяют</h2>
-                </div>
-            </div>
-            <div class="infograph__block">
-                <div class="infograph__block-img">
-                    <img class="infograph__back-img" src="images/trainBack.png">
-                </div>
-                <div class="container">
-                    <div class="infograph__block-content">
-                        <div class="infograph__card">
-                            <div class="infograph__card-icon-wrapper"><img class="infograph__card-icon" src="images/icons/card-icon.svg"></div>
-                            <h3 class="text_large infograph__card-title">Автопарк</h3>
-                            <span class="text_small infograph__card-text">Собственный парк <br>автотранспорта.</span>
-                        </div>
-                        <div class="infograph__card">
-                            <div class="infograph__card-icon-wrapper"><img class="infograph__card-icon" src="images/icons/card-icon1.svg"></div>
-                            <h3 class="text_large infograph__card-title">Филиалы</h3>
-                            <span class="text_small infograph__card-text">Москва, Краснодар, Красноярск.</span>
-                        </div>
-                        <div class="infograph__card">
-                            <div class="infograph__card-icon-wrapper"><img class="infograph__card-icon" src="images/icons/card-icon2.svg"></div>
-                            <h3 class="text_large infograph__card-title">Стоки</h3>
-                            <span class="text_small infograph__card-text">Свои стоки для хранения контейнеров.</span>
-                        </div>
-                        <div class="infograph__card">
-                            <div class="infograph__card-icon-wrapper"><img class="infograph__card-icon" src="images/icons/card-icon3.svg"></div>
-                            <h3 class="text_large infograph__card-title">Терминалы</h3>
-                            <span class="text_small infograph__card-text">Наличие грузовых <br>терминалов.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="map" class="section map">
-            <div class="container map__container">
-                <div class="section__head map__title-block">
-                    <div class="section__number-block"><img class="section__number-icon" src="images/icons/number3.svg"></div>
-                    <h2 class="text_head section__title map__title">Мы работаем по всей <br>России и городам Китая</h2>
-                </div>
-                <div class="map__wrapper">
-                    <!--
+        </div>
+    </div>
+</section>
+            <section id="map" class="map section">
+    <div class="container map__container">
+        <div class="section__head map__title-block">
+            <div class="section__number-block"><img class="section__number-icon" src="images/icons/number3.svg"></div>
+            <h2 class="text_head section__title map__title">Мы работаем по всей <br>России и городам Китая</h2>
+        </div>
+        <div class="map__wrapper">
+<!--
     <svg class = "map__img" width="1364" height="963" viewBox="0 0 1364 963" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1079.9 409.649L1079.54 433.114L1109.85 478.56L1120.7 518.111L1139.81 553.289L1147.29 555.837L1153.68 550.703L1156.65 542.261L1129.32 513.319L1130.06 498.297L1136.05 495.749L1137.54 486.964L1084.01 413.338L1079.9 409.649Z" fill="#3F9755"/>
         <mask id="path-2-inside-1_2040_81" fill="white">
@@ -305,7 +304,7 @@
         </defs>
         </svg>
     -->
-                    <!--
+    <!--
     <svg class = "map__img" width="1386" height="972" viewBox="0 0 1386 972" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1088.9 418.649L1088.54 442.114L1118.85 487.56L1129.7 527.111L1148.81 562.289L1156.29 564.837L1162.68 559.703L1165.65 551.261L1138.32 522.319L1139.06 507.297L1145.05 504.749L1146.54 495.964L1093.01 422.338L1088.9 418.649Z" fill="url(#paint0_linear_2048_81)"/>
         <path d="M1088.9 418.649L1088.54 442.114L1118.85 487.56L1129.7 527.111L1148.81 562.289L1156.29 564.837L1162.68 559.703L1165.65 551.261L1138.32 522.319L1139.06 507.297L1145.05 504.749L1146.54 495.964L1093.01 422.338L1088.9 418.649Z" fill="url(#paint1_linear_2048_81)"/>
@@ -401,7 +400,7 @@
         </defs>
         </svg>
     -->
-                    <!--
+    <!--
     <svg class = "map__img" width="1364" height="963" viewBox="0 0 1364 963" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1079.9 409.649L1079.54 433.114L1109.85 478.56L1120.7 518.111L1139.81 553.289L1147.29 555.837L1153.68 550.703L1156.65 542.261L1129.32 513.319L1130.06 498.297L1136.05 495.749L1137.54 486.964L1084.01 413.338L1079.9 409.649Z" fill="url(#paint0_linear_2040_239)"/>
         <mask id="path-2-inside-1_2040_239" fill="white">
@@ -500,170 +499,171 @@
         </defs>
         </svg>
         -->
-                    <svg class="map__img" width="1447" height="963" viewBox="0 0 1447 963" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M31.454 680.143C29.4848 680.377 11.6642 693.303 3 699.736L4.18148 703.245L10.0889 705.195L11.7626 703.928L14.8148 702.076L20.5253 701.686C25.8026 701.686 30.2068 707.664 31.7493 710.654L38.2475 715.82L40.0197 714.066L43.958 712.408C51.736 715.138 52.2283 724.398 52.7206 726.153C53.1144 727.557 52.8847 732.262 52.7206 734.439L50.8499 734.926L50.3576 738.045L49.9638 748.378L47.4039 749.158L43.5641 750.62L47.4039 755.007L50.8499 756.371L54.1974 757.054L56.265 761.245H57.7419L61.4832 763L64.4369 761.83L68.9659 763L73.1011 761.245L76.1533 760.758L78.3193 755.884H81.9622L87.2789 750.62L89.6418 745.356L97.3214 739.897L110.613 735.998C112.385 735.803 115.989 735.413 116.225 735.413C116.461 735.413 118.949 736.518 120.163 737.071L121.443 735.413L123.412 731.417L126.76 728.98L128.335 727.615L132.569 728.492V727.615C132.438 726.998 132.254 725.666 132.569 725.276C132.884 724.886 134.079 724.333 134.637 724.106L132.569 722.351L139.166 716.6C136.146 716.568 131.998 716.522 139.559 716.6C147.121 716.678 152.424 721.896 154.131 724.496C154.82 724.366 156.415 724.008 157.282 723.618C158.365 723.131 158.857 724.203 159.251 724.106C159.566 724.028 161.22 722.189 162.007 721.279C164.731 721.929 170.317 723.209 170.869 723.131C171.558 723.034 170.869 721.376 172.739 721.279C174.61 721.182 175.201 720.694 176.382 720.499C177.327 720.343 179.205 719.654 180.025 719.329V718.55V717.282C179.894 716.795 179.415 715.645 178.548 714.943C177.465 714.066 178.548 712.798 178.548 711.921V709.874V707.827C179.04 707.502 180.242 706.677 181.108 705.975C182.191 705.097 181.108 703.245 181.896 701.491C182.526 700.087 183.274 702.076 183.569 703.245H188V698.079H185.046C183.707 698.079 181.863 696.584 181.108 695.837H178.548C177.682 695.837 176.743 695.252 176.382 694.96H170.869C168.604 694.96 166.635 695.837 164.272 695.837C162.382 695.837 163.484 697.332 164.272 698.079C163.812 699.216 162.441 701.491 160.629 701.491C158.365 701.491 158.069 699.639 157.282 699.639C156.494 699.639 155.115 698.079 155.115 695.837C155.115 694.043 154.197 695.09 153.737 695.837L152.753 698.079C152.031 698.436 150.429 699.249 149.799 699.639C149.169 700.029 149.011 701.036 149.011 701.491V703.245L145.27 705.097L138.772 706.852C133.258 706.657 114.551 677.121 113.961 677.121C113.488 677.121 109.038 674.782 106.872 673.612V667.568L104.41 666.496L101.555 663.766L96.0415 661.817L92.4971 665.424C91.8407 662.662 89.76 657.313 86.6881 658.015C83.6163 658.717 78.8444 655.903 76.8425 654.408H73.7903L68.6706 652.556L62.8616 648.365L59.4156 649.924L55.8712 647H54.3944V652.556L52.6221 654.408V657.138L50.3576 661.817V669.713C49.0777 670.46 46.38 672.072 45.8286 672.539C45.1394 673.124 37.8536 676.829 36.2783 677.121C35.0181 677.355 34.3748 674.879 34.2108 673.612C34.1123 675.691 33.4231 679.909 31.454 680.143Z" fill="#6BA179" stroke="url(#paint0_linear_2040_239)" stroke-width="4" />
-                        <path d="M1162.9 409.649L1162.54 433.114L1192.85 478.56L1203.7 518.111L1222.81 553.289L1230.29 555.837L1236.68 550.703L1239.65 542.261L1212.32 513.319L1213.06 498.297L1219.05 495.749L1220.54 486.964L1167.01 413.338L1162.9 409.649Z" fill="url(#paint1_linear_2040_239)" />
-                        <mask id="path-3-inside-1_2040_239" fill="white">
-                            <path d="M1237.75 218.586L1244.47 241.816L1257.92 245.675L1271.37 224.394L1263.69 209.875L1266.56 197.304H1286.73L1281.91 206.971L1283.82 241.816L1255.02 313.417L1257.88 328.891L1256.93 355.026L1310.68 433.389L1321.23 436.293L1322.18 372.448L1332.73 362.782L1321.19 337.641L1330.78 326.981L1309.65 298.937L1298.11 299.892L1294.29 253.47L1324.06 245.713L1325.97 232.15L1341.33 228.291L1349.96 236.047L1360.5 193.484L1378.73 162.535L1393.13 154.779L1405.63 155.734V141.215L1385.45 137.357L1357.6 114.126L1371.05 98.6522L1359.51 72.5181L1369.1 62.8516L1380.64 78.3257L1409.45 88.9856L1441.12 91.8894L1444.98 78.3639L1428.66 61.9346L1446.89 36.794L1405.59 22.2751L1395.04 43.5567L1381.59 26.134L1305.76 0L1233.74 12.5703L1223.19 18.3779V24.1854L1238.55 31.9416L1236.64 50.3195L1208.79 38.7044L1147.35 62.8898L1136.81 40.6529H1094.55L1075.33 60.9794L1007.17 45.5053L944.782 58.0756L937.102 77.4087L946.692 80.3125L945.737 94.8314L885.256 101.594L889.115 120.927L833.41 111.261L846.859 86.12L790.199 83.2163L795.013 109.35L776.789 118.062L761.43 103.543L699.039 114.203L675.045 136.44L674.09 149.965L658.731 150.92L656.821 135.446L705.801 92.8828V63.845L674.128 55.1336L632.827 68.6591L615.558 51.2365H607.878L598.289 70.5695L605.968 79.2809L551.219 109.274L504.186 145.074L475.379 184.734V201.163L506.097 213.734L490.738 225.349L458.11 213.734L444.661 225.349L424.488 202.118L420.629 210.83L442.713 280.482L448.482 282.431L463.841 274.675L471.52 280.482V293.053L457.116 287.245L448.482 294.008L454.251 306.578L449.437 339.475L419.674 342.379L417.764 331.719L435.033 321.059L438.892 292.021L419.674 266.88L412.95 223.362L382.232 218.51L379.366 233.984L385.136 241.74L372.642 252.4L377.456 281.438L395.681 289.194L399.539 310.475L381.277 298.86L334.245 290.149L328.476 305.623L291.033 319.149L285.264 309.482L236.284 336.571L235.329 354.949L216.111 357.853L221.88 344.327V330.802L202.662 324.039L190.169 328.891L200.714 349.218L208.393 362.743V373.403L193.99 370.5L191.124 367.596L176.72 383.07L184.4 396.595L151.771 395.64L162.316 409.204L159.451 415.012H142.182L129.688 406.3L126.823 382.115L106.65 374.359V364.692L148.906 373.403L171.944 375.352L181.534 360.833L172.9 345.359L111.464 321.174L90.2593 326.446L83 332.674L85.2543 347.002L94.2709 348.568L92.1696 371.111L119.984 436.446L99.8874 468.311L98.5118 475.494L108.713 482.677L99.5052 488.752L93.3922 488.867L94.5384 516.95L102.982 528.909L103.097 540.524L113.909 541.517L130.452 547.821L147.951 571.892L148.142 578.235L142.449 587.978L155.516 587.252L168.238 590.92L185.431 615.258L227.764 619.117L225.93 648.078L211.335 660.572L214.353 665.463L199.95 680.937L196.129 695.456L204.764 708.026L232.616 717.693L244.154 710.93L318.084 738.974L320.949 731.218L305.59 716.699V698.321L296 695.417L297.911 679.943L313.27 661.565L285.723 640.933L287.633 612.239L317.09 592.868L351.667 594.817L357.436 605.477L392.968 607.425L418.91 592.906L405.461 578.387L408.327 551.298L475.532 518.401L527.225 541.708L544.494 526.234L595.385 574.605L633.782 570.746L647.231 584.271L683.718 588.13L707.712 555.234L738.43 568.797L754.744 571.701L771.058 557.182L756.654 547.516L769.147 528.183L804.679 539.798L812.359 555.272L827.718 556.227L837.307 549.464L863.25 548.509L866.115 555.272L895.878 557.22L916.051 535.939L957.352 540.791L969.845 535.939L973.666 512.708L961.172 484.664L973.666 474.004H1013.02L1050.46 518.516L1098.45 545.605H1112.85L1114.76 533.99L1132.03 523.33L1133.94 586.22L1118.58 587.175V602.649L1127.22 613.309L1125.61 627.14L1131.99 629.777L1135.85 620.11L1141.62 622.059L1145.44 625.918L1162.71 622.059L1179.98 571.739L1181.89 508.849L1159.81 458.53L1131.95 424.678L1118.51 426.627V437.287L1085.88 424.716L1098.37 397.627L1108.92 326.026L1153.08 312.5L1174.21 298.975H1197.25L1191.48 306.731L1197.25 316.398L1217.42 295.116L1228.96 296.071L1227.05 283.501L1208.79 279.642L1221.28 234.175L1237.75 218.586Z" />
-                        </mask>
-                        <path d="M1237.75 218.586L1244.47 241.816L1257.92 245.675L1271.37 224.394L1263.69 209.875L1266.56 197.304H1286.73L1281.91 206.971L1283.82 241.816L1255.02 313.417L1257.88 328.891L1256.93 355.026L1310.68 433.389L1321.23 436.293L1322.18 372.448L1332.73 362.782L1321.19 337.641L1330.78 326.981L1309.65 298.937L1298.11 299.892L1294.29 253.47L1324.06 245.713L1325.97 232.15L1341.33 228.291L1349.96 236.047L1360.5 193.484L1378.73 162.535L1393.13 154.779L1405.63 155.734V141.215L1385.45 137.357L1357.6 114.126L1371.05 98.6522L1359.51 72.5181L1369.1 62.8516L1380.64 78.3257L1409.45 88.9856L1441.12 91.8894L1444.98 78.3639L1428.66 61.9346L1446.89 36.794L1405.59 22.2751L1395.04 43.5567L1381.59 26.134L1305.76 0L1233.74 12.5703L1223.19 18.3779V24.1854L1238.55 31.9416L1236.64 50.3195L1208.79 38.7044L1147.35 62.8898L1136.81 40.6529H1094.55L1075.33 60.9794L1007.17 45.5053L944.782 58.0756L937.102 77.4087L946.692 80.3125L945.737 94.8314L885.256 101.594L889.115 120.927L833.41 111.261L846.859 86.12L790.199 83.2163L795.013 109.35L776.789 118.062L761.43 103.543L699.039 114.203L675.045 136.44L674.09 149.965L658.731 150.92L656.821 135.446L705.801 92.8828V63.845L674.128 55.1336L632.827 68.6591L615.558 51.2365H607.878L598.289 70.5695L605.968 79.2809L551.219 109.274L504.186 145.074L475.379 184.734V201.163L506.097 213.734L490.738 225.349L458.11 213.734L444.661 225.349L424.488 202.118L420.629 210.83L442.713 280.482L448.482 282.431L463.841 274.675L471.52 280.482V293.053L457.116 287.245L448.482 294.008L454.251 306.578L449.437 339.475L419.674 342.379L417.764 331.719L435.033 321.059L438.892 292.021L419.674 266.88L412.95 223.362L382.232 218.51L379.366 233.984L385.136 241.74L372.642 252.4L377.456 281.438L395.681 289.194L399.539 310.475L381.277 298.86L334.245 290.149L328.476 305.623L291.033 319.149L285.264 309.482L236.284 336.571L235.329 354.949L216.111 357.853L221.88 344.327V330.802L202.662 324.039L190.169 328.891L200.714 349.218L208.393 362.743V373.403L193.99 370.5L191.124 367.596L176.72 383.07L184.4 396.595L151.771 395.64L162.316 409.204L159.451 415.012H142.182L129.688 406.3L126.823 382.115L106.65 374.359V364.692L148.906 373.403L171.944 375.352L181.534 360.833L172.9 345.359L111.464 321.174L90.2593 326.446L83 332.674L85.2543 347.002L94.2709 348.568L92.1696 371.111L119.984 436.446L99.8874 468.311L98.5118 475.494L108.713 482.677L99.5052 488.752L93.3922 488.867L94.5384 516.95L102.982 528.909L103.097 540.524L113.909 541.517L130.452 547.821L147.951 571.892L148.142 578.235L142.449 587.978L155.516 587.252L168.238 590.92L185.431 615.258L227.764 619.117L225.93 648.078L211.335 660.572L214.353 665.463L199.95 680.937L196.129 695.456L204.764 708.026L232.616 717.693L244.154 710.93L318.084 738.974L320.949 731.218L305.59 716.699V698.321L296 695.417L297.911 679.943L313.27 661.565L285.723 640.933L287.633 612.239L317.09 592.868L351.667 594.817L357.436 605.477L392.968 607.425L418.91 592.906L405.461 578.387L408.327 551.298L475.532 518.401L527.225 541.708L544.494 526.234L595.385 574.605L633.782 570.746L647.231 584.271L683.718 588.13L707.712 555.234L738.43 568.797L754.744 571.701L771.058 557.182L756.654 547.516L769.147 528.183L804.679 539.798L812.359 555.272L827.718 556.227L837.307 549.464L863.25 548.509L866.115 555.272L895.878 557.22L916.051 535.939L957.352 540.791L969.845 535.939L973.666 512.708L961.172 484.664L973.666 474.004H1013.02L1050.46 518.516L1098.45 545.605H1112.85L1114.76 533.99L1132.03 523.33L1133.94 586.22L1118.58 587.175V602.649L1127.22 613.309L1125.61 627.14L1131.99 629.777L1135.85 620.11L1141.62 622.059L1145.44 625.918L1162.71 622.059L1179.98 571.739L1181.89 508.849L1159.81 458.53L1131.95 424.678L1118.51 426.627V437.287L1085.88 424.716L1098.37 397.627L1108.92 326.026L1153.08 312.5L1174.21 298.975H1197.25L1191.48 306.731L1197.25 316.398L1217.42 295.116L1228.96 296.071L1227.05 283.501L1208.79 279.642L1221.28 234.175L1237.75 218.586Z" fill="url(#paint2_linear_2040_239)" stroke="url(#paint3_linear_2040_239)" stroke-width="11.64" mask="url(#path-3-inside-1_2040_239)" />
-                        <path d="M674.527 589.467L661.313 622.712L643.096 621.757L623.886 663.829L640.193 684.617L606.585 731.046L589.323 728.142L577.789 742.663L580.653 751.375L594.097 752.331L600.818 767.807L614.261 770.711L655.546 823.942V851.035L675.711 863.607L697.785 859.747L725.627 876.179L759.235 885.847L775.542 883.898L793.798 881.949L832.179 856.805L844.668 858.754L849.442 870.103L860.021 873.275L874.419 894.56L864.833 915.844L870.6 930.365L886.907 936.173L889.772 953.599L908.982 955.547L911.846 946.835L939.687 932.314L956.949 933.269L977.114 955.509L990.558 949.701L999.189 950.656L1003.05 961.318L1009.77 962.273L1019.35 948.746L1057.74 934.225L1092.3 892.611L1103.83 852.946L1102.88 826.808L1088.48 823.904L1097.11 814.236L1095.2 798.759L1058.73 761.999V743.618L1069.27 730.091L1079.81 725.238L1080.76 714.576H1053.88L1049.07 729.097L1036.58 726.193L1021.23 709.761L1030.81 684.617L1044.25 670.096L1056.74 671.051L1054.83 693.291L1061.55 699.1L1077.86 682.668L1083.63 681.713L1081.72 669.141L1097.07 650.76L1108.61 651.716L1115.33 630.431L1123.2 626.266L1124 613.006L1116.36 604.981L1115.71 584.04L1130.41 583.085L1129.46 529.09L1119.15 535.281L1115.29 549.114L1098.07 549.076L1048.15 520.989L1012.1 477.503L975.51 477.12L966.192 485.222L978.031 512.353L973.906 537.803L959.165 543.917L950.877 543.267L950.266 568.45L958.897 570.398L974.25 563.635L994.415 573.303V582.97L980.017 583.926L968.483 609.07L957.942 610.025L920.515 659.358L881.179 676.783L854.292 678.732L836.075 666.16L810.143 679.726L782.302 671.013L775.58 652.633L728.567 649.729L703.629 609.108H693.088L684.609 590.269L674.527 589.467Z" fill="#F2F2F2" />
-                        <path d="M677.167 303.455C680.766 303.455 683.388 304.162 685.033 305.576C686.678 306.989 687.5 308.981 687.5 311.552C687.5 312.683 687.307 313.775 686.922 314.829C686.562 315.857 685.958 316.782 685.11 317.605C684.262 318.427 683.131 319.083 681.717 319.571C680.303 320.034 678.568 320.265 676.512 320.265H673.35V330.983H669.88V303.455H677.167ZM676.859 306.424H673.35V317.296H676.126C677.874 317.296 679.326 317.116 680.483 316.757C681.64 316.371 682.501 315.767 683.066 314.944C683.632 314.122 683.915 313.042 683.915 311.706C683.915 309.932 683.349 308.609 682.218 307.735C681.087 306.861 679.301 306.424 676.859 306.424ZM710.728 320.612C710.728 322.334 710.497 323.864 710.034 325.2C709.598 326.511 708.955 327.629 708.107 328.554C707.284 329.48 706.269 330.187 705.061 330.675C703.879 331.138 702.555 331.369 701.09 331.369C699.727 331.369 698.468 331.138 697.311 330.675C696.155 330.187 695.152 329.48 694.304 328.554C693.456 327.629 692.787 326.511 692.299 325.2C691.836 323.864 691.605 322.334 691.605 320.612C691.605 318.324 691.991 316.397 692.762 314.829C693.533 313.235 694.638 312.027 696.078 311.205C697.517 310.356 699.226 309.932 701.205 309.932C703.082 309.932 704.727 310.356 706.14 311.205C707.58 312.027 708.698 313.235 709.495 314.829C710.317 316.397 710.728 318.324 710.728 320.612ZM695.114 320.612C695.114 322.231 695.319 323.645 695.731 324.853C696.167 326.035 696.836 326.948 697.735 327.591C698.635 328.233 699.779 328.554 701.167 328.554C702.555 328.554 703.699 328.233 704.598 327.591C705.498 326.948 706.153 326.035 706.565 324.853C707.001 323.645 707.22 322.231 707.22 320.612C707.22 318.967 707.001 317.566 706.565 316.41C706.128 315.253 705.459 314.366 704.56 313.749C703.686 313.107 702.542 312.785 701.128 312.785C699.021 312.785 697.491 313.479 696.54 314.867C695.589 316.255 695.114 318.17 695.114 320.612ZM724.395 331.369C722.57 331.369 720.938 330.996 719.499 330.251C718.085 329.505 716.967 328.349 716.144 326.781C715.347 325.213 714.949 323.208 714.949 320.766C714.949 318.222 715.373 316.153 716.221 314.559C717.07 312.965 718.213 311.796 719.653 311.05C721.118 310.305 722.776 309.932 724.626 309.932C725.68 309.932 726.696 310.048 727.672 310.279C728.649 310.485 729.446 310.742 730.063 311.05L729.022 313.865C728.405 313.634 727.685 313.415 726.863 313.209C726.04 313.004 725.269 312.901 724.549 312.901C723.161 312.901 722.018 313.197 721.118 313.788C720.218 314.379 719.55 315.253 719.113 316.41C718.676 317.566 718.458 319.006 718.458 320.728C718.458 322.373 718.676 323.774 719.113 324.93C719.55 326.087 720.205 326.961 721.079 327.552C721.953 328.143 723.046 328.439 724.357 328.439C725.487 328.439 726.477 328.323 727.325 328.092C728.199 327.86 728.996 327.578 729.716 327.244V330.251C729.022 330.611 728.251 330.881 727.402 331.061C726.58 331.266 725.577 331.369 724.395 331.369ZM742.92 331.369C741.095 331.369 739.463 330.996 738.023 330.251C736.609 329.505 735.491 328.349 734.669 326.781C733.872 325.213 733.474 323.208 733.474 320.766C733.474 318.222 733.898 316.153 734.746 314.559C735.594 312.965 736.738 311.796 738.177 311.05C739.642 310.305 741.3 309.932 743.151 309.932C744.205 309.932 745.22 310.048 746.197 310.279C747.174 310.485 747.97 310.742 748.587 311.05L747.546 313.865C746.929 313.634 746.21 313.415 745.387 313.209C744.565 313.004 743.794 312.901 743.074 312.901C741.686 312.901 740.542 313.197 739.642 313.788C738.743 314.379 738.075 315.253 737.638 316.41C737.201 317.566 736.982 319.006 736.982 320.728C736.982 322.373 737.201 323.774 737.638 324.93C738.075 326.087 738.73 326.961 739.604 327.552C740.478 328.143 741.57 328.439 742.881 328.439C744.012 328.439 745.002 328.323 745.85 328.092C746.724 327.86 747.521 327.578 748.24 327.244V330.251C747.546 330.611 746.775 330.881 745.927 331.061C745.104 331.266 744.102 331.369 742.92 331.369ZM756.355 322.925C756.355 323.157 756.342 323.491 756.316 323.928C756.316 324.339 756.304 324.789 756.278 325.277C756.252 325.74 756.226 326.19 756.201 326.627C756.175 327.038 756.149 327.372 756.124 327.629L767.189 310.318H771.353V330.983H768.191V318.8C768.191 318.389 768.191 317.849 768.191 317.181C768.217 316.512 768.243 315.857 768.268 315.214C768.294 314.546 768.32 314.045 768.346 313.711L757.357 330.983H753.155V310.318H756.355V322.925ZM779.202 330.983H775.269L781.168 322.308C780.371 322.103 779.6 321.782 778.855 321.345C778.109 320.882 777.505 320.252 777.043 319.455C776.58 318.633 776.349 317.618 776.349 316.41C776.349 314.43 777.017 312.927 778.354 311.899C779.69 310.845 781.464 310.318 783.674 310.318H792.928V330.983H789.535V322.771H784.522L779.202 330.983ZM779.626 316.448C779.626 317.63 780.063 318.517 780.937 319.108C781.836 319.674 783.083 319.957 784.677 319.957H789.535V313.132H784.021C782.453 313.132 781.322 313.441 780.628 314.058C779.96 314.675 779.626 315.471 779.626 316.448Z" fill="white" />
-                        <path class="pathGreen" d="M1133.5 607C1141.24 640.744 1123.27 710.662 1061 730" stroke="#3F9755" stroke-width="1.60647" stroke-dasharray="20" />
-                        <path class="pathGreen" d="M1134.08 606.96C1134.08 627.5 1134.5 656.128 1087 651" stroke="#3F9755" stroke-width="1.60647" stroke-dasharray="20" />
-                        <path class="pathGreen" d="M1157 548C1235 611 1134.87 769.72 1077 802" stroke="#3F9755" stroke-width="1.60647" stroke-dasharray="20" />
-                        <path class="pathGreen" d="M1155.5 629.5C1163 704.5 1115 760 1068.5 806" stroke="#3F9755" stroke-width="1.60647" stroke-dasharray="20" />
-                        <path class="pathGreen" d="M869.5 509.5C776.5 531.5 700 636.5 700 809" stroke="#3F9755" stroke-width="1.60647" stroke-dasharray="20" />
-                        <path class="pathGreen" d="M951.999 523.5C780.997 542.5 718.501 649 701.001 801.5" stroke="#3F9755" stroke-width="1.60647" stroke-dasharray="20" />
-                        <path class="pathGreen" d="M873.5 509.5C1007 586 986.499 706 879.5 773.5" stroke="#3F9755" stroke-width="1.60647" stroke-dasharray="20" />
-                        <path class="pathGreen" d="M953.5 523.5C1011 597 1014.5 651 979 682.5" stroke="#3F9755" stroke-width="1.60647" stroke-dasharray="20" />
-                        <path class="pathGreen" d="M1153 546C1095.5 563.5 1014 636 980 683" stroke="#3F9755" stroke-width="1.60647" stroke-dasharray="20" />
-                        <path class="pathGreen" d="M1157 549C1293.5 661 1121.07 843.654 1072 886" stroke="#3F9755" stroke-width="1.60647" stroke-dasharray="20" />
-                        <path class="pathGray path0" d="M321 494.024C361.857 471.609 432.465 420.824 388.039 397C442.07 403.885 536.825 425.05 483.594 454.638C555.136 485.378 695.217 509.874 657.195 415.252C735.24 439.268 802.528 466.516 755 503.5C886.076 454.028 1154.9 460.77 1154.5 543" stroke="white" stroke-width="2" stroke-dasharray="4 4" />
-                        <path class="pathGray path1" d="M327 500.805C386.478 506.493 499.869 505.291 477.613 454.977C548.123 518.357 677.511 608.238 748.5 508C766.727 431.781 743.152 312.128 385.518 395.984" stroke="white" stroke-width="2" stroke-dasharray="4 4" />
-                        <path class="pathGray path2" d="M1133.5 600C1230 481 969.917 224.522 654.5 417C617.727 353.716 508.988 262.313 388.5 397" stroke="white" stroke-width="2" stroke-dasharray="4 4" />
-                        <path class="pathGray path3" d="M771.827 766H767.663L755.21 752.043V766H751.74V738.472H755.21V751.812L767.355 738.472H771.287L759.335 751.85L771.827 766ZM778.311 757.942C778.311 758.173 778.298 758.507 778.272 758.944C778.272 759.356 778.259 759.805 778.234 760.294C778.208 760.756 778.182 761.206 778.156 761.643C778.131 762.055 778.105 762.389 778.079 762.646L789.145 745.334H793.309V766H790.147V753.817C790.147 753.405 790.147 752.866 790.147 752.197C790.173 751.529 790.199 750.874 790.224 750.231C790.25 749.563 790.276 749.061 790.301 748.727L779.313 766H775.111V745.334H778.311V757.942ZM814.151 748.188H807.404V766H804.049V748.188H797.379V745.334H814.151V748.188ZM826.048 744.987C828.567 744.987 830.431 745.54 831.639 746.645C832.847 747.751 833.451 749.511 833.451 751.927V766H830.983L830.328 763.07H830.174C829.583 763.815 828.966 764.445 828.323 764.959C827.706 765.447 826.987 765.807 826.164 766.039C825.367 766.27 824.39 766.386 823.234 766.386C822 766.386 820.882 766.167 819.879 765.73C818.903 765.293 818.132 764.625 817.566 763.725C817.001 762.8 816.718 761.643 816.718 760.255C816.718 758.199 817.528 756.618 819.147 755.513C820.766 754.382 823.26 753.765 826.627 753.662L830.135 753.547V752.313C830.135 750.591 829.762 749.396 829.017 748.727C828.272 748.059 827.218 747.725 825.856 747.725C824.776 747.725 823.748 747.892 822.771 748.226C821.794 748.535 820.882 748.894 820.034 749.306L818.993 746.761C819.892 746.273 820.959 745.861 822.193 745.527C823.427 745.167 824.712 744.987 826.048 744.987ZM827.051 756.014C824.48 756.117 822.694 756.528 821.692 757.248C820.715 757.968 820.226 758.983 820.226 760.294C820.226 761.45 820.573 762.299 821.267 762.838C821.987 763.378 822.9 763.648 824.005 763.648C825.753 763.648 827.205 763.173 828.362 762.222C829.518 761.245 830.097 759.754 830.097 757.749V755.899L827.051 756.014ZM856.567 736.775C856.464 738.06 856.142 739.14 855.603 740.014C855.089 740.888 854.318 741.543 853.289 741.98C852.261 742.417 850.925 742.636 849.28 742.636C847.609 742.636 846.259 742.417 845.231 741.98C844.229 741.543 843.496 740.901 843.034 740.052C842.571 739.178 842.288 738.086 842.185 736.775H845.347C845.476 738.163 845.835 739.101 846.427 739.59C847.043 740.052 848.02 740.284 849.357 740.284C850.539 740.284 851.464 740.04 852.133 739.551C852.827 739.037 853.238 738.112 853.366 736.775H856.567ZM843.034 757.942C843.034 758.173 843.021 758.507 842.995 758.944C842.995 759.356 842.982 759.805 842.957 760.294C842.931 760.756 842.905 761.206 842.879 761.643C842.854 762.055 842.828 762.389 842.802 762.646L853.868 745.334H858.032V766H854.87V753.817C854.87 753.405 854.87 752.866 854.87 752.197C854.896 751.529 854.922 750.874 854.947 750.231C854.973 749.563 854.999 749.061 855.024 748.727L844.036 766H839.834V745.334H843.034V757.942Z" fill="#616161" />
-                        <path class="pathGray path4" d="M321 500.5C392.812 560 913.5 618.5 1132 605" stroke="#DADADA" stroke-width="2" stroke-dasharray="4 4" />
-                        <path class="pathGray path5" d="M243.001 647C310.831 563.739 315.348 530.883 318.002 499.5" stroke="white" stroke-width="2" stroke-dasharray="4 4" />
-                        <circle class="circle_cin" cx="1053.03" cy="733.032" r="7.2291" fill="white" stroke="#3F9755" stroke-width="1.60647" />
-                        <circle cx="1053.03" cy="733.032" r="3.21293" fill="#3F9755" />
-                        <circle class="circle_shen" cx="1085.03" cy="651.032" r="7.2291" fill="white" stroke="#3F9755" stroke-width="1.60647" />
-                        <circle cx="1085.03" cy="651.032" r="3.21293" fill="#3F9755" />
-                        <circle cx="953.032" cy="524.032" r="7.2291" fill="#3F9755" stroke="white" stroke-width="1.60647" />
-                        <circle class="circle_zab" cx="953.033" cy="524.032" r="3.21293" fill="white" />
-                        <circle cx="1153.03" cy="546.032" r="7.2291" fill="#3F9755" stroke="white" stroke-width="1.60647" />
-                        <circle class="circle_grod" cx="1153.03" cy="546.032" r="3.21293" fill="white" />
-                        <circle cx="870.032" cy="510.032" r="7.2291" fill="#3F9755" stroke="white" stroke-width="1.60647" />
-                        <circle class="circle_nau" cx="870.033" cy="510.032" r="3.21293" fill="white" />
-                        <circle cx="318.72" cy="498.032" r="7.2291" fill="#3F9755" stroke="white" stroke-width="1.60647" />
-                        <circle class="circle_msk" cx="318.721" cy="498.032" r="3.21293" fill="white" />
-                        <circle cx="240.032" cy="650.032" r="7.2291" fill="#3F9755" stroke="white" stroke-width="1.60647" />
-                        <circle class="circle_krsnd" cx="240.033" cy="650.032" r="3.21293" fill="white" />
-                        <circle cx="386.72" cy="397.032" r="7.2291" fill="#3F9755" stroke="white" stroke-width="1.60647" />
-                        <circle class="circle_spb" cx="386.721" cy="397.032" r="3.21293" fill="white" />
-                        <circle cx="481.72" cy="457.032" r="7.2291" fill="#3F9755" stroke="white" stroke-width="1.60647" />
-                        <circle class="circle_kazan" cx="481.721" cy="457.032" r="3.21293" fill="white" />
-                        <circle cx="656.72" cy="417.032" r="7.2291" fill="#3F9755" stroke="white" stroke-width="1.60647" />
-                        <circle class="circle_ekb" cx="656.721" cy="417.032" r="3.21293" fill="white" />
-                        <circle class="circle_nsk" cx="748.032" cy="508.032" r="7.2291" fill="#3F9755" stroke="white" stroke-width="1.60647" />
-                        <circle cx="748.033" cy="508.032" r="3.21293" fill="white" />
-                        <circle class="circle_krsn" cx="800.032" cy="488.032" r="7.2291" fill="#3F9755" stroke="white" stroke-width="1.60647" />
-                        <circle cx="800.033" cy="488.032" r="3.21293" fill="white" />
-                        <circle class="circle_chen" cx="700.032" cy="810.032" r="7.2291" fill="white" stroke="#3F9755" stroke-width="1.60647" />
-                        <circle cx="700.033" cy="810.032" r="3.21293" fill="#3F9755" />
-                        <circle class="circle_jaen" cx="874.032" cy="774.032" r="7.2291" fill="white" stroke="#3F9755" stroke-width="1.60647" />
-                        <circle cx="874.033" cy="774.032" r="3.21293" fill="#3F9755" />
-                        <circle class="circle_shan" cx="1069.03" cy="805.032" r="7.2291" fill="white" stroke="#3F9755" stroke-width="1.60647" />
-                        <circle cx="1069.03" cy="805.032" r="3.21293" fill="#3F9755" />
-                        <circle class="circle_nin" cx="1069.03" cy="887.032" r="7.2291" fill="white" stroke="#3F9755" stroke-width="1.60647" />
-                        <circle cx="1069.03" cy="887.032" r="3.21293" fill="#3F9755" />
-                        <circle class="circle_tyan" cx="976.032" cy="687.032" r="7.2291" fill="white" stroke="#3F9755" stroke-width="1.60647" />
-                        <circle cx="976.033" cy="687.032" r="3.21293" fill="#3F9755" />
-                        <circle cx="1132.03" cy="604.032" r="7.2291" fill="#3F9755" stroke="white" stroke-width="1.60647" />
-                        <circle class="circle_vsk" cx="1132.03" cy="604.032" r="3.21293" fill="white" />
-                        <circle cx="1155.03" cy="629.032" r="7.2291" fill="white" stroke="#3F9755" stroke-width="1.60647" />
-                        <circle class="circle_nahod" cx="1155.03" cy="629.032" r="3.21293" fill="#3F9755" />
-                        <defs>
-                            <linearGradient id="paint0_linear_2040_239" x1="117" y1="618" x2="-31.2571" y2="729.356" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#17642A" />
-                                <stop offset="1" stop-color="white" />
-                            </linearGradient>
-                            <linearGradient id="paint1_linear_2040_239" x1="1201" y1="564" x2="1275.5" y2="410" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#3F9755" />
-                                <stop offset="1" stop-color="white" />
-                            </linearGradient>
-                            <linearGradient id="paint2_linear_2040_239" x1="668" y1="343.5" x2="2138.5" y2="-256" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#5CAB70" />
-                                <stop offset="1" stop-color="white" />
-                            </linearGradient>
-                            <linearGradient id="paint3_linear_2040_239" x1="55.6901" y1="566.279" x2="285.415" y2="314.867" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#17642A" />
-                                <stop offset="1" stop-color="white" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
+        <svg class="map__img" width="1447" height="963" viewBox="0 0 1447 963" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M31.454 680.143C29.4848 680.377 11.6642 693.303 3 699.736L4.18148 703.245L10.0889 705.195L11.7626 703.928L14.8148 702.076L20.5253 701.686C25.8026 701.686 30.2068 707.664 31.7493 710.654L38.2475 715.82L40.0197 714.066L43.958 712.408C51.736 715.138 52.2283 724.398 52.7206 726.153C53.1144 727.557 52.8847 732.262 52.7206 734.439L50.8499 734.926L50.3576 738.045L49.9638 748.378L47.4039 749.158L43.5641 750.62L47.4039 755.007L50.8499 756.371L54.1974 757.054L56.265 761.245H57.7419L61.4832 763L64.4369 761.83L68.9659 763L73.1011 761.245L76.1533 760.758L78.3193 755.884H81.9622L87.2789 750.62L89.6418 745.356L97.3214 739.897L110.613 735.998C112.385 735.803 115.989 735.413 116.225 735.413C116.461 735.413 118.949 736.518 120.163 737.071L121.443 735.413L123.412 731.417L126.76 728.98L128.335 727.615L132.569 728.492V727.615C132.438 726.998 132.254 725.666 132.569 725.276C132.884 724.886 134.079 724.333 134.637 724.106L132.569 722.351L139.166 716.6C136.146 716.568 131.998 716.522 139.559 716.6C147.121 716.678 152.424 721.896 154.131 724.496C154.82 724.366 156.415 724.008 157.282 723.618C158.365 723.131 158.857 724.203 159.251 724.106C159.566 724.028 161.22 722.189 162.007 721.279C164.731 721.929 170.317 723.209 170.869 723.131C171.558 723.034 170.869 721.376 172.739 721.279C174.61 721.182 175.201 720.694 176.382 720.499C177.327 720.343 179.205 719.654 180.025 719.329V718.55V717.282C179.894 716.795 179.415 715.645 178.548 714.943C177.465 714.066 178.548 712.798 178.548 711.921V709.874V707.827C179.04 707.502 180.242 706.677 181.108 705.975C182.191 705.097 181.108 703.245 181.896 701.491C182.526 700.087 183.274 702.076 183.569 703.245H188V698.079H185.046C183.707 698.079 181.863 696.584 181.108 695.837H178.548C177.682 695.837 176.743 695.252 176.382 694.96H170.869C168.604 694.96 166.635 695.837 164.272 695.837C162.382 695.837 163.484 697.332 164.272 698.079C163.812 699.216 162.441 701.491 160.629 701.491C158.365 701.491 158.069 699.639 157.282 699.639C156.494 699.639 155.115 698.079 155.115 695.837C155.115 694.043 154.197 695.09 153.737 695.837L152.753 698.079C152.031 698.436 150.429 699.249 149.799 699.639C149.169 700.029 149.011 701.036 149.011 701.491V703.245L145.27 705.097L138.772 706.852C133.258 706.657 114.551 677.121 113.961 677.121C113.488 677.121 109.038 674.782 106.872 673.612V667.568L104.41 666.496L101.555 663.766L96.0415 661.817L92.4971 665.424C91.8407 662.662 89.76 657.313 86.6881 658.015C83.6163 658.717 78.8444 655.903 76.8425 654.408H73.7903L68.6706 652.556L62.8616 648.365L59.4156 649.924L55.8712 647H54.3944V652.556L52.6221 654.408V657.138L50.3576 661.817V669.713C49.0777 670.46 46.38 672.072 45.8286 672.539C45.1394 673.124 37.8536 676.829 36.2783 677.121C35.0181 677.355 34.3748 674.879 34.2108 673.612C34.1123 675.691 33.4231 679.909 31.454 680.143Z" fill="#6BA179" stroke="url(#paint0_linear_2040_239)" stroke-width="4"/>
+            <path d="M1162.9 409.649L1162.54 433.114L1192.85 478.56L1203.7 518.111L1222.81 553.289L1230.29 555.837L1236.68 550.703L1239.65 542.261L1212.32 513.319L1213.06 498.297L1219.05 495.749L1220.54 486.964L1167.01 413.338L1162.9 409.649Z" fill="url(#paint1_linear_2040_239)"/>
+            <mask id="path-3-inside-1_2040_239" fill="white">
+            <path d="M1237.75 218.586L1244.47 241.816L1257.92 245.675L1271.37 224.394L1263.69 209.875L1266.56 197.304H1286.73L1281.91 206.971L1283.82 241.816L1255.02 313.417L1257.88 328.891L1256.93 355.026L1310.68 433.389L1321.23 436.293L1322.18 372.448L1332.73 362.782L1321.19 337.641L1330.78 326.981L1309.65 298.937L1298.11 299.892L1294.29 253.47L1324.06 245.713L1325.97 232.15L1341.33 228.291L1349.96 236.047L1360.5 193.484L1378.73 162.535L1393.13 154.779L1405.63 155.734V141.215L1385.45 137.357L1357.6 114.126L1371.05 98.6522L1359.51 72.5181L1369.1 62.8516L1380.64 78.3257L1409.45 88.9856L1441.12 91.8894L1444.98 78.3639L1428.66 61.9346L1446.89 36.794L1405.59 22.2751L1395.04 43.5567L1381.59 26.134L1305.76 0L1233.74 12.5703L1223.19 18.3779V24.1854L1238.55 31.9416L1236.64 50.3195L1208.79 38.7044L1147.35 62.8898L1136.81 40.6529H1094.55L1075.33 60.9794L1007.17 45.5053L944.782 58.0756L937.102 77.4087L946.692 80.3125L945.737 94.8314L885.256 101.594L889.115 120.927L833.41 111.261L846.859 86.12L790.199 83.2163L795.013 109.35L776.789 118.062L761.43 103.543L699.039 114.203L675.045 136.44L674.09 149.965L658.731 150.92L656.821 135.446L705.801 92.8828V63.845L674.128 55.1336L632.827 68.6591L615.558 51.2365H607.878L598.289 70.5695L605.968 79.2809L551.219 109.274L504.186 145.074L475.379 184.734V201.163L506.097 213.734L490.738 225.349L458.11 213.734L444.661 225.349L424.488 202.118L420.629 210.83L442.713 280.482L448.482 282.431L463.841 274.675L471.52 280.482V293.053L457.116 287.245L448.482 294.008L454.251 306.578L449.437 339.475L419.674 342.379L417.764 331.719L435.033 321.059L438.892 292.021L419.674 266.88L412.95 223.362L382.232 218.51L379.366 233.984L385.136 241.74L372.642 252.4L377.456 281.438L395.681 289.194L399.539 310.475L381.277 298.86L334.245 290.149L328.476 305.623L291.033 319.149L285.264 309.482L236.284 336.571L235.329 354.949L216.111 357.853L221.88 344.327V330.802L202.662 324.039L190.169 328.891L200.714 349.218L208.393 362.743V373.403L193.99 370.5L191.124 367.596L176.72 383.07L184.4 396.595L151.771 395.64L162.316 409.204L159.451 415.012H142.182L129.688 406.3L126.823 382.115L106.65 374.359V364.692L148.906 373.403L171.944 375.352L181.534 360.833L172.9 345.359L111.464 321.174L90.2593 326.446L83 332.674L85.2543 347.002L94.2709 348.568L92.1696 371.111L119.984 436.446L99.8874 468.311L98.5118 475.494L108.713 482.677L99.5052 488.752L93.3922 488.867L94.5384 516.95L102.982 528.909L103.097 540.524L113.909 541.517L130.452 547.821L147.951 571.892L148.142 578.235L142.449 587.978L155.516 587.252L168.238 590.92L185.431 615.258L227.764 619.117L225.93 648.078L211.335 660.572L214.353 665.463L199.95 680.937L196.129 695.456L204.764 708.026L232.616 717.693L244.154 710.93L318.084 738.974L320.949 731.218L305.59 716.699V698.321L296 695.417L297.911 679.943L313.27 661.565L285.723 640.933L287.633 612.239L317.09 592.868L351.667 594.817L357.436 605.477L392.968 607.425L418.91 592.906L405.461 578.387L408.327 551.298L475.532 518.401L527.225 541.708L544.494 526.234L595.385 574.605L633.782 570.746L647.231 584.271L683.718 588.13L707.712 555.234L738.43 568.797L754.744 571.701L771.058 557.182L756.654 547.516L769.147 528.183L804.679 539.798L812.359 555.272L827.718 556.227L837.307 549.464L863.25 548.509L866.115 555.272L895.878 557.22L916.051 535.939L957.352 540.791L969.845 535.939L973.666 512.708L961.172 484.664L973.666 474.004H1013.02L1050.46 518.516L1098.45 545.605H1112.85L1114.76 533.99L1132.03 523.33L1133.94 586.22L1118.58 587.175V602.649L1127.22 613.309L1125.61 627.14L1131.99 629.777L1135.85 620.11L1141.62 622.059L1145.44 625.918L1162.71 622.059L1179.98 571.739L1181.89 508.849L1159.81 458.53L1131.95 424.678L1118.51 426.627V437.287L1085.88 424.716L1098.37 397.627L1108.92 326.026L1153.08 312.5L1174.21 298.975H1197.25L1191.48 306.731L1197.25 316.398L1217.42 295.116L1228.96 296.071L1227.05 283.501L1208.79 279.642L1221.28 234.175L1237.75 218.586Z"/>
+            </mask>
+            <path d="M1237.75 218.586L1244.47 241.816L1257.92 245.675L1271.37 224.394L1263.69 209.875L1266.56 197.304H1286.73L1281.91 206.971L1283.82 241.816L1255.02 313.417L1257.88 328.891L1256.93 355.026L1310.68 433.389L1321.23 436.293L1322.18 372.448L1332.73 362.782L1321.19 337.641L1330.78 326.981L1309.65 298.937L1298.11 299.892L1294.29 253.47L1324.06 245.713L1325.97 232.15L1341.33 228.291L1349.96 236.047L1360.5 193.484L1378.73 162.535L1393.13 154.779L1405.63 155.734V141.215L1385.45 137.357L1357.6 114.126L1371.05 98.6522L1359.51 72.5181L1369.1 62.8516L1380.64 78.3257L1409.45 88.9856L1441.12 91.8894L1444.98 78.3639L1428.66 61.9346L1446.89 36.794L1405.59 22.2751L1395.04 43.5567L1381.59 26.134L1305.76 0L1233.74 12.5703L1223.19 18.3779V24.1854L1238.55 31.9416L1236.64 50.3195L1208.79 38.7044L1147.35 62.8898L1136.81 40.6529H1094.55L1075.33 60.9794L1007.17 45.5053L944.782 58.0756L937.102 77.4087L946.692 80.3125L945.737 94.8314L885.256 101.594L889.115 120.927L833.41 111.261L846.859 86.12L790.199 83.2163L795.013 109.35L776.789 118.062L761.43 103.543L699.039 114.203L675.045 136.44L674.09 149.965L658.731 150.92L656.821 135.446L705.801 92.8828V63.845L674.128 55.1336L632.827 68.6591L615.558 51.2365H607.878L598.289 70.5695L605.968 79.2809L551.219 109.274L504.186 145.074L475.379 184.734V201.163L506.097 213.734L490.738 225.349L458.11 213.734L444.661 225.349L424.488 202.118L420.629 210.83L442.713 280.482L448.482 282.431L463.841 274.675L471.52 280.482V293.053L457.116 287.245L448.482 294.008L454.251 306.578L449.437 339.475L419.674 342.379L417.764 331.719L435.033 321.059L438.892 292.021L419.674 266.88L412.95 223.362L382.232 218.51L379.366 233.984L385.136 241.74L372.642 252.4L377.456 281.438L395.681 289.194L399.539 310.475L381.277 298.86L334.245 290.149L328.476 305.623L291.033 319.149L285.264 309.482L236.284 336.571L235.329 354.949L216.111 357.853L221.88 344.327V330.802L202.662 324.039L190.169 328.891L200.714 349.218L208.393 362.743V373.403L193.99 370.5L191.124 367.596L176.72 383.07L184.4 396.595L151.771 395.64L162.316 409.204L159.451 415.012H142.182L129.688 406.3L126.823 382.115L106.65 374.359V364.692L148.906 373.403L171.944 375.352L181.534 360.833L172.9 345.359L111.464 321.174L90.2593 326.446L83 332.674L85.2543 347.002L94.2709 348.568L92.1696 371.111L119.984 436.446L99.8874 468.311L98.5118 475.494L108.713 482.677L99.5052 488.752L93.3922 488.867L94.5384 516.95L102.982 528.909L103.097 540.524L113.909 541.517L130.452 547.821L147.951 571.892L148.142 578.235L142.449 587.978L155.516 587.252L168.238 590.92L185.431 615.258L227.764 619.117L225.93 648.078L211.335 660.572L214.353 665.463L199.95 680.937L196.129 695.456L204.764 708.026L232.616 717.693L244.154 710.93L318.084 738.974L320.949 731.218L305.59 716.699V698.321L296 695.417L297.911 679.943L313.27 661.565L285.723 640.933L287.633 612.239L317.09 592.868L351.667 594.817L357.436 605.477L392.968 607.425L418.91 592.906L405.461 578.387L408.327 551.298L475.532 518.401L527.225 541.708L544.494 526.234L595.385 574.605L633.782 570.746L647.231 584.271L683.718 588.13L707.712 555.234L738.43 568.797L754.744 571.701L771.058 557.182L756.654 547.516L769.147 528.183L804.679 539.798L812.359 555.272L827.718 556.227L837.307 549.464L863.25 548.509L866.115 555.272L895.878 557.22L916.051 535.939L957.352 540.791L969.845 535.939L973.666 512.708L961.172 484.664L973.666 474.004H1013.02L1050.46 518.516L1098.45 545.605H1112.85L1114.76 533.99L1132.03 523.33L1133.94 586.22L1118.58 587.175V602.649L1127.22 613.309L1125.61 627.14L1131.99 629.777L1135.85 620.11L1141.62 622.059L1145.44 625.918L1162.71 622.059L1179.98 571.739L1181.89 508.849L1159.81 458.53L1131.95 424.678L1118.51 426.627V437.287L1085.88 424.716L1098.37 397.627L1108.92 326.026L1153.08 312.5L1174.21 298.975H1197.25L1191.48 306.731L1197.25 316.398L1217.42 295.116L1228.96 296.071L1227.05 283.501L1208.79 279.642L1221.28 234.175L1237.75 218.586Z" fill="url(#paint2_linear_2040_239)" stroke="url(#paint3_linear_2040_239)" stroke-width="11.64" mask="url(#path-3-inside-1_2040_239)"/>
+            <path d="M674.527 589.467L661.313 622.712L643.096 621.757L623.886 663.829L640.193 684.617L606.585 731.046L589.323 728.142L577.789 742.663L580.653 751.375L594.097 752.331L600.818 767.807L614.261 770.711L655.546 823.942V851.035L675.711 863.607L697.785 859.747L725.627 876.179L759.235 885.847L775.542 883.898L793.798 881.949L832.179 856.805L844.668 858.754L849.442 870.103L860.021 873.275L874.419 894.56L864.833 915.844L870.6 930.365L886.907 936.173L889.772 953.599L908.982 955.547L911.846 946.835L939.687 932.314L956.949 933.269L977.114 955.509L990.558 949.701L999.189 950.656L1003.05 961.318L1009.77 962.273L1019.35 948.746L1057.74 934.225L1092.3 892.611L1103.83 852.946L1102.88 826.808L1088.48 823.904L1097.11 814.236L1095.2 798.759L1058.73 761.999V743.618L1069.27 730.091L1079.81 725.238L1080.76 714.576H1053.88L1049.07 729.097L1036.58 726.193L1021.23 709.761L1030.81 684.617L1044.25 670.096L1056.74 671.051L1054.83 693.291L1061.55 699.1L1077.86 682.668L1083.63 681.713L1081.72 669.141L1097.07 650.76L1108.61 651.716L1115.33 630.431L1123.2 626.266L1124 613.006L1116.36 604.981L1115.71 584.04L1130.41 583.085L1129.46 529.09L1119.15 535.281L1115.29 549.114L1098.07 549.076L1048.15 520.989L1012.1 477.503L975.51 477.12L966.192 485.222L978.031 512.353L973.906 537.803L959.165 543.917L950.877 543.267L950.266 568.45L958.897 570.398L974.25 563.635L994.415 573.303V582.97L980.017 583.926L968.483 609.07L957.942 610.025L920.515 659.358L881.179 676.783L854.292 678.732L836.075 666.16L810.143 679.726L782.302 671.013L775.58 652.633L728.567 649.729L703.629 609.108H693.088L684.609 590.269L674.527 589.467Z" fill="#F2F2F2"/>
+            <path d="M677.167 303.455C680.766 303.455 683.388 304.162 685.033 305.576C686.678 306.989 687.5 308.981 687.5 311.552C687.5 312.683 687.307 313.775 686.922 314.829C686.562 315.857 685.958 316.782 685.11 317.605C684.262 318.427 683.131 319.083 681.717 319.571C680.303 320.034 678.568 320.265 676.512 320.265H673.35V330.983H669.88V303.455H677.167ZM676.859 306.424H673.35V317.296H676.126C677.874 317.296 679.326 317.116 680.483 316.757C681.64 316.371 682.501 315.767 683.066 314.944C683.632 314.122 683.915 313.042 683.915 311.706C683.915 309.932 683.349 308.609 682.218 307.735C681.087 306.861 679.301 306.424 676.859 306.424ZM710.728 320.612C710.728 322.334 710.497 323.864 710.034 325.2C709.598 326.511 708.955 327.629 708.107 328.554C707.284 329.48 706.269 330.187 705.061 330.675C703.879 331.138 702.555 331.369 701.09 331.369C699.727 331.369 698.468 331.138 697.311 330.675C696.155 330.187 695.152 329.48 694.304 328.554C693.456 327.629 692.787 326.511 692.299 325.2C691.836 323.864 691.605 322.334 691.605 320.612C691.605 318.324 691.991 316.397 692.762 314.829C693.533 313.235 694.638 312.027 696.078 311.205C697.517 310.356 699.226 309.932 701.205 309.932C703.082 309.932 704.727 310.356 706.14 311.205C707.58 312.027 708.698 313.235 709.495 314.829C710.317 316.397 710.728 318.324 710.728 320.612ZM695.114 320.612C695.114 322.231 695.319 323.645 695.731 324.853C696.167 326.035 696.836 326.948 697.735 327.591C698.635 328.233 699.779 328.554 701.167 328.554C702.555 328.554 703.699 328.233 704.598 327.591C705.498 326.948 706.153 326.035 706.565 324.853C707.001 323.645 707.22 322.231 707.22 320.612C707.22 318.967 707.001 317.566 706.565 316.41C706.128 315.253 705.459 314.366 704.56 313.749C703.686 313.107 702.542 312.785 701.128 312.785C699.021 312.785 697.491 313.479 696.54 314.867C695.589 316.255 695.114 318.17 695.114 320.612ZM724.395 331.369C722.57 331.369 720.938 330.996 719.499 330.251C718.085 329.505 716.967 328.349 716.144 326.781C715.347 325.213 714.949 323.208 714.949 320.766C714.949 318.222 715.373 316.153 716.221 314.559C717.07 312.965 718.213 311.796 719.653 311.05C721.118 310.305 722.776 309.932 724.626 309.932C725.68 309.932 726.696 310.048 727.672 310.279C728.649 310.485 729.446 310.742 730.063 311.05L729.022 313.865C728.405 313.634 727.685 313.415 726.863 313.209C726.04 313.004 725.269 312.901 724.549 312.901C723.161 312.901 722.018 313.197 721.118 313.788C720.218 314.379 719.55 315.253 719.113 316.41C718.676 317.566 718.458 319.006 718.458 320.728C718.458 322.373 718.676 323.774 719.113 324.93C719.55 326.087 720.205 326.961 721.079 327.552C721.953 328.143 723.046 328.439 724.357 328.439C725.487 328.439 726.477 328.323 727.325 328.092C728.199 327.86 728.996 327.578 729.716 327.244V330.251C729.022 330.611 728.251 330.881 727.402 331.061C726.58 331.266 725.577 331.369 724.395 331.369ZM742.92 331.369C741.095 331.369 739.463 330.996 738.023 330.251C736.609 329.505 735.491 328.349 734.669 326.781C733.872 325.213 733.474 323.208 733.474 320.766C733.474 318.222 733.898 316.153 734.746 314.559C735.594 312.965 736.738 311.796 738.177 311.05C739.642 310.305 741.3 309.932 743.151 309.932C744.205 309.932 745.22 310.048 746.197 310.279C747.174 310.485 747.97 310.742 748.587 311.05L747.546 313.865C746.929 313.634 746.21 313.415 745.387 313.209C744.565 313.004 743.794 312.901 743.074 312.901C741.686 312.901 740.542 313.197 739.642 313.788C738.743 314.379 738.075 315.253 737.638 316.41C737.201 317.566 736.982 319.006 736.982 320.728C736.982 322.373 737.201 323.774 737.638 324.93C738.075 326.087 738.73 326.961 739.604 327.552C740.478 328.143 741.57 328.439 742.881 328.439C744.012 328.439 745.002 328.323 745.85 328.092C746.724 327.86 747.521 327.578 748.24 327.244V330.251C747.546 330.611 746.775 330.881 745.927 331.061C745.104 331.266 744.102 331.369 742.92 331.369ZM756.355 322.925C756.355 323.157 756.342 323.491 756.316 323.928C756.316 324.339 756.304 324.789 756.278 325.277C756.252 325.74 756.226 326.19 756.201 326.627C756.175 327.038 756.149 327.372 756.124 327.629L767.189 310.318H771.353V330.983H768.191V318.8C768.191 318.389 768.191 317.849 768.191 317.181C768.217 316.512 768.243 315.857 768.268 315.214C768.294 314.546 768.32 314.045 768.346 313.711L757.357 330.983H753.155V310.318H756.355V322.925ZM779.202 330.983H775.269L781.168 322.308C780.371 322.103 779.6 321.782 778.855 321.345C778.109 320.882 777.505 320.252 777.043 319.455C776.58 318.633 776.349 317.618 776.349 316.41C776.349 314.43 777.017 312.927 778.354 311.899C779.69 310.845 781.464 310.318 783.674 310.318H792.928V330.983H789.535V322.771H784.522L779.202 330.983ZM779.626 316.448C779.626 317.63 780.063 318.517 780.937 319.108C781.836 319.674 783.083 319.957 784.677 319.957H789.535V313.132H784.021C782.453 313.132 781.322 313.441 780.628 314.058C779.96 314.675 779.626 315.471 779.626 316.448Z" fill="white"/>
+            <path class="pathGreen" d="M1133.5 607C1141.24 640.744 1123.27 710.662 1061 730" stroke="#3F9755" stroke-width="1.60647" stroke-dasharray="20"/>
+            <path class="pathGreen" d="M1134.08 606.96C1134.08 627.5 1134.5 656.128 1087 651" stroke="#3F9755" stroke-width="1.60647" stroke-dasharray="20"/>
+            <path class="pathGreen" d="M1157 548C1235 611 1134.87 769.72 1077 802" stroke="#3F9755" stroke-width="1.60647" stroke-dasharray="20"/>
+            <path class="pathGreen" d="M1155.5 629.5C1163 704.5 1115 760 1068.5 806" stroke="#3F9755" stroke-width="1.60647" stroke-dasharray="20"/>
+            <path class="pathGreen" d="M869.5 509.5C776.5 531.5 700 636.5 700 809" stroke="#3F9755" stroke-width="1.60647" stroke-dasharray="20"/>
+            <path class="pathGreen" d="M951.999 523.5C780.997 542.5 718.501 649 701.001 801.5" stroke="#3F9755" stroke-width="1.60647" stroke-dasharray="20"/>
+            <path class="pathGreen" d="M873.5 509.5C1007 586 986.499 706 879.5 773.5" stroke="#3F9755" stroke-width="1.60647" stroke-dasharray="20"/>
+            <path class="pathGreen" d="M953.5 523.5C1011 597 1014.5 651 979 682.5" stroke="#3F9755" stroke-width="1.60647" stroke-dasharray="20"/>
+            <path class="pathGreen" d="M1153 546C1095.5 563.5 1014 636 980 683" stroke="#3F9755" stroke-width="1.60647" stroke-dasharray="20"/>
+            <path class="pathGreen" d="M1157 549C1293.5 661 1121.07 843.654 1072 886" stroke="#3F9755" stroke-width="1.60647" stroke-dasharray="20"/>
+            <path class="pathGray path0" d="M321 494.024C361.857 471.609 432.465 420.824 388.039 397C442.07 403.885 536.825 425.05 483.594 454.638C555.136 485.378 695.217 509.874 657.195 415.252C735.24 439.268 802.528 466.516 755 503.5C886.076 454.028 1154.9 460.77 1154.5 543" stroke="white" stroke-width="2" stroke-dasharray="4 4"/>
+            <path class="pathGray path1" d="M327 500.805C386.478 506.493 499.869 505.291 477.613 454.977C548.123 518.357 677.511 608.238 748.5 508C766.727 431.781 743.152 312.128 385.518 395.984" stroke="white" stroke-width="2" stroke-dasharray="4 4"/>
+            <path class="pathGray path2" d="M1133.5 600C1230 481 969.917 224.522 654.5 417C617.727 353.716 508.988 262.313 388.5 397" stroke="white" stroke-width="2" stroke-dasharray="4 4"/>
+            <path class="pathGray path3" d="M771.827 766H767.663L755.21 752.043V766H751.74V738.472H755.21V751.812L767.355 738.472H771.287L759.335 751.85L771.827 766ZM778.311 757.942C778.311 758.173 778.298 758.507 778.272 758.944C778.272 759.356 778.259 759.805 778.234 760.294C778.208 760.756 778.182 761.206 778.156 761.643C778.131 762.055 778.105 762.389 778.079 762.646L789.145 745.334H793.309V766H790.147V753.817C790.147 753.405 790.147 752.866 790.147 752.197C790.173 751.529 790.199 750.874 790.224 750.231C790.25 749.563 790.276 749.061 790.301 748.727L779.313 766H775.111V745.334H778.311V757.942ZM814.151 748.188H807.404V766H804.049V748.188H797.379V745.334H814.151V748.188ZM826.048 744.987C828.567 744.987 830.431 745.54 831.639 746.645C832.847 747.751 833.451 749.511 833.451 751.927V766H830.983L830.328 763.07H830.174C829.583 763.815 828.966 764.445 828.323 764.959C827.706 765.447 826.987 765.807 826.164 766.039C825.367 766.27 824.39 766.386 823.234 766.386C822 766.386 820.882 766.167 819.879 765.73C818.903 765.293 818.132 764.625 817.566 763.725C817.001 762.8 816.718 761.643 816.718 760.255C816.718 758.199 817.528 756.618 819.147 755.513C820.766 754.382 823.26 753.765 826.627 753.662L830.135 753.547V752.313C830.135 750.591 829.762 749.396 829.017 748.727C828.272 748.059 827.218 747.725 825.856 747.725C824.776 747.725 823.748 747.892 822.771 748.226C821.794 748.535 820.882 748.894 820.034 749.306L818.993 746.761C819.892 746.273 820.959 745.861 822.193 745.527C823.427 745.167 824.712 744.987 826.048 744.987ZM827.051 756.014C824.48 756.117 822.694 756.528 821.692 757.248C820.715 757.968 820.226 758.983 820.226 760.294C820.226 761.45 820.573 762.299 821.267 762.838C821.987 763.378 822.9 763.648 824.005 763.648C825.753 763.648 827.205 763.173 828.362 762.222C829.518 761.245 830.097 759.754 830.097 757.749V755.899L827.051 756.014ZM856.567 736.775C856.464 738.06 856.142 739.14 855.603 740.014C855.089 740.888 854.318 741.543 853.289 741.98C852.261 742.417 850.925 742.636 849.28 742.636C847.609 742.636 846.259 742.417 845.231 741.98C844.229 741.543 843.496 740.901 843.034 740.052C842.571 739.178 842.288 738.086 842.185 736.775H845.347C845.476 738.163 845.835 739.101 846.427 739.59C847.043 740.052 848.02 740.284 849.357 740.284C850.539 740.284 851.464 740.04 852.133 739.551C852.827 739.037 853.238 738.112 853.366 736.775H856.567ZM843.034 757.942C843.034 758.173 843.021 758.507 842.995 758.944C842.995 759.356 842.982 759.805 842.957 760.294C842.931 760.756 842.905 761.206 842.879 761.643C842.854 762.055 842.828 762.389 842.802 762.646L853.868 745.334H858.032V766H854.87V753.817C854.87 753.405 854.87 752.866 854.87 752.197C854.896 751.529 854.922 750.874 854.947 750.231C854.973 749.563 854.999 749.061 855.024 748.727L844.036 766H839.834V745.334H843.034V757.942Z" fill="#616161"/>
+            <path class="pathGray path4" d="M321 500.5C392.812 560 913.5 618.5 1132 605" stroke="#DADADA" stroke-width="2" stroke-dasharray="4 4"/>
+            <path class="pathGray path5" d="M243.001 647C310.831 563.739 315.348 530.883 318.002 499.5" stroke="white" stroke-width="2" stroke-dasharray="4 4"/>
+            <circle class="circle_cin" cx="1053.03" cy="733.032" r="7.2291" fill="white" stroke="#3F9755" stroke-width="1.60647"/>
+            <circle cx="1053.03" cy="733.032" r="3.21293" fill="#3F9755"/>
+            <circle class="circle_shen" cx="1085.03" cy="651.032" r="7.2291" fill="white" stroke="#3F9755" stroke-width="1.60647"/>
+            <circle cx="1085.03" cy="651.032" r="3.21293" fill="#3F9755"/>
+            <circle cx="953.032" cy="524.032" r="7.2291" fill="#3F9755" stroke="white" stroke-width="1.60647"/>
+            <circle class="circle_zab" cx="953.033" cy="524.032" r="3.21293" fill="white"/>
+            <circle cx="1153.03" cy="546.032" r="7.2291" fill="#3F9755" stroke="white" stroke-width="1.60647"/>
+            <circle class="circle_grod" cx="1153.03" cy="546.032" r="3.21293" fill="white"/>
+            <circle cx="870.032" cy="510.032" r="7.2291" fill="#3F9755" stroke="white" stroke-width="1.60647"/>
+            <circle class="circle_nau" cx="870.033" cy="510.032" r="3.21293" fill="white"/>
+            <circle cx="318.72" cy="498.032" r="7.2291" fill="#3F9755" stroke="white" stroke-width="1.60647"/>
+            <circle class="circle_msk" cx="318.721" cy="498.032" r="3.21293" fill="white"/>
+            <circle cx="240.032" cy="650.032" r="7.2291" fill="#3F9755" stroke="white" stroke-width="1.60647"/>
+            <circle class="circle_krsnd" cx="240.033" cy="650.032" r="3.21293" fill="white"/>
+            <circle cx="386.72" cy="397.032" r="7.2291" fill="#3F9755" stroke="white" stroke-width="1.60647"/>
+            <circle class="circle_spb" cx="386.721" cy="397.032" r="3.21293" fill="white"/>
+            <circle cx="481.72" cy="457.032" r="7.2291" fill="#3F9755" stroke="white" stroke-width="1.60647"/>
+            <circle class="circle_kazan" cx="481.721" cy="457.032" r="3.21293" fill="white"/>
+            <circle cx="656.72" cy="417.032" r="7.2291" fill="#3F9755" stroke="white" stroke-width="1.60647"/>
+            <circle class="circle_ekb" cx="656.721" cy="417.032" r="3.21293" fill="white"/>
+            <circle class="circle_nsk" cx="748.032" cy="508.032" r="7.2291" fill="#3F9755" stroke="white" stroke-width="1.60647"/>
+            <circle cx="748.033" cy="508.032" r="3.21293" fill="white"/>
+            <circle class="circle_krsn" cx="800.032" cy="488.032" r="7.2291" fill="#3F9755" stroke="white" stroke-width="1.60647"/>
+            <circle cx="800.033" cy="488.032" r="3.21293" fill="white"/>
+            <circle class="circle_chen" cx="700.032" cy="810.032" r="7.2291" fill="white" stroke="#3F9755" stroke-width="1.60647"/>
+            <circle cx="700.033" cy="810.032" r="3.21293" fill="#3F9755"/>
+            <circle class="circle_jaen" cx="874.032" cy="774.032" r="7.2291" fill="white" stroke="#3F9755" stroke-width="1.60647"/>
+            <circle cx="874.033" cy="774.032" r="3.21293" fill="#3F9755"/>
+            <circle class="circle_shan" cx="1069.03" cy="805.032" r="7.2291" fill="white" stroke="#3F9755" stroke-width="1.60647"/>
+            <circle cx="1069.03" cy="805.032" r="3.21293" fill="#3F9755"/>
+            <circle class="circle_nin" cx="1069.03" cy="887.032" r="7.2291" fill="white" stroke="#3F9755" stroke-width="1.60647"/>
+            <circle cx="1069.03" cy="887.032" r="3.21293" fill="#3F9755"/>
+            <circle class="circle_tyan" cx="976.032" cy="687.032" r="7.2291" fill="white" stroke="#3F9755" stroke-width="1.60647"/>
+            <circle cx="976.033" cy="687.032" r="3.21293" fill="#3F9755"/>
+            <circle cx="1132.03" cy="604.032" r="7.2291" fill="#3F9755" stroke="white" stroke-width="1.60647"/>
+            <circle class="circle_vsk" cx="1132.03" cy="604.032" r="3.21293" fill="white"/>
+            <circle cx="1155.03" cy="629.032" r="7.2291" fill="white" stroke="#3F9755" stroke-width="1.60647"/>
+            <circle class="circle_nahod" cx="1155.03" cy="629.032" r="3.21293" fill="#3F9755"/>
+            <defs>
+            <linearGradient id="paint0_linear_2040_239" x1="117" y1="618" x2="-31.2571" y2="729.356" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#17642A"/>
+            <stop offset="1" stop-color="white"/>
+            </linearGradient>
+            <linearGradient id="paint1_linear_2040_239" x1="1201" y1="564" x2="1275.5" y2="410" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#3F9755"/>
+            <stop offset="1" stop-color="white"/>
+            </linearGradient>
+            <linearGradient id="paint2_linear_2040_239" x1="668" y1="343.5" x2="2138.5" y2="-256" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#5CAB70"/>
+            <stop offset="1" stop-color="white"/>
+            </linearGradient>
+            <linearGradient id="paint3_linear_2040_239" x1="55.6901" y1="566.279" x2="285.415" y2="314.867" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#17642A"/>
+            <stop offset="1" stop-color="white"/>
+            </linearGradient>
+            </defs>
+            </svg>
+            
+            
+        
+        <div class="map__wrapper-link">
+            <a href="/TR/404.html" id="circle_msk" class="text_small map__sity map__sityRussia map__absolute">Москва</a>
+            <a href="/TR/404.html" id="circle_krsnd" class="text_min map__sity map__sityRussia map__absolute">Краснодар</a>
+            <a href="/TR/404.html" id="circle_spb" class="text_min map__sity map__sityRussia map__absolute">Санкт- Петербург</a>
+            <a href="/TR/404.html" id="circle_kazan" class="text_min map__sity map__sityRussia map__absolute">Казань</a>
+            <a href="/TR/404.html" id="circle_ekb" class="text_min map__sity map__sityRussia map__absolute">Екатеринбург</a>
+            <a href="/TR/404.html" id="circle_nsk" class="text_small map__sity map__sityRussia map__absolute">Новосибирск</a>
+            <a href="/TR/404.html" id="circle_krsn" class="text map__sity map__sityRussia map__absolute">Красноярск</a>
+            <a href="/TR/404.html" id="circle_nau" class="text map__sity map__sityRussia map__absolute">Наушки</a>
+            <a href="/TR/404.html" id="circle_zab" class="text map__sity map__sityRussia map__absolute">Забайкальск</a>
+            <a href="/TR/404.html" id="circle_grod" class="text map__sity map__sityRussia map__absolute">Гродеково</a>
+            <a href="/TR/404.html" id="circle_vsk" class="text_small map__sity map__sityRussia map__absolute">Владивосток</a>
+            <a href="/TR/404.html" id="circle_nahod" class="text map__sity map__sityRussia map__absolute">Находка</a>
+            <a href="/TR/404.html" id="circle_cin" class="text map__sity map__sityChina map__absolute">Циндао</a>
+            <a href="/TR/404.html" id="circle_jaen" class="text map__sity map__sityChina map__absolute">Чжэнчжоу</a>
+            <a href="/TR/404.html" id="circle_chen" class="text map__sity map__sityChina map__absolute">Чэнду</a>
+            <a href="/TR/404.html" id="circle_shan" class="text_small map__sity map__sityChina map__absolute">Шанхай</a>
+            <a href="/TR/404.html" id="circle_shen" class="text map__sity map__sityChina map__absolute">Шэньян</a>
+            <a href="/TR/404.html" id="circle_nin" class="text map__sity map__sityChina map__absolute">Нинбо</a>
+            <a href="/TR/404.html" id="circle_tyan" class="text map__sity map__sityChina map__absolute">Тяньцзинь</a>
+        </div>
+        </div>
+    </div>
+</section>
+            <section id="tariff" class="delivery-block tariff green-block green-block_up">
+    
+    <div class="container delivery-block__container">
+        <div class="section__head delivery-block__title-block">
+            <div class="section__number-block"><img class="section__number-icon" src="images/icons/number4.svg"></div>
+            <span class="text_standart section__head-text">Тарифы транспортных <br>перевозок</span>
+            <h2 class="text_head section__title">Транспортно-логистические <br>возможности с Trans Innovation</h2>
+        </div>
+    </div>
 
+    <div class="container container_right delivery-block__slider-block">
+        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
 
-                    <div class="map__wrapper-link">
-                        <a href="/TR/404.html" id="circle_msk" class="map__absolute map__sity map__sityRussia text_small">Москва</a>
-                        <a href="/TR/404.html" id="circle_krsnd" class="map__absolute map__sity map__sityRussia text_min">Краснодар</a>
-                        <a href="/TR/404.html" id="circle_spb" class="map__absolute map__sity map__sityRussia text_min">Санкт- Петербург</a>
-                        <a href="/TR/404.html" id="circle_kazan" class="map__absolute map__sity map__sityRussia text_min">Казань</a>
-                        <a href="/TR/404.html" id="circle_ekb" class="map__absolute map__sity map__sityRussia text_min">Екатеринбург</a>
-                        <a href="/TR/404.html" id="circle_nsk" class="map__absolute map__sity map__sityRussia text_small">Новосибирск</a>
-                        <a href="/TR/404.html" id="circle_krsn" class="map__absolute map__sity map__sityRussia text">Красноярск</a>
-                        <a href="/TR/404.html" id="circle_nau" class="map__absolute map__sity map__sityRussia text">Наушки</a>
-                        <a href="/TR/404.html" id="circle_zab" class="map__absolute map__sity map__sityRussia text">Забайкальск</a>
-                        <a href="/TR/404.html" id="circle_grod" class="map__absolute map__sity map__sityRussia text">Гродеково</a>
-                        <a href="/TR/404.html" id="circle_vsk" class="map__absolute map__sity map__sityRussia text_small">Владивосток</a>
-                        <a href="/TR/404.html" id="circle_nahod" class="map__absolute map__sity map__sityRussia text">Находка</a>
-                        <a href="/TR/404.html" id="circle_cin" class="map__absolute map__sity text map__sityChina">Циндао</a>
-                        <a href="/TR/404.html" id="circle_jaen" class="map__absolute map__sity text map__sityChina">Чжэнчжоу</a>
-                        <a href="/TR/404.html" id="circle_chen" class="map__absolute map__sity text map__sityChina">Чэнду</a>
-                        <a href="/TR/404.html" id="circle_shan" class="map__absolute map__sity map__sityChina text_small">Шанхай</a>
-                        <a href="/TR/404.html" id="circle_shen" class="map__absolute map__sity text map__sityChina">Шэньян</a>
-                        <a href="/TR/404.html" id="circle_nin" class="map__absolute map__sity text map__sityChina">Нинбо</a>
-                        <a href="/TR/404.html" id="circle_tyan" class="map__absolute map__sity text map__sityChina">Тяньцзинь</a>
+            <div class="delivery-block__slider-buttons">
+                <a class="delivery-block__button delivery-block__button_prev" uk-slidenav-previous uk-slider-item="previous"><img class="" src="images/icons/prev-icon-green.svg"></a>
+                <a class="delivery-block__button delivery-block__button_next" uk-slidenav-next uk-slider-item="next"><img class="" src="images/icons/next-icon-green.svg"></a>
+            </div>
+
+            <div class="delivery-slider green-slider uk-slider-items uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m">
+
+                <div class="delivery-block__slide green-slide">
+                    <div class="delivery-block__slide_green">
+                        <div class="delivery-block__slide-up">
+                            <img class="delivery-block__icon" src="images/icons/ship-icon.png">
+                            <a href="/TR/404.html" class="delivery-block__arrow-button"><img class="delivery-block__arrow-icon" src="images/icons/arrow-type-1.svg" uk-svg></a>
+                        </div>   
+                        <div class="delivery-block__slide-down">
+                            <h3 class="text_standart delivery-block__slide-title">Тарифы на морские перевозки</h3>
+                        </div>  
                     </div>
                 </div>
-            </div>
-        </section>
-        <section id="tariff" class="delivery-block green-block green-block_up tariff">
 
-            <div class="container delivery-block__container">
-                <div class="section__head delivery-block__title-block">
-                    <div class="section__number-block"><img class="section__number-icon" src="images/icons/number4.svg"></div>
-                    <span class="text_standart section__head-text">Тарифы транспортных <br>перевозок</span>
-                    <h2 class="text_head section__title">Транспортно-логистические <br>возможности с Trans Innovation</h2>
-                </div>
-            </div>
-
-            <div class="container container_right delivery-block__slider-block">
-                <div class="uk-light uk-position-relative uk-visible-toggle" tabindex="-1" uk-slider>
-
-                    <div class="delivery-block__slider-buttons">
-                        <a class="delivery-block__button delivery-block__button_prev" uk-slidenav-previous uk-slider-item="previous"><img class="" src="images/icons/prev-icon-green.svg"></a>
-                        <a class="delivery-block__button delivery-block__button_next" uk-slidenav-next uk-slider-item="next"><img class="" src="images/icons/next-icon-green.svg"></a>
+                <div class="delivery-block__slide green-slide white-active">
+                    <div class="delivery-block__slide_green">
+                        <div class="delivery-block__slide-up">
+                            <img class="delivery-block__icon" src="images/icons/auto-icon.png">
+                            <a href="/TR/404.html" class="delivery-block__arrow-button"><img class="delivery-block__arrow-icon" src="images/icons/arrow-type-1.svg" uk-svg></a>
+                        </div>   
+                        <div class="delivery-block__slide-down">
+                            <h3 class="text_standart delivery-block__slide-title">Тариф автомобильным транспортом</h3>
+                        </div>  
                     </div>
+                </div>
 
-                    <div class="delivery-slider uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m uk-slider-items green-slider">
-
-                        <div class="delivery-block__slide green-slide">
-                            <div class="delivery-block__slide_green">
-                                <div class="delivery-block__slide-up">
-                                    <img class="delivery-block__icon" src="images/icons/ship-icon.png">
-                                    <a href="/TR/404.html" class="delivery-block__arrow-button"><img class="delivery-block__arrow-icon" src="images/icons/arrow-type-1.svg" uk-svg></a>
-                                </div>
-                                <div class="delivery-block__slide-down">
-                                    <h3 class="text_standart delivery-block__slide-title">Тарифы на морские перевозки</h3>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="delivery-block__slide green-slide white-active">
-                            <div class="delivery-block__slide_green">
-                                <div class="delivery-block__slide-up">
-                                    <img class="delivery-block__icon" src="images/icons/auto-icon.png">
-                                    <a href="/TR/404.html" class="delivery-block__arrow-button"><img class="delivery-block__arrow-icon" src="images/icons/arrow-type-1.svg" uk-svg></a>
-                                </div>
-                                <div class="delivery-block__slide-down">
-                                    <h3 class="text_standart delivery-block__slide-title">Тариф автомобильным транспортом</h3>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="delivery-block__slide green-slide">
-                            <div class="delivery-block__slide_green">
-                                <div class="delivery-block__slide-up">
-                                    <img class="delivery-block__icon" src="images/icons/auto-icon.png">
-                                    <a href="/TR/404.html" class="delivery-block__arrow-button"><img class="delivery-block__arrow-icon" src="images/icons/arrow-type-1.svg" uk-svg></a>
-                                </div>
-                                <div class="delivery-block__slide-down">
-                                    <h3 class="text_standart delivery-block__slide-title">Транспортно-экспедиционные услуги</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <!--
+                <div class="delivery-block__slide green-slide">
+                    <div class="delivery-block__slide_green">
+                        <div class="delivery-block__slide-up">
+                            <img class="delivery-block__icon" src="images/icons/auto-icon.png">
+                            <a href="/TR/404.html" class="delivery-block__arrow-button"><img class="delivery-block__arrow-icon" src="images/icons/arrow-type-1.svg" uk-svg></a>
+                        </div>   
+                        <div class="delivery-block__slide-down">
+                            <h3 class="text_standart delivery-block__slide-title">Транспортно-экспедиционные услуги</h3>
+                        </div>  
+                    </div>
+                </div>
+<!--
                 <div class = "delivery-block__slide green-slide">
                     <div class = "delivery-block__slide_green">
                         <div class = "delivery-block__slide-up">
@@ -700,164 +700,166 @@
                     </div>
                 </div>
 -->
-                    </div>
-                </div>
             </div>
-        </section>
-        <section class="delivery-block green-block green-block_down guides section-no-margin">
-
-            <div class="container delivery-block__container">
-                <div class="section__head delivery-block__title-block">
-                    <div class="section__number-block"><img class="section__number-icon" src="images/icons/number5.svg"></div>
-                    <span class="text_standart section__head-text">Онлайн-справочники <br>для вашего удобства</span>
-                    <h2 class="text_head section__title">Справочники</h2>
-                </div>
-            </div>
-            <div class="container guides__block">
-                <div class="guides__block-row">
-                    <div class="guides__card">
-                        <span class="text_standart guides__card-title">ЖЕЛЕЗНОДОРОЖНЫЕ <br>ГРУЗЫ ЕТСНГ</span>
-                        <a href="/TR/404.html" class="guides__card-link"><img class="guides__card-link-icon" src="images/icons/arrow-right-white.svg" uk-svg></a>
-                    </div>
-                    <div class="guides__card">
-                        <span class="text_standart guides__card-title">ЖЕЛЕЗНОДОРОЖНЫЕ <br>ГРУЗЫ ГНГ</span>
-                        <a href="/TR/404.html" class="guides__card-link"><img class="guides__card-link-icon" src="images/icons/arrow-right-white.svg" uk-svg></a>
-                    </div>
-                    <div class="guides__card">
-                        <span class="text_standart guides__card-title">ЖЕЛЕЗНОДОРОЖНЫЕ <br>СТАНЦИИ</span>
-                        <a href="/TR/404.html" class="guides__card-link"><img class="guides__card-link-icon" src="images/icons/arrow-right-white.svg" uk-svg></a>
-                    </div>
-                    <div class="guides__card">
-                        <span class="text_standart guides__card-title">РАСЧЕТ РАССТОЯНИЯ <br>МАРШРУТА</span>
-                        <a href="/TR/404.html" class="guides__card-link"><img class="guides__card-link-icon" src="images/icons/arrow-right-white.svg" uk-svg></a>
-                    </div>
-                </div>
-                <div class="guides__block-row">
-                    <div class="guides__card">
-                        <span class="text_standart guides__card-title">характеристики <br>контейнеров</span>
-                        <a href="/TR/404.html" class="guides__card-link"><img class="guides__card-link-icon" src="images/icons/arrow-right-white.svg" uk-svg></a>
-                    </div>
-                    <div class="guides__card">
-                        <span class="text_standart guides__card-title">КАРТЫ ЖЕЛЕЗНЫХ <br>ДОРОГ</span>
-                        <a href="/TR/404.html" class="guides__card-link"><img class="guides__card-link-icon" src="images/icons/arrow-right-white.svg" uk-svg></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="clients" class="section clients">
-            <div class="container clients__container">
-                <h2 class="clients__title text_overhead">Наши клиенты</h2>
-                <a class="clients__card reveal reveal1 uk-card uk-card-default uk-card-hover"><img class="clients__img" src="images/AkaTrans.png"></a>
-                <a class="clients__card reveal reveal1 uk-card uk-card-default uk-card-hover"><img class="clients__img" src="images/Troika.png"></a>
-                <a class="clients__card reveal reveal1 uk-card uk-card-default uk-card-hover"><img class="clients__img" src="images/stal.png"></a>
-                <a class="clients__card reveal reveal1 uk-card uk-card-default uk-card-hover clients__card_dark"><img class="clients__img" src="images/RGgroup.png"></a>
-                <a class="clients__card reveal reveal1 uk-card uk-card-default uk-card-hover"><img class="clients__img" src="images/magistral.png"></a>
-            </div>
-        </section>
-    </main>
-
-    <footer class="section footer">
-        <div class="footer__up">
-            <div class="container footer__container">
-                <div class="text_head footer__head">Контакты</div>
-                <div class="footer__block">
-                    <div class="text_min footer__column">
-                        <span class="footer__column-title">ОФИС Новосибирск</span>
-                        <div class="footer__column-content">
-                            <span class="footer__column-text">Новосибирск - 630049, <br>РФ, г. Новосибирск, <br>ул. Дуси Ковальчук, д. 274 <br>Телефон: 8 (800) 101-28-32;</span>
-                        </div>
-                        <span class="footer__column-title">ОФИС МОСКВА</span>
-                        <div class="footer__column-content">
-                            <span class="footer__column-text">Москва – 117405, <br>РФ, г. Москва, <br>ул. Дорожная, д. 60 <br>Телефон: 8 (985) 719-79-80;</span>
-                        </div>
-                        <span class="footer__column-title">ГРАФИК РАБОТЫ</span>
-                        <div class="footer__column-content">
-                            <span class="footer__column-text">Пн-Пт 08:00 - 18:00 <br>Сб-Вс - Выходной</span>
-                        </div>
-                    </div>
-
-                    <div class="text_min footer__column">
-                        <span class="footer__column-title">МЕНЮ</span>
-                        <div class="footer__column-content">
-                            <a href="/TR/" class="footer__column-text footer__column-link">ГЛАВНАЯ</a>
-                            <a href="/TR/404.html" class="footer__column-text footer__column-link">О КОМПАНИИ</a>
-                            <a href="/TR/404.html" class="footer__column-text footer__column-link">УСЛУГИ</a>
-                            <a href="/TR/404.html" class="footer__column-text footer__column-link">ТАРИФЫ</a>
-                            <a href="/TR/404.html" class="footer__column-text footer__column-link">СПРАВОЧНИК</a>
-                            <a href="/TR/404.html" class="footer__column-text footer__column-link">КОНТАКТЫ</a>
-                        </div>
-                    </div>
-
-                    <div class="text_min footer__column">
-                        <span class="footer__column-title">УСЛУГИ</span>
-                        <div class="footer__column-content">
-                            <a href="/TR/404.html" class="footer__column-text footer__column-link">перевозка опасных грузов</a>
-                            <a href="/TR/404.html" class="footer__column-text footer__column-link">ЖД перевозки</a>
-                            <a href="/TR/404.html" class="footer__column-text footer__column-link">АВТОперевозки</a>
-                            <a href="/TR/404.html" class="footer__column-text footer__column-link">перевозка сыпучих <br>грузов</a>
-                        </div>
-                    </div>
-
-                    <div class="text_min footer__column">
-                        <span class="footer__column-title">Справочники</span>
-                        <div class="footer__column-content">
-                            <a href="/TR/404.html" class="footer__column-text footer__column-link">ЖЕЛЕЗНОДОРОЖНЫЕ ГРУЗЫ ЕТСНГ</a>
-                            <a href="/TR/404.html" class="footer__column-text footer__column-link">ЖЕЛЕЗНОДОРОЖНЫЕ ГРУЗЫ ГНГ</a>
-                            <a href="/TR/404.html" class="footer__column-text footer__column-link">ЖЕЛЕЗНОДОРОЖНЫЕ СТАНЦИИ</a>
-                            <a href="/TR/404.html" class="footer__column-text footer__column-link">РАСЧЕТ РАССТОЯНИЯ МАРШРУТА</a>
-                            <a href="/TR/404.html" class="footer__column-text footer__column-link">Характеристики контейнеров</a>
-                            <a href="/TR/404.html" class="footer__column-text footer__column-link">КАРТЫ ЖЕЛЕЗНЫХ ДОРОГ</a>
-                        </div>
-                    </div>
-                </div>
-                <a href="mailto:info@transinn.ru" class="text_standart footer__email-text">info@transinn.ru</a>
-            </div>
-        </div>
-        <div class="footer__down">
-            <div class="text_standart container footer__container footer__down-container">
-                <a href="/TR/" class="link header__logo-wrapper footer__logo-wrapper"><img src="images/icons/logo.svg" class="header__logo-icon" alt="Trans inovation"></a>
-                <a href="/TR/documents/Политика конфиденциальности сайта ТРАНС ИННОВАЦИЯ.pdf" class="footer__down-text" target="_blank">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
-                <a href="/TR/documents/Пользовательское соглашение на сайт ТРАНС ИННОВАЦИЯ.pdf" class="footer__down-text" target="_blank">ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</a>
-                <div class="footer__delevoper">
-                    <span class="footer__down-text">разработка сайта:</span>
-                    <a href="https://dmagroup.ru/" class="footer__down-text footer__down-text_accent">dma group</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer__button-top"><img class="footer__button-top-img" src="images/icons/up-top.svg"></div>
-    </footer>
-
-    <div id="formRequest" class="modal-request uk-flex-top" uk-modal>
-        <div class="uk-margin-auto-vertical uk-modal-body uk-modal-dialog">
-            <h2 class="text_large uk-modal-title">Оставить заявку</h2>
-            <button class="text_small button button__accent uk-modal-close" type="button">x</button>
-            <form class="modal-form">
-                <input type="text" name="name" class="text_small modal-form__input" placeholder="Имя" required>
-                <input type="tel" name="phone" class="text_small modal-form__input" placeholder="+7 999 999 99-99" required>
-                <button type="submit" class="text_small button button__accent button-form" uk-toggle="target: #formRequest">Отправить</button>
-            </form>
         </div>
     </div>
+</section>
+            <section class="delivery-block guides green-block green-block_down section-no-margin">
+    
+    <div class="container delivery-block__container">
+        <div class="section__head delivery-block__title-block">
+            <div class="section__number-block"><img class="section__number-icon" src="images/icons/number5.svg"></div>
+            <span class="text_standart section__head-text">Онлайн-справочники <br>для вашего удобства</span>
+            <h2 class="text_head section__title">Справочники</h2>
+        </div>
+    </div>
+    <div class="guides__block container">
+        <div class="guides__block-row">
+            <div class="guides__card">
+                <span class="text_standart guides__card-title">ЖЕЛЕЗНОДОРОЖНЫЕ <br>ГРУЗЫ ЕТСНГ</span>
+                <a href="/TR/404.html" class="guides__card-link"><img class="guides__card-link-icon" src="images/icons/arrow-right-white.svg" uk-svg></a>
+            </div>
+            <div class="guides__card">
+                <span class="text_standart guides__card-title">ЖЕЛЕЗНОДОРОЖНЫЕ <br>ГРУЗЫ ГНГ</span>
+                <a href="/TR/404.html" class="guides__card-link"><img class="guides__card-link-icon" src="images/icons/arrow-right-white.svg" uk-svg></a>
+            </div>
+            <div class="guides__card">
+                <span class="text_standart guides__card-title">ЖЕЛЕЗНОДОРОЖНЫЕ <br>СТАНЦИИ</span>
+                <a href="/TR/404.html" class="guides__card-link"><img class="guides__card-link-icon" src="images/icons/arrow-right-white.svg" uk-svg></a>
+            </div>
+            <div class="guides__card">
+                <span class="text_standart guides__card-title">РАСЧЕТ РАССТОЯНИЯ <br>МАРШРУТА</span>
+                <a href="/TR/404.html" class="guides__card-link"><img class="guides__card-link-icon" src="images/icons/arrow-right-white.svg" uk-svg></a>
+            </div>
+        </div>
+        <div class="guides__block-row">
+            <div class="guides__card">
+                <span class="text_standart guides__card-title">характеристики <br>контейнеров</span>
+                <a href="/TR/404.html" class="guides__card-link"><img class="guides__card-link-icon" src="images/icons/arrow-right-white.svg" uk-svg></a>
+            </div>
+            <div class="guides__card">
+                <span class="text_standart guides__card-title">КАРТЫ ЖЕЛЕЗНЫХ <br>ДОРОГ</span>
+                <a href="/TR/404.html" class="guides__card-link"><img class="guides__card-link-icon" src="images/icons/arrow-right-white.svg" uk-svg></a>
+            </div>
+        </div>
+    </div>
+</section>
+            <section id="clients" class="clients section">
+    <div class="container clients__container">
+        <h2 class="text_overhead clients__title">Наши клиенты</h2>
+        <a class="clients__card reveal reveal1 uk-card uk-card-default uk-card-hover"><img class="clients__img" src="images/AkaTrans.png"></a>
+        <a class="clients__card reveal reveal1 uk-card uk-card-default uk-card-hover"><img class="clients__img" src="images/Troika.png"></a>
+        <a class="clients__card reveal reveal1 uk-card uk-card-default uk-card-hover"><img class="clients__img" src="images/stal.png"></a>
+        <a class="clients__card clients__card_dark reveal reveal1 uk-card uk-card-default uk-card-hover"><img class="clients__img" src="images/RGgroup.png"></a>
+        <a class="clients__card reveal reveal1 uk-card uk-card-default uk-card-hover"><img class="clients__img" src="images/magistral.png"></a>
+    </div>
+</section>
+        </main>
 
-    <!-- UIkit JS -->
-    <script src="static/uikit-3.16.24.min.js?_v=20240617120154"></script>
-    <script src="static/uikit-icons-3.16.24.min.js?_v=20240617120154"></script>
+        <footer class="footer section">
+    <div class="footer__up">
+        <div class="container footer__container">
+            <div class="text_head footer__head">Контакты</div>
+            <div class="footer__block">
+                <div class="text_min footer__column">
+                    <span class="footer__column-title">ОФИС Новосибирск</span>
+                    <div class="footer__column-content">
+                        <span class="footer__column-text">Новосибирск - 630049, <br>РФ, г. Новосибирск, <br>ул. Дуси Ковальчук, д. 274 <br>Телефон: 8 (800) 101-28-32;</span>
+                    </div>
+                    <span class="footer__column-title">ОФИС МОСКВА</span>
+                    <div class="footer__column-content">
+                        <span class="footer__column-text">Москва – 117405, <br>РФ, г. Москва, <br>ул. Дорожная, д. 60 <br>Телефон: 8 (985) 719-79-80;</span>
+                    </div>
+                    <span class="footer__column-title">ГРАФИК РАБОТЫ</span>
+                    <div class="footer__column-content">
+                        <span class="footer__column-text">Пн-Пт 08:00 - 18:00 <br>Сб-Вс - Выходной</span>
+                    </div>
+                </div>
 
-    <!-- Anime JS -->
-    <script src="js/anime.js?_v=20240617120154"></script>
+                <div class="text_min footer__column">
+                    <span class="footer__column-title">МЕНЮ</span>
+                    <div class="footer__column-content">
+                        <a href="/TR/" class="footer__column-text footer__column-link">ГЛАВНАЯ</a>
+                        <a href="/TR/404.html" class="footer__column-text footer__column-link">О КОМПАНИИ</a>
+                        <a href="/TR/404.html" class="footer__column-text footer__column-link">УСЛУГИ</a>
+                        <a href="/TR/404.html" class="footer__column-text footer__column-link">ТАРИФЫ</a>
+                        <a href="/TR/404.html" class="footer__column-text footer__column-link">СПРАВОЧНИК</a>
+                        <a href="/TR/404.html" class="footer__column-text footer__column-link">КОНТАКТЫ</a>
+                    </div>
+                </div>
+
+                <div class="text_min footer__column">
+                    <span class="footer__column-title">УСЛУГИ</span>
+                    <div class="footer__column-content">
+                        <a href="/TR/404.html" class="footer__column-text footer__column-link">перевозка опасных грузов</a>
+                        <a href="/TR/404.html" class="footer__column-text footer__column-link">ЖД перевозки</a>
+                        <a href="/TR/404.html" class="footer__column-text footer__column-link">АВТОперевозки</a>
+                        <a href="/TR/404.html" class="footer__column-text footer__column-link">перевозка сыпучих <br>грузов</a>
+                    </div>
+                </div>
+
+                <div class="text_min footer__column">
+                    <span class="footer__column-title">Справочники</span>
+                    <div class="footer__column-content">
+                        <a href="/TR/404.html" class="footer__column-text footer__column-link">ЖЕЛЕЗНОДОРОЖНЫЕ ГРУЗЫ ЕТСНГ</a>
+                        <a href="/TR/404.html" class="footer__column-text footer__column-link">ЖЕЛЕЗНОДОРОЖНЫЕ ГРУЗЫ ГНГ</a>
+                        <a href="/TR/404.html" class="footer__column-text footer__column-link">ЖЕЛЕЗНОДОРОЖНЫЕ СТАНЦИИ</a>
+                        <a href="/TR/404.html" class="footer__column-text footer__column-link">РАСЧЕТ РАССТОЯНИЯ МАРШРУТА</a>
+                        <a href="/TR/404.html" class="footer__column-text footer__column-link">Характеристики контейнеров</a>
+                        <a href="/TR/404.html" class="footer__column-text footer__column-link">КАРТЫ ЖЕЛЕЗНЫХ ДОРОГ</a>
+                    </div>
+                </div>
+            </div>
+            <a href="mailto:info@transinn.ru" class="text_standart footer__email-text">info@transinn.ru</a>
+        </div>
+    </div>
+    <div class="footer__down">
+        <div class="text_standart container footer__container footer__down-container">
+            <a href="/TR/" class="header__logo-wrapper footer__logo-wrapper link"><img src="images/icons/logo.svg" class="header__logo-icon" alt="Trans inovation"></a>
+            <a href="/TR/documents/Политика конфиденциальности сайта ТРАНС ИННОВАЦИЯ.pdf" class="footer__down-text" target="_blank">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
+            <a href="/TR/documents/Пользовательское соглашение на сайт ТРАНС ИННОВАЦИЯ.pdf" class="footer__down-text" target="_blank">ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</a>
+            <div class="footer__delevoper">
+                <span class="footer__down-text">разработка сайта:</span>
+                <a href="https://dmagroup.ru/" class="footer__down-text footer__down-text_accent">dma group</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer__button-top"><img class="footer__button-top-img" src="images/icons/up-top.svg"></div>
+</footer>
+
+<div id="formRequest" class="modal-request uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+        <h2 class="uk-modal-title text_large modal__title">Заполните форму <br>обратной связи</h2>
+        <span class="text_standart modal__text">Наши менеджеры свяжутся <br>с вами в течении 15 минут!</span>
+        <button class="uk-modal-close text_small button button__accent" type="button"></button>
+        <form class="modal-form">
+            <input type="text" name="name" class="text_small modal-form__input" placeholder="Ваше имя" required>
+            <input type="email" name="email" class="text_small modal-form__input" placeholder="Ваш e-mail" required>
+            <input type="tel" name="phone" e class="text_small modal-form__input" placeholder="Ваш телефон" required>
+            <button type="submit" class="text_small button button__accent button-form" uk-toggle="target: #formRequest">Отправить</button>
+        </form>
+    </div>
+</div>
+
+        <!-- UIkit JS -->
+<script src="static/uikit-3.16.24.min.js"></script>
+<script src="static/uikit-icons-3.16.24.min.js"></script>
+
+<!-- Anime JS -->
+<script src="js/anime.js"></script>
 
 
-    <!-- Imask JS -->
-    <script src="static/imask-7.5.0.min.js?_v=20240617120154"></script>
+<!-- Imask JS -->
+<script src="static/imask-7.5.0.min.js"></script>
 
-    <!-- Tippy JS -->
-    <script src="https://unpkg.com/@popperjs/core@2?_v=20240617120154"></script>
-    <script src="https://unpkg.com/tippy.js@6?_v=20240617120154"></script>
-    <!-- Particles JS -->
-    <script src="js/TweenMax.js?_v=20240617120154" type="module"></script>
-    <!-- Particles JS -->
-    <script src="static/particles.min.js?_v=20240617120154"></script>
-    <script src="js/app.js?_v=20240617120154" type="module"></script>
-</body>
-
-</html>
+<!-- Tippy JS -->
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<!-- Particles JS -->
+<script src="js/TweenMax.js" type="module"></script>
+<!-- Particles JS -->
+<script src="static/particles.min.js"></script>
+<!--<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>-->
+<script src="js/app.js" type="module"></script>
+    </body>
+</html> 

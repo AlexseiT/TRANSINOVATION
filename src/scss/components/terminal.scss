@@ -1,0 +1,28 @@
+.terminal {
+
+    &__container {
+    }
+
+    &__map {
+        width: 100% !important;
+        height: 120vh !important;
+        margin-top: 50px;
+        .ymaps-2-1-79-map{
+            width: 100% !important;
+            height: 120vh !important;
+        }
+    }
+
+    &__content {
+    }
+
+    &__button {
+    }
+
+    &__search {
+    }
+
+    &__content-list {
+    }
+}
+

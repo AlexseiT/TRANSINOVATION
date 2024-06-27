@@ -435,6 +435,11 @@ function LinckMapInit() {
                     .width) / 2 + 40) * coeffX;
                 coordinateY += 6 * coeffX;
             }
+            if (objLink.id == "circle_krsnd") {
+                coordinateX -= (parseFloat(objLink.getBoundingClientRect()
+                    .width) / 2 - 120) * coeffX;
+                coordinateY += -6 * coeffX;
+            }
             if (objLink.classList.contains("map__sityChina")) {
                 coordinateX -= (parseFloat(objLink.getBoundingClientRect()
                     .width) - 0) * coeffX;
@@ -532,7 +537,6 @@ function TippyRussiaCityInit() {
     vskTippy.show();
 
 }
-
 function TippyChinaCityInit() {
     let obj = document.querySelector(".circle_cin");
     let circle_cin = tippy(obj, {
@@ -773,6 +777,260 @@ function DeleteActiveSlides() {
         slide.classList.remove("white-active");
     });
 }
+function InitContactMapMSK(){
+    let check = document.querySelector(".contacts__map_second");
+    if (check){
+        let map = new ymaps.Map('contacts__map_second', {
+            center: [55.579225, 37.607655],
+            zoom: 16.5
+        }, 
+        {
+            searchControlProvider: 'yandex#search'
+        }),
+        BalloonContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="margin: 10px;">' +
+                '<span id="counter-button"> улица Дорожная, 60 </span>' +
+            '</div>', {
+
+            build: function () {
+                BalloonContentLayout.superclass.build.call(this);
+            },
+
+            clear: function () {
+                BalloonContentLayout.superclass.clear.call(this);
+            },
+        });
+        map.events.add('click', function() {
+            map.balloon.close();
+        });
+
+        let placemark = new ymaps.Placemark(
+            [55.579225, 37.607655],{
+                    address: 'улица Дорожная, 60'
+                },
+            {
+            balloonContentLayout: BalloonContentLayout,
+            balloonOffset: [0, 0],
+            balloonShadow: false,
+            balloonPanelMaxMapArea: 0,
+            iconLayout: 'default#image',
+            iconImageHref: 'https://raw.githubusercontent.com/AlexseiT/TR/master/icon.png',
+            iconImageSize: [81, 110],
+            iconImageOffset: [-40, -90],
+            hideIconOnBalloonOpen: false,
+            balloonCloseButton: false,
+            }
+        );
+        map.geoObjects.add(placemark);
+    }
+}
+function InitContactMapNSK(){
+    let check = document.querySelector(".contacts__map_first");
+    if (check){
+        let map = new ymaps.Map('contacts__map_first', {
+            center: [55.058172, 82.915758],
+            zoom: 16.5
+        }, 
+        {
+            searchControlProvider: 'yandex#search'
+        }),
+        BalloonContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="margin: 10px;">' +
+                '<span id="counter-button"> улица Дуси Ковальчук, 274 </span>' +
+            '</div>', {
+
+            build: function () {
+                BalloonContentLayout.superclass.build.call(this);
+            },
+
+            clear: function () {
+                BalloonContentLayout.superclass.clear.call(this);
+            },
+        });
+        map.events.add('click', function() {
+            map.balloon.close();
+        });
+
+        let placemark = new ymaps.Placemark(
+            [55.058328, 82.915683],{
+                    address: 'улица Дуси Ковальчук, 274'
+                },
+            {
+            balloonContentLayout: BalloonContentLayout,
+            balloonOffset: [0, 0],
+            balloonShadow: false,
+            balloonPanelMaxMapArea: 0,
+            iconLayout: 'default#image',
+            iconImageHref: 'https://raw.githubusercontent.com/AlexseiT/TR/master/icon.png',
+            iconImageSize: [81, 110],
+            iconImageOffset: [-40, -90],
+            hideIconOnBalloonOpen: false,
+            balloonCloseButton: false,
+            }
+        );
+        map.geoObjects.add(placemark);
+    }
+}
+function TerminalList(){
+    let block = document.querySelector(".terminal__content-list");
+
+    //map.addChild(new YMapDefaultSchemeLayer());
+
+    if (block)
+    {
+        let map = new ymaps.Map("terminal__map", {
+            center: [54.995963, 82.904236],
+            zoom: 11,
+        });
+        let arrayTerminal = ['г. Новосибирск, Восточное шоссе, 2|АО "Евросиб-СПб-ТС"|55.125731|83.006803', 
+            'г. Новосибирск, ул. Толмачевская, 1|ПАО "Трансконтейнер"|54.965471|82.827858', 
+            'г. Новосибирск, ул. Тайгинская, 6 к. 1|ООО "ФИТ"|55.106551|82.990929', 
+            'с. Прокудское, ст. ЧИК, 3307 км|ТЛЦ Сибирский|54.999000|82.536696',
+            'г. Новосибирск, ул Молодости 53 Г|Чемской пл 1|54.861668|82.958922',
+            'г. Новосибирск, ул Варшавская 1 А корп. 1|Чемской пл 2|54.855921|82.957701',
+            'г. Новосибирск, ст. Сеятель, ул.Плотинная, 12|ООО «Сервис-Эклон»|54.858554|83.026116',
+            'г. Новосибирск, ул 2-я Станционная, 21, корпус 2|ТГ Континент|55.011732|82.823717',
+            'г. Новосибирск, Толмачевское 53Г|ТК Терминал|54.973646|82.781352',
+            'г. Новосибирск, Тайгинская 7/12|ТК Терминал|55.110486|82.993031',
+            'г. Новосибирск, ул Аэропорт, 2/3|ТЕРМИНАЛ-СЕВЕР|55.088815|82.921005',
+            'г. Новосибирск, Толмачёвское шоссе, д 45, сток ПАО "ТрансКонтейнер"|ООО «ТК 54 РЕГИОН»|54.970029|82.788656',
+            'г. Новосибирск, Толмачёвское шоссе, 27 к31|Азимут|54.961915|82.822055',
+            'г. Новосибирск, Новосибирский р-н, Толмачевская складская зона 5а|Терминал ТрейдТранс|54.963801|82.788108',
+            'Новосибирский район, Адрес НСО, Пашинский переезд, Восточное шоссе, 2. Сток Евросиб|Терминал ЕТН|55.125731|83.006803',
+            'г. Новосибирск, Станционная, 38/4|Терминал НГТ|54.998803|82.835548',
+            'г. Новосибирск, ул. Толмачёвская складская зона 1|Терминал ОБЬ|54.963967|82.788189',
+            'г. Обь, Октябрьская 8/2|Терминал Константа|54.988949|82.694171',
+            'г. Новосибирск, Петухова 47А|Терминал Ross|54.954342|82.861150',
+            'г. Новосибирск, ул. Пасечная, 23|Терминал Восточный|55.147695|82.988477',
+        ];
+        //let averageLon = 0;
+        //let averageLat = 0;
+        //let index = 0;
+        arrayTerminal.forEach(element => {
+            let string =  element.split("|");
+            let adress = string[0];
+            let name = string[1];
+            let lon = string[2];
+            let lat = string[3];
+            let card = document.createElement("div");
+            card.classList = "terminal__card";
+            card.setAttribute("lon",lon);
+            card.setAttribute("lat",lat);
+            let nameAdress = document.createElement("span");
+            nameAdress.classList = "terminal__adress";
+            nameAdress.innerText = adress;
+            let nameCard = document.createElement("span");
+            nameCard.classList = "terminal__name";
+            nameCard.innerText = name;
+            card.appendChild(nameAdress);
+            card.appendChild(nameCard);
+            block.appendChild(card);
+            //index+=1;
+            //averageLon+=parseInt(lon);
+            //averageLat+=parseInt(lat);
+            let placemark = new ymaps.Placemark([lon,lat], {
+                iconCaption: name
+            }, {
+                preset: 'islands#greenDotIcon'
+            });
+            map.geoObjects.add(placemark);
+            card.addEventListener('click', function (event) {
+                map.setCenter([lon,lat]);
+            })
+        });
+        //averageLon = averageLon/index;
+        //averageLat = averageLat/index;
+    }
+}
+function InitAnimCircleContainer(){
+    let object = document.querySelector(".object-container__object");
+    if (object){
+        let circles = document.querySelectorAll(".object-container__object circle");
+        circles.forEach((circle) => {
+            anime({
+                targets: circle,
+                easing: 'easeInOutSine',
+                duration: 3000,
+                direction: 'alternate',
+                r: 9,
+                loop: true,
+            });
+        });
+    }
+}
+function InitCircleContainer(){
+    let object = document.querySelector(".object-container__object");
+    if (object)
+    {
+        let mapWidthNow = parseFloat(object.getBoundingClientRect().width);
+        let mapHeightNow = parseFloat(object.getBoundingClientRect().height);
+        let mapWidth = 1920;
+        let mapHeight = 864;
+        let coeffX = mapWidthNow / mapWidth;
+        let coeffY = mapHeightNow / mapHeight;
+        let elementsMap = document.querySelectorAll(".map__sity");//34679
+        elementsMap.forEach((objLink) => {
+
+            let obj = document.querySelector("." + objLink.id);
+            let coordinateX = (obj.getAttribute('cx') * coeffX);
+            let coordinateY = (obj.getAttribute('cy') * coeffY);
+
+            if (obj.classList.contains("obj1")) {
+                coordinateX -= (parseFloat(objLink.getBoundingClientRect().width) - parseFloat(objLink.getBoundingClientRect().width) / 8 ) * coeffX;
+                coordinateY -= (17) * coeffX;
+            }
+            if (obj.classList.contains("obj2")) {
+                coordinateX -= (parseFloat(objLink.getBoundingClientRect().width) - parseFloat(objLink.getBoundingClientRect().width) / 5.5 ) * coeffX;
+                coordinateY -= (17) * coeffX;
+            }
+            if (obj.classList.contains("obj5")) {
+                coordinateX -= (parseFloat(objLink.getBoundingClientRect().width) - parseFloat(objLink.getBoundingClientRect().width) / 5.7 ) * coeffX;
+                coordinateY -= (17) * coeffX;
+            }
+            if (obj.classList.contains("obj8")) {
+                coordinateX -= (parseFloat(objLink.getBoundingClientRect().width) - parseFloat(objLink.getBoundingClientRect().width) / 6.7 ) * coeffX;
+                coordinateY -= (17) * coeffX;
+            }
+            if (obj.classList.contains("obj3") || obj.classList.contains("obj4") || obj.classList.contains("obj6") || obj.classList.contains("obj7") || obj.classList.contains("obj9")) {
+                coordinateX += 10 * coeffX;
+                coordinateY -= (17) * coeffX;
+            }
+            if (obj.classList.contains("obj10") || obj.classList.contains("obj11") || obj.classList.contains("obj12") || obj.classList.contains("obj13") || obj.classList.contains("obj14")) {
+                coordinateX -= (parseFloat(objLink.getBoundingClientRect().width) / 2.5 ) * coeffX;
+                coordinateY += (9) * coeffX;
+            }
+            /*if (objLink.classList.contains("obj3") || objLink.classList.contains("obj4") || objLink.classList.contains("obj6") || objLink.classList.contains("obj7") || objLink.classList.contains("obj9") || objLink.classList.contains("obj10") || objLink.classList.contains("obj11") || objLink.classList.contains("obj12") || objLink.classList.contains("obj13") || objLink.classList.contains("obj14")) {
+                coordinateX -= (parseFloat(objLink.getBoundingClientRect().width) - parseFloat(objLink.getBoundingClientRect().width) / 8 ) * coeffX;
+                coordinateY -= (17) * coeffX;
+            }*/
+            objLink.style.left = coordinateX + "px";
+            objLink.style.top = coordinateY + "px";
+        });
+    }
+}
+function InitNumberContainer(){
+    let object = document.querySelector(".object-container__object");
+    if (object)
+    {
+        let mapWidthNow = parseFloat(object.getBoundingClientRect().width);
+        let mapHeightNow = parseFloat(object.getBoundingClientRect().height);
+        let mapWidth = 1920;
+        let mapHeight = 864;
+        let coeffX = mapWidthNow / mapWidth;
+        let coeffY = mapHeightNow / mapHeight;
+        let elementsMap = document.querySelectorAll(".object__number");
+        elementsMap.forEach((objLink) => {
+
+            let obj = document.querySelector("." + objLink.id.slice(0, -1));
+            let coordinateX = (obj.getAttribute('cx') * coeffX);
+            let coordinateY = (obj.getAttribute('cy') * coeffY);
+            coordinateX -= 10;
+            coordinateY -= 10;
+            objLink.style.left = coordinateX + "px";
+            objLink.style.top = coordinateY + "px";
+        });
+    }
+}
 document.addEventListener('DOMContentLoaded', (event) => {
     // ASYNC
     InitCenteredSliders(); // Преключение класса центрального слайда при свайпах
@@ -789,10 +1047,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     if (!isMobile) {
         MapPathInit();
+        InitAnimCircleContainer();
     }
 
     RevealInit();
     LinckMapInit();
+    InitCircleContainer();
+    if (isMobile) {
+        InitNumberContainer();
+    }
+    setTimeout(() => {
+        TerminalList();
+        InitContactMapNSK();
+        InitContactMapMSK();
+    }, 1000);
     window.addEventListener("scroll", RevealInit);
     if (isTablet) {
         InitBurgerMenu();
@@ -806,4 +1074,27 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Наложение партикла
     // particlesJS.load('particles-slider', 'static/ParticlesJSON/GreenHexagons.json');
+})
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    
+    let forms = document.querySelectorAll('form');
+    forms.forEach((form) => {
+        form.addEventListener('submit', (event) => {
+            jQuery.ajax({
+                url: '/mail.php',
+                method: 'post',
+                dataType: 'html',
+                data: jQuery(form).serialize(),
+                success: function(data){
+                    $('.uk-modal-close').click();
+                    setTimeout(() => {
+                        alert("Спасибо! Мы свяжемся с Вами в ближайшее время!");
+                    }, 1000);
+            	    
+                }
+            });
+        })
+    })
 })

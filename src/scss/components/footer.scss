@@ -139,3 +139,93 @@
         }
     }
 }
+.modal__title{
+    font-weight: 400 !important;
+    font-family: Actay;
+    margin-bottom: 0;
+}
+.modal__text{
+    font-weight: 500;
+    color: $black;
+    margin-top: 20px;
+    display: flex;
+}
+.modal-form{
+    margin-top: 50px;
+}
+.modal-form__input{
+    border: none;
+    background-color: #EEEEEE;
+}
+.modal-form__input::placeholder{
+    color: #C9C9C9;
+}
+.modal-form{
+    gap: 25px;
+}
+.modal-request .uk-modal-dialog{
+    max-width: 550px;
+    border-radius: 50px;
+}
+.modal-request .uk-modal-body {
+    padding: 40px 40px;
+}
+.button.uk-modal-close{
+    top: 40px;
+    right: 40px;
+    border-radius: 50px;
+    background-color: #EEEEEE;
+    border: none;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+.button.uk-modal-close::before{
+    content: "";
+    width: 18px;
+    height: 1px;
+    background-color: $black;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 22px;
+}
+.button.uk-modal-close::after{
+    content: "";
+    width: 18px;
+    height: 1px;
+    background-color: $black;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 22px;
+}
+.button.uk-modal-close:hover{
+    background-color: $green;
+}
+.button.uk-modal-close:hover:before{
+    background-color: $white;
+}
+.button.uk-modal-close:hover:after{
+    background-color: $white;
+}
+@include media($mobile) {
+    .button.uk-modal-close{
+        width: 35px;
+        height: 35px;
+    }
+    .button.uk-modal-close::before{
+        width: 15px;
+        height: 1px;
+        top: 17px;
+    }
+    .button.uk-modal-close::after{
+        width: 15px;
+        height: 1px;
+        top: 17px;
+    }
+    .modal-form{
+        margin-top: 25px;
+    }
+    .modal-form{
+        gap: 15px;
+    }
+}

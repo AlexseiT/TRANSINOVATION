@@ -13,10 +13,22 @@ html {
 }
 @include media($tablet) {
     html {
-        zoom: inherit;
+        zoom: 100%;
     }
 }
-
+.section-first{
+    margin-top: 200px;
+}
+@include media($tablet) {
+    .section-first{
+        margin-top: 110px;
+    }
+}
+@include media($mobile) {
+    .section-first{
+        margin-top: 70px;
+    }
+}
 body {
     background-color: $white;
     overflow-y: hidden;

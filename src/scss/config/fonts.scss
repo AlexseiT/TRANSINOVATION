@@ -1,7 +1,7 @@
 @font-face {
-	font-family: Circe;
+	font-family: Actay;
 	font-display: swap;
-	src: url("../fonts/Circe-Regular.woff2") format("woff2"), url("../fonts/Circe-Regular.woff") format("woff");
+	src: url("../fonts/Actay.woff2") format("woff2"), url("../fonts/Actay.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 }
@@ -22,6 +22,20 @@
 @font-face {
 	font-family: Manrope;
 	font-display: swap;
+	src: url("../fonts/Manrope-Bold.woff2") format("woff2"), url("../fonts/Manrope-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: Circe;
+	font-display: swap;
+	src: url("../fonts/Circe-Regular.woff2") format("woff2"), url("../fonts/Circe-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: Manrope;
+	font-display: swap;
 	src: url("../fonts/Manrope-ExtraBold.woff2") format("woff2"), url("../fonts/Manrope-ExtraBold.woff") format("woff");
 	font-weight: 800;
 	font-style: normal;
@@ -36,13 +50,6 @@
 @font-face {
 	font-family: Manrope;
 	font-display: swap;
-	src: url("../fonts/Manrope-Bold.woff2") format("woff2"), url("../fonts/Manrope-Bold.woff") format("woff");
-	font-weight: 700;
-	font-style: normal;
-}
-@font-face {
-	font-family: Manrope;
-	font-display: swap;
 	src: url("../fonts/Manrope-Medium.woff2") format("woff2"), url("../fonts/Manrope-Medium.woff") format("woff");
 	font-weight: 500;
 	font-style: normal;
@@ -50,43 +57,8 @@
 @font-face {
 	font-family: Manrope;
 	font-display: swap;
-	src: url("../fonts/Manrope-Regular.woff2") format("woff2"), url("../fonts/Manrope-Regular.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
-}
-@font-face {
-	font-family: Manrope;
-	font-display: swap;
 	src: url("../fonts/Manrope-ExtraLight.woff2") format("woff2"), url("../fonts/Manrope-ExtraLight.woff") format("woff");
 	font-weight: 200;
-	font-style: normal;
-}
-@font-face {
-	font-family: Raleway;
-	font-display: swap;
-	src: url("../fonts/Raleway-Black.woff2") format("woff2"), url("../fonts/Raleway-Black.woff") format("woff");
-	font-weight: 900;
-	font-style: normal;
-}
-@font-face {
-	font-family: Raleway;
-	font-display: swap;
-	src: url("../fonts/Raleway-BoldItalic.woff2") format("woff2"), url("../fonts/Raleway-BoldItalic.woff") format("woff");
-	font-weight: undefined;
-	font-style: normal;
-}
-@font-face {
-	font-family: Raleway;
-	font-display: swap;
-	src: url("../fonts/Raleway-Bold.woff2") format("woff2"), url("../fonts/Raleway-Bold.woff") format("woff");
-	font-weight: 700;
-	font-style: normal;
-}
-@font-face {
-	font-family: Raleway;
-	font-display: swap;
-	src: url("../fonts/Raleway-Regular.woff2") format("woff2"), url("../fonts/Raleway-Regular.woff") format("woff");
-	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
@@ -99,8 +71,43 @@
 @font-face {
 	font-family: Raleway;
 	font-display: swap;
+	src: url("../fonts/Raleway-Black.woff2") format("woff2"), url("../fonts/Raleway-Black.woff") format("woff");
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+	font-family: Raleway;
+	font-display: swap;
+	src: url("../fonts/Raleway-Bold.woff2") format("woff2"), url("../fonts/Raleway-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: Raleway;
+	font-display: swap;
+	src: url("../fonts/Raleway-BoldItalic.woff2") format("woff2"), url("../fonts/Raleway-BoldItalic.woff") format("woff");
+	font-weight: undefined;
+	font-style: normal;
+}
+@font-face {
+	font-family: Raleway;
+	font-display: swap;
+	src: url("../fonts/Raleway-Regular.woff2") format("woff2"), url("../fonts/Raleway-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: Raleway;
+	font-display: swap;
 	src: url("../fonts/Raleway-Italic.woff2") format("woff2"), url("../fonts/Raleway-Italic.woff") format("woff");
 	font-weight: undefined;
+	font-style: normal;
+}
+@font-face {
+	font-family: Manrope;
+	font-display: swap;
+	src: url("../fonts/Manrope-Regular.woff2") format("woff2"), url("../fonts/Manrope-Regular.woff") format("woff");
+	font-weight: 400;
 	font-style: normal;
 }
 @font-face {

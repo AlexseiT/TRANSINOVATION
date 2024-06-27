@@ -71,11 +71,13 @@
 
 <div id="formRequest" class = "modal-request uk-flex-top" uk-modal>
     <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-        <h2 class="uk-modal-title text_large">Оставить заявку</h2>
-        <button class="uk-modal-close text_small button button__accent" type="button">x</button>
+        <h2 class="uk-modal-title text_large modal__title">Заполните форму <br>обратной связи</h2>
+        <span class = "text_standart modal__text">Наши менеджеры свяжутся <br>с вами в течении 15 минут!</span>
+        <button class="uk-modal-close text_small button button__accent" type="button"></button>
         <form class = "modal-form">
-            <input type = "text" name="name" class = "text_small modal-form__input" placeholder="Имя" required>
-            <input type = "tel" name="phone" class = "text_small modal-form__input" placeholder="+7 999 999 99-99" required>
+            <input type = "text" name="name" class = "text_small modal-form__input" placeholder="Ваше имя" required>
+            <input type = "email" name="email" class = "text_small modal-form__input" placeholder="Ваш e-mail" required>
+            <input type = "tel" name="phone"e class = "text_small modal-form__input" placeholder="Ваш телефон" required>
             <button type = "submit" class = "text_small button button__accent button-form" uk-toggle="target: #formRequest">Отправить</button>
         </form>
     </div>

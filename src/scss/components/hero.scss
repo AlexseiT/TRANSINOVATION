@@ -2,7 +2,7 @@
 
     background: url(../images/hero1.jpg) no-repeat 45% 50%;
     background-size: cover !important;
-    height: 100vh;
+    height: 900px;
     position: relative;
     margin-top: 0px;
     &__container {
@@ -44,6 +44,7 @@
 @include media($laptop) {
     .hero {
         background: url(../images/hero1.jpg) no-repeat 45% 50%;
+        height: 100vh;
         &__container {
             top: 130px;
         }
